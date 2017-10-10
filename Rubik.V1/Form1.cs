@@ -41,6 +41,9 @@ namespace Rubik.V1
         int numPicture = 1;
         //TestGit
         //000000
+        /// <summary>
+        /// 100
+        /// </summary>
         // รูปต้นฉบับ
         // Image<Hsv, Byte> gray_image;   // รูปที่โดนเปลี่ยนเป็นแบบ GRY
         Image<Hsv, Byte> My_image_copy; // รูปที่ใช้แก้ใข 
