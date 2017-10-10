@@ -62,3 +62,6 @@ C:\Users\tanap\Desktop\Rubik.V1\Rubik.V1\Rubik.V1\obj\Debug\Rubik.V1.Form1.resou
 C:\Users\tanap\Desktop\Rubik.V1\Rubik.V1\Rubik.V1\obj\Debug\Rubik.V1.Form2.resources
 C:\Users\tanap\Desktop\Rubik.V1\Rubik.V1\Rubik.V1\obj\Debug\Rubik.V1.Properties.Resources.resources
 C:\Users\tanap\Desktop\Rubik.V1\Rubik.V1\Rubik.V1\obj\Debug\Rubik.V1.csproj.GenerateResource.Cache
+C:\Users\tanap\Desktop\Rubik.V1\GUIRubik\Rubik.V1\bin\Debug\Rubik.V1.exe.config
+C:\Users\tanap\Desktop\Rubik.V1\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.exe
+C:\Users\tanap\Desktop\Rubik.V1\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.pdb
