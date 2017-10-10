@@ -40,7 +40,7 @@ namespace Rubik.V1
         String str = "";
         int numPicture = 1;
         //TestGit
-
+        //000000
         // รูปต้นฉบับ
         // Image<Hsv, Byte> gray_image;   // รูปที่โดนเปลี่ยนเป็นแบบ GRY
         Image<Hsv, Byte> My_image_copy; // รูปที่ใช้แก้ใข 
