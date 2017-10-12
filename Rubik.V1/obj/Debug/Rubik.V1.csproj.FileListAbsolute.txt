@@ -39,3 +39,6 @@ C:\Users\BOM\Desktop\Rubik.V1\Rubik.V1\bin\Debug\Emgu.CV.UI.GL.xml
 C:\Users\BOM\Desktop\Rubik.V1\Rubik.V1\bin\Debug\Emgu.CV.World.xml
 C:\Users\BOM\Desktop\Rubik.V1\Rubik.V1\bin\Debug\Microsoft.VisualStudio.DebuggerVisualizers.xml
 C:\Users\BOM\Desktop\Rubik.V1\Rubik.V1\obj\Debug\Rubik.V1.Form2.resources
+C:\Users\BOM\Desktop\GuiRubik\GUIRubik\Rubik.V1\bin\Debug\Rubik.V1.exe.config
+C:\Users\BOM\Desktop\GuiRubik\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.exe
+C:\Users\BOM\Desktop\GuiRubik\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.pdb
