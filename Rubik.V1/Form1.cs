@@ -39,6 +39,8 @@ namespace Rubik.V1
         Image<Hsv, Byte> My_Image;
         String str = "";
         int numPicture = 1;
+        int numList = 1;
+
         
         // รูปต้นฉบับ
         // Image<Hsv, Byte> gray_image;   // รูปที่โดนเปลี่ยนเป็นแบบ GRY
@@ -58,7 +60,7 @@ namespace Rubik.V1
             {
                 comboBox1.Items.Add(VideoCaptureDevice.Name);
             }
-           // comboBox1.SelectedIndex = 0;
+            comboBox1.SelectedIndex = 0;
 
         }
 
@@ -330,6 +332,17 @@ namespace Rubik.V1
 
         public void rotate_top() // หมุนบน // Finish
         {
+            rotate_Face_right(Rubik,3);
+            rotate_Face(Rubik, 1);
+
+            char[] rk = Rubik[0];
+            Rubik[0] = Rubik[2];
+            Rubik[2] = Rubik[4];
+            Rubik[4] = Rubik[5];
+            Rubik[5] = rk;
+
+
+            /*
             rotate_Face(Rubik, 2);
 
             char[] tmp = new char[3];
@@ -338,22 +351,10 @@ namespace Rubik.V1
             Rubik[3][0] = Rubik[4][2]; Rubik[3][3] = Rubik[4][1]; Rubik[3][6] = Rubik[4][0];
             Rubik[4][2] = Rubik[1][8]; Rubik[4][1] = Rubik[1][5]; Rubik[4][0] = Rubik[1][2];
             Rubik[1][8] = tmp[0]; Rubik[1][5] = tmp[1]; Rubik[1][2] = tmp[2];
-
+            */
         }
 
-        public void rotate_dow() // หมุนล่าง // Finish
-        {
-            rotate_Face(Rubik, 5);
-
-            char[] tmp = new char[3];
-            tmp[0] = Rubik[4][6]; tmp[1] = Rubik[4][7]; ; tmp[2] = Rubik[4][8];
-            Rubik[4][6] = Rubik[3][8]; Rubik[4][7] = Rubik[3][5]; Rubik[4][8] = Rubik[3][2];
-            Rubik[3][2] = Rubik[0][0]; Rubik[3][5] = Rubik[0][1]; Rubik[3][8] = Rubik[0][2];
-            Rubik[0][0] = Rubik[1][6]; Rubik[0][1] = Rubik[1][3]; Rubik[0][2] = Rubik[1][0];
-            Rubik[1][0] = tmp[0]; Rubik[1][3] = tmp[1]; Rubik[1][6] = tmp[2];
-
-
-        }
+       
 
         public void rotate_front() // หมุนหน้า // Finish
         {
@@ -385,9 +386,6 @@ namespace Rubik.V1
         }
 
         public void rotate_Face(char[][] Rc,int F) //ไว้หมุนหน้าทุกด้าน // Finish
-
-
-
         {
             char M = Rc[F][1];
 
@@ -404,6 +402,23 @@ namespace Rubik.V1
             Rc[F][6] = C;
 
            
+        }
+
+        public void rotate_Face_right(char[][] Rc, int F)
+        {
+            char M = Rc[F][1];
+
+            Rc[F][1] = Rc[F][3];
+            Rc[F][3] = Rc[F][7];
+            Rc[F][7] = Rc[F][5];
+            Rc[F][5] = M;
+
+            char C = Rc[F][0];
+
+            Rc[F][0] = Rc[F][6];
+            Rc[F][6] = Rc[F][8];
+            Rc[F][8] = Rc[F][2];
+            Rc[F][2] = C;
         }
 
         public void show_color(char[][] rk) // แสดงค่าสีบน panel // Finish
@@ -1250,6 +1265,8 @@ namespace Rubik.V1
                                                 new char[] { 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R' },
                                                 new char[] { 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W' } };
 
+            listBox1.Items.Clear();
+            numList = 0;
             Rubik = RK ;
             show_color(Rubik);
 
@@ -1263,36 +1280,42 @@ namespace Rubik.V1
         {
             rotate_left();
             show_color(Rubik);
+            listBox1.Items.Add(numList + ": Left");
+            numList++;
         }
 
         private void Right_Click_1(object sender, EventArgs e)
         {
             rotate_right();
             show_color(Rubik);
+            listBox1.Items.Add(numList + ": Right");
+            numList++;
         }
 
         private void Top_Click(object sender, EventArgs e)
         {
             rotate_top();
             show_color(Rubik);
+            listBox1.Items.Add(numList + ": Change_Face");
+            numList++;
         }
 
-        private void Dow_Click(object sender, EventArgs e)
-        {
-            rotate_dow();
-            show_color(Rubik);
-        }
+        
 
         private void Front_Click(object sender, EventArgs e)
         {
             rotate_front();
             show_color(Rubik);
+            listBox1.Items.Add(numList + ": Front");
+            numList++;
         }
 
         private void Rear_Click(object sender, EventArgs e)
         {
             rotate_rear();
             show_color(Rubik);
+            listBox1.Items.Add(numList + ": Rear");
+            numList++;
         }
 
 
@@ -1364,5 +1387,9 @@ namespace Rubik.V1
         {
 
         }
+
+
+
+       
     } // end class 
 }

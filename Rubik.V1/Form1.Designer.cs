@@ -83,7 +83,6 @@
             this.B2 = new System.Windows.Forms.Panel();
             this.B1 = new System.Windows.Forms.Panel();
             this.B0 = new System.Windows.Forms.Panel();
-            this.Dow = new System.Windows.Forms.Button();
             this.Right = new System.Windows.Forms.Button();
             this.Left = new System.Windows.Forms.Button();
             this.Top = new System.Windows.Forms.Button();
@@ -118,6 +117,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Box2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box4)).BeginInit();
@@ -504,25 +505,12 @@
             this.B0.Size = new System.Drawing.Size(30, 29);
             this.B0.TabIndex = 46;
             // 
-            // Dow
-            // 
-            this.Dow.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Dow.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Dow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dow.Location = new System.Drawing.Point(661, 385);
-            this.Dow.Name = "Dow";
-            this.Dow.Size = new System.Drawing.Size(65, 47);
-            this.Dow.TabIndex = 57;
-            this.Dow.Text = "Down";
-            this.Dow.UseVisualStyleBackColor = false;
-            this.Dow.Click += new System.EventHandler(this.Dow_Click);
-            // 
             // Right
             // 
             this.Right.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Right.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Right.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Right.Location = new System.Drawing.Point(506, 384);
+            this.Right.Location = new System.Drawing.Point(484, 384);
             this.Right.Name = "Right";
             this.Right.Size = new System.Drawing.Size(60, 48);
             this.Right.TabIndex = 58;
@@ -548,11 +536,11 @@
             this.Top.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Top.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Top.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Top.Location = new System.Drawing.Point(423, 384);
+            this.Top.Location = new System.Drawing.Point(602, 386);
             this.Top.Name = "Top";
-            this.Top.Size = new System.Drawing.Size(65, 47);
+            this.Top.Size = new System.Drawing.Size(172, 47);
             this.Top.TabIndex = 60;
-            this.Top.Text = "Top";
+            this.Top.Text = "Rotate_Rubik";
             this.Top.UseVisualStyleBackColor = false;
             this.Top.Click += new System.EventHandler(this.Top_Click);
             // 
@@ -561,7 +549,7 @@
             this.Front.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Front.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Front.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Front.Location = new System.Drawing.Point(580, 384);
+            this.Front.Location = new System.Drawing.Point(413, 385);
             this.Front.Name = "Front";
             this.Front.Size = new System.Drawing.Size(65, 47);
             this.Front.TabIndex = 61;
@@ -574,11 +562,11 @@
             this.Rear.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Rear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Rear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Rear.Location = new System.Drawing.Point(248, 385);
+            this.Rear.Location = new System.Drawing.Point(253, 386);
             this.Rear.Name = "Rear";
             this.Rear.Size = new System.Drawing.Size(65, 47);
             this.Rear.TabIndex = 62;
-            this.Rear.Text = "Rear";
+            this.Rear.Text = "Back";
             this.Rear.UseVisualStyleBackColor = false;
             this.Rear.Click += new System.EventHandler(this.Rear_Click);
             // 
@@ -799,7 +787,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(616, 368);
+            this.label10.Location = new System.Drawing.Point(245, 350);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(110, 13);
             this.label10.TabIndex = 91;
@@ -841,11 +829,30 @@
             this.label14.TabIndex = 95;
             this.label14.Text = "3.กดปุ่ม Stop เพื่อปิดกล้อง";
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(382, 177);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(162, 186);
+            this.listBox1.TabIndex = 96;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(379, 161);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(62, 13);
+            this.label15.TabIndex = 97;
+            this.label15.Text = "Show_Step";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1098, 441);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
@@ -878,7 +885,6 @@
             this.Controls.Add(this.Top);
             this.Controls.Add(this.Left);
             this.Controls.Add(this.Right);
-            this.Controls.Add(this.Dow);
             this.Controls.Add(this.B8);
             this.Controls.Add(this.B7);
             this.Controls.Add(this.B6);
@@ -1003,7 +1009,6 @@
         private System.Windows.Forms.Panel B2;
         private System.Windows.Forms.Panel B1;
         private System.Windows.Forms.Panel B0;
-        private System.Windows.Forms.Button Dow;
         private System.Windows.Forms.Button Right;
         private System.Windows.Forms.Button Left;
         private System.Windows.Forms.Button Top;
@@ -1038,6 +1043,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label label15;
     }
 }
 
