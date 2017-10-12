@@ -32,6 +32,7 @@ namespace Rubik.V1
                                                 new char[] { 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W' } };
         // public char[][] Rubik_copy = new char[6][];
 
+        //Notebook
         private FilterInfoCollection webcam;
         private VideoCaptureDevice cam;
         int numTake = 1;
