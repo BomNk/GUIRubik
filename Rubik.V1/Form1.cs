@@ -49,6 +49,7 @@ namespace Rubik.V1
 
         public Form1()
         {
+           
             InitializeComponent();
         }
 
@@ -56,12 +57,13 @@ namespace Rubik.V1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            serialPort1.Open();
             webcam = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo VideoCaptureDevice in webcam)
             {
                 comboBox1.Items.Add(VideoCaptureDevice.Name);
             }
-            comboBox1.SelectedIndex = 0;
+            //comboBox1.SelectedIndex = 0;
 
         }
 
@@ -1283,6 +1285,7 @@ namespace Rubik.V1
             show_color(Rubik);
             listBox1.Items.Add(numList + ": Left");
             numList++;
+            serialPort1.Write("c");
         }
 
         private void Right_Click_1(object sender, EventArgs e)
@@ -1291,6 +1294,7 @@ namespace Rubik.V1
             show_color(Rubik);
             listBox1.Items.Add(numList + ": Right");
             numList++;
+            serialPort1.Write("d");
         }
 
         private void Top_Click(object sender, EventArgs e)
@@ -1309,6 +1313,7 @@ namespace Rubik.V1
             show_color(Rubik);
             listBox1.Items.Add(numList + ": Front");
             numList++;
+            serialPort1.Write("b");// Tanapon Ninket
         }
 
         private void Rear_Click(object sender, EventArgs e)
@@ -1317,6 +1322,7 @@ namespace Rubik.V1
             show_color(Rubik);
             listBox1.Items.Add(numList + ": Rear");
             numList++;
+            serialPort1.Write("a");
         }
 
 
@@ -1352,6 +1358,7 @@ namespace Rubik.V1
             else if(numPicture == 5)
                 str = "C:/Users/BOM/Desktop/New folder/5.jpg";
             else if(numPicture == 6)
+
                 str = "C:/Users/BOM/Desktop/New folder/6.jpg";
             R_Image = new Image<Hsv, Byte>(str);
 
