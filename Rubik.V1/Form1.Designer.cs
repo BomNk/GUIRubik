@@ -119,6 +119,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label15 = new System.Windows.Forms.Label();
+            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Box2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box4)).BeginInit();
@@ -846,6 +847,10 @@
             this.label15.TabIndex = 97;
             this.label15.Text = "Show_Step";
             // 
+            // serialPort1
+            // 
+            this.serialPort1.PortName = "COM4";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1045,6 +1050,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label15;
+        private System.IO.Ports.SerialPort serialPort1;
     }
 }
 

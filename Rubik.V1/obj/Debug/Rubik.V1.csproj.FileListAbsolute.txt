@@ -39,9 +39,30 @@ C:\Users\BOM\Desktop\Rubik.V1\Rubik.V1\bin\Debug\Emgu.CV.UI.GL.xml
 C:\Users\BOM\Desktop\Rubik.V1\Rubik.V1\bin\Debug\Emgu.CV.World.xml
 C:\Users\BOM\Desktop\Rubik.V1\Rubik.V1\bin\Debug\Microsoft.VisualStudio.DebuggerVisualizers.xml
 C:\Users\BOM\Desktop\Rubik.V1\Rubik.V1\obj\Debug\Rubik.V1.Form2.resources
+<<<<<<< HEAD
+C:\Users\tanap\Desktop\Rubik.V1\GUIRubik\Rubik.V1\bin\Debug\Rubik.V1.exe.config
+C:\Users\tanap\Desktop\Rubik.V1\GUIRubik\Rubik.V1\bin\Debug\Rubik.V1.exe
+C:\Users\tanap\Desktop\Rubik.V1\GUIRubik\Rubik.V1\bin\Debug\Rubik.V1.pdb
+C:\Users\tanap\Desktop\Rubik.V1\GUIRubik\Rubik.V1\bin\Debug\AForge.dll
+C:\Users\tanap\Desktop\Rubik.V1\GUIRubik\Rubik.V1\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\tanap\Desktop\Rubik.V1\GUIRubik\Rubik.V1\bin\Debug\AForge.Video.dll
+C:\Users\tanap\Desktop\Rubik.V1\GUIRubik\Rubik.V1\bin\Debug\Microsoft.VisualStudio.DebuggerVisualizers.dll
+C:\Users\tanap\Desktop\Rubik.V1\GUIRubik\Rubik.V1\bin\Debug\Emgu.CV.UI.xml
+C:\Users\tanap\Desktop\Rubik.V1\GUIRubik\Rubik.V1\bin\Debug\Emgu.CV.UI.GL.xml
+C:\Users\tanap\Desktop\Rubik.V1\GUIRubik\Rubik.V1\bin\Debug\Emgu.CV.World.xml
+C:\Users\tanap\Desktop\Rubik.V1\GUIRubik\Rubik.V1\bin\Debug\Microsoft.VisualStudio.DebuggerVisualizers.xml
+C:\Users\tanap\Desktop\Rubik.V1\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.csprojResolveAssemblyReference.cache
+C:\Users\tanap\Desktop\Rubik.V1\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.Form1.resources
+C:\Users\tanap\Desktop\Rubik.V1\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.Form2.resources
+C:\Users\tanap\Desktop\Rubik.V1\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.Properties.Resources.resources
+C:\Users\tanap\Desktop\Rubik.V1\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.csproj.GenerateResource.Cache
+C:\Users\tanap\Desktop\Rubik.V1\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.exe
+C:\Users\tanap\Desktop\Rubik.V1\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.pdb
+=======
 C:\Users\BOM\Desktop\GuiRubik\GUIRubik\Rubik.V1\bin\Debug\Rubik.V1.exe.config
 C:\Users\BOM\Desktop\GuiRubik\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.exe
 C:\Users\BOM\Desktop\GuiRubik\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.pdb
+<<<<<<< HEAD
 C:\Users\BOM\Desktop\GuiRubik\GUIRubik\Rubik.V1\bin\Debug\Rubik.V1.exe
 C:\Users\BOM\Desktop\GuiRubik\GUIRubik\Rubik.V1\bin\Debug\Rubik.V1.pdb
 C:\Users\BOM\Desktop\GuiRubik\GUIRubik\Rubik.V1\bin\Debug\AForge.dll
@@ -57,3 +78,6 @@ C:\Users\BOM\Desktop\GuiRubik\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.Form1.resourc
 C:\Users\BOM\Desktop\GuiRubik\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.Form2.resources
 C:\Users\BOM\Desktop\GuiRubik\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.Properties.Resources.resources
 C:\Users\BOM\Desktop\GuiRubik\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.csproj.GenerateResource.Cache
+=======
+>>>>>>> e7590344d0e0de16c1079f00359431ab803df19f
+>>>>>>> f4cca2a58ccb6a61c4ea75ac8a050eaa69e582e0
