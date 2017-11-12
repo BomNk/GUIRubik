@@ -1294,7 +1294,7 @@ namespace Rubik.V1
             show_color(Rubik);
             listBox1.Items.Add(numList + ": Right");
             numList++;
-            serialPort1.Write("d");
+            serialPort1.Write("a");
         }
 
         private void Top_Click(object sender, EventArgs e)
@@ -1322,7 +1322,7 @@ namespace Rubik.V1
             show_color(Rubik);
             listBox1.Items.Add(numList + ": Rear");
             numList++;
-            serialPort1.Write("a");
+            serialPort1.Write("d");
         }
 
 

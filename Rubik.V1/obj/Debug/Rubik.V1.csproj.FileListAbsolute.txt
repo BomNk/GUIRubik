@@ -62,7 +62,6 @@ C:\Users\tanap\Desktop\Rubik.V1\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.pdb
 C:\Users\BOM\Desktop\GuiRubik\GUIRubik\Rubik.V1\bin\Debug\Rubik.V1.exe.config
 C:\Users\BOM\Desktop\GuiRubik\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.exe
 C:\Users\BOM\Desktop\GuiRubik\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.pdb
-<<<<<<< HEAD
 C:\Users\BOM\Desktop\GuiRubik\GUIRubik\Rubik.V1\bin\Debug\Rubik.V1.exe
 C:\Users\BOM\Desktop\GuiRubik\GUIRubik\Rubik.V1\bin\Debug\Rubik.V1.pdb
 C:\Users\BOM\Desktop\GuiRubik\GUIRubik\Rubik.V1\bin\Debug\AForge.dll
@@ -78,6 +77,5 @@ C:\Users\BOM\Desktop\GuiRubik\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.Form1.resourc
 C:\Users\BOM\Desktop\GuiRubik\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.Form2.resources
 C:\Users\BOM\Desktop\GuiRubik\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.Properties.Resources.resources
 C:\Users\BOM\Desktop\GuiRubik\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.csproj.GenerateResource.Cache
-=======
 >>>>>>> e7590344d0e0de16c1079f00359431ab803df19f
 >>>>>>> f4cca2a58ccb6a61c4ea75ac8a050eaa69e582e0
