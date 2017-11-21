@@ -24,12 +24,12 @@ namespace Rubik.V1
 {
     public partial class Form1 : Form
     {
-        public char[][] Rubik = new char[6][] { new char[] {'P','P', 'P', 'P', 'P', 'P', 'P', 'P', 'P' },
-                                                new char[] {'B','B','B','B','B','B','B','B','B'},
-                                                new char[] { 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y' },
-                                                new char[] { 'G', 'G' , 'G' , 'G', 'G' , 'G' , 'G' , 'G','G' },
+        public char[][] Rubik = new char[6][] { new char[] {'B','B','B','B','B','B','B','B','B' },
+                                                new char[] {'P','P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},
+                                                new char[] { 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W'  },
                                                 new char[] { 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R' },
-                                                new char[] { 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W' } };
+                                                new char[] {'G', 'G' , 'G' , 'G', 'G' , 'G' , 'G' , 'G','G' },
+                                                new char[] { 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y' } };
         // public char[][] Rubik_copy = new char[6][];
 
         //Notebook
@@ -57,7 +57,7 @@ namespace Rubik.V1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            serialPort1.Open();
+            //serialPort1.Open();
             webcam = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo VideoCaptureDevice in webcam)
             {
@@ -407,6 +407,7 @@ namespace Rubik.V1
            
         }
 
+
         public void rotate_Face_right(char[][] Rc, int F)
         {
             char M = Rc[F][1];
@@ -423,6 +424,10 @@ namespace Rubik.V1
             Rc[F][8] = Rc[F][2];
             Rc[F][2] = C;
         }
+
+
+
+
 
         public void show_color(char[][] rk) // แสดงค่าสีบน panel // Finish
         {
@@ -1261,12 +1266,12 @@ namespace Rubik.V1
      
         private void Test_Click(object sender, EventArgs e) // Reset //Finish
         {
-            char[][] RK = new char[6][] { new char[] {'P','P', 'P', 'P', 'P', 'P', 'P', 'P', 'P' },
-                                                new char[] {'B','B','B','B','B','B','B','B','B'},
-                                                new char[] { 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y' },
-                                                new char[] { 'G', 'G' , 'G' , 'G', 'G' , 'G' , 'G' , 'G','G' },
+            char[][] RK = new char[6][] {  new char[] {'B','B','B','B','B','B','B','B','B' },
+                                                new char[] {'P','P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},
+                                                new char[] { 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W'  },
                                                 new char[] { 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R' },
-                                                new char[] { 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W' } };
+                                                new char[] {'G', 'G' , 'G' , 'G', 'G' , 'G' , 'G' , 'G','G' },
+                                                new char[] { 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y' } };
 
             listBox1.Items.Clear();
             numList = 0;
@@ -1285,7 +1290,7 @@ namespace Rubik.V1
             show_color(Rubik);
             listBox1.Items.Add(numList + ": Left");
             numList++;
-            serialPort1.Write("c");
+           // serialPort1.Write("c");
         }
 
         private void Right_Click_1(object sender, EventArgs e)
@@ -1294,10 +1299,10 @@ namespace Rubik.V1
             show_color(Rubik);
             listBox1.Items.Add(numList + ": Right");
             numList++;
-            serialPort1.Write("a");
+          //  serialPort1.Write("a");
         }
 
-        private void Top_Click(object sender, EventArgs e)
+        private void Top_Click(object sender, EventArgs e)   /// หมุนหน้ารูบิค
         {
             rotate_top();
             show_color(Rubik);
@@ -1313,7 +1318,7 @@ namespace Rubik.V1
             show_color(Rubik);
             listBox1.Items.Add(numList + ": Front");
             numList++;
-            serialPort1.Write("b");// Tanapon Ninket
+            //serialPort1.Write("b");// Tanapon Ninket
         }
 
         private void Rear_Click(object sender, EventArgs e)
@@ -1322,7 +1327,7 @@ namespace Rubik.V1
             show_color(Rubik);
             listBox1.Items.Add(numList + ": Rear");
             numList++;
-            serialPort1.Write("d");
+           // serialPort1.Write("d");
         }
 
 
@@ -1396,8 +1401,9 @@ namespace Rubik.V1
 
         }
 
+        private void label9_Click(object sender, EventArgs e)
+        {
 
-
-       
+        }
     } // end class 
 }
