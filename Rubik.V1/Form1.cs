@@ -1284,52 +1284,7 @@ namespace Rubik.V1
 
         //ส่วนควบคุมการหมุน
 
-        private void Left_Click(object sender, EventArgs e)
-        {
-            rotate_left();
-            show_color(Rubik);
-            listBox1.Items.Add(numList + ": Left");
-            numList++;
-           // serialPort1.Write("c");
-        }
-
-        private void Right_Click_1(object sender, EventArgs e)
-        {
-            rotate_right();
-            show_color(Rubik);
-            listBox1.Items.Add(numList + ": Right");
-            numList++;
-          //  serialPort1.Write("a");
-        }
-
-        private void Top_Click(object sender, EventArgs e)   /// หมุนหน้ารูบิค
-        {
-            rotate_top();
-            show_color(Rubik);
-            listBox1.Items.Add(numList + ": Change_Face");
-            numList++;
-        }
-
-        
-
-        private void Front_Click(object sender, EventArgs e)
-        {
-            rotate_front();
-            show_color(Rubik);
-            listBox1.Items.Add(numList + ": Front");
-            numList++;
-            //serialPort1.Write("b");// Tanapon Ninket
-        }
-
-        private void Rear_Click(object sender, EventArgs e)
-        {
-            rotate_rear();
-            show_color(Rubik);
-            listBox1.Items.Add(numList + ": Rear");
-            numList++;
-           // serialPort1.Write("d");
-        }
-
+       
 
 
 
@@ -1353,18 +1308,18 @@ namespace Rubik.V1
         {
             
             if (numPicture == 1)
-                str = "C:/Users/BOM/Desktop/New folder/1.jpg";
-            else if (numPicture == 2)
                 str = "C:/Users/BOM/Desktop/New folder/2.jpg";
+            else if (numPicture == 2)
+                str = "C:/Users/BOM/Desktop/New folder/1.jpg";
             else if (numPicture == 3)
-                str = "C:/Users/BOM/Desktop/New folder/3.jpg";
+                str = "C:/Users/BOM/Desktop/New folder/6.jpg";
             else if(numPicture == 4)
-                str = "C:/Users/BOM/Desktop/New folder/4.jpg";
-            else if(numPicture == 5)
                 str = "C:/Users/BOM/Desktop/New folder/5.jpg";
+            else if(numPicture == 5)
+                str = "C:/Users/BOM/Desktop/New folder/4.jpg";
             else if(numPicture == 6)
 
-                str = "C:/Users/BOM/Desktop/New folder/6.jpg";
+                str = "C:/Users/BOM/Desktop/New folder/3.jpg";
             R_Image = new Image<Hsv, Byte>(str);
 
             if (numPicture == 1)
@@ -1404,6 +1359,98 @@ namespace Rubik.V1
         private void label9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Left_Click(object sender, EventArgs e)    // Click L
+        {
+            rotate_left();
+            show_color(Rubik);
+            listBox1.Items.Add(numList + ": Left");
+            numList++;
+            // serialPort1.Write("c");
+        }
+
+        private void Right_Click_1(object sender, EventArgs e)   // Click R
+        {
+            rotate_right();
+            show_color(Rubik);
+            listBox1.Items.Add(numList + ": Right");
+            numList++;
+            //  serialPort1.Write("a");
+        }
+
+        private void Top_Click(object sender, EventArgs e)   // Chang Face
+        {
+            rotate_top();
+            show_color(Rubik);
+            listBox1.Items.Add(numList + ": Change_Face");
+            numList++;
+        }
+
+        private void Front_Click(object sender, EventArgs e) //Click F
+        {
+            rotate_front();
+            show_color(Rubik);
+            listBox1.Items.Add(numList + ": Front");
+            numList++;
+            //serialPort1.Write("b");// Tanapon Ninket
+        }
+
+        private void Rear_Click(object sender, EventArgs e)  // Click B
+        {
+            rotate_rear();
+            show_color(Rubik);
+            listBox1.Items.Add(numList + ": Rear");
+            numList++;
+            // serialPort1.Write("d");
+        }
+
+
+        private void U_Click(object sender, EventArgs e)  
+        {
+
+
+        }
+
+        private void D_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Bdet_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Ldet_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Fdet_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Rdet_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Udet_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Ddet_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form3 fm3 = new Form3();
+            fm3.Show();
         }
     } // end class 
 }

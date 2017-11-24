@@ -119,14 +119,15 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label15 = new System.Windows.Forms.Label();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
-            this.button4 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
+            this.U = new System.Windows.Forms.Button();
+            this.D = new System.Windows.Forms.Button();
+            this.Ddet = new System.Windows.Forms.Button();
+            this.Ldet = new System.Windows.Forms.Button();
+            this.Bdet = new System.Windows.Forms.Button();
+            this.Udet = new System.Windows.Forms.Button();
+            this.Rdet = new System.Windows.Forms.Button();
+            this.Fdet = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Box2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box4)).BeginInit();
@@ -517,12 +518,12 @@
             // 
             this.Right.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Right.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Right.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Right.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Right.Location = new System.Drawing.Point(456, 245);
             this.Right.Name = "Right";
             this.Right.Size = new System.Drawing.Size(60, 48);
             this.Right.TabIndex = 58;
-            this.Right.Text = "Right";
+            this.Right.Text = "R";
             this.Right.UseVisualStyleBackColor = false;
             this.Right.Click += new System.EventHandler(this.Right_Click_1);
             // 
@@ -530,12 +531,12 @@
             // 
             this.Left.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Left.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Left.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Left.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Left.Location = new System.Drawing.Point(315, 245);
             this.Left.Name = "Left";
             this.Left.Size = new System.Drawing.Size(61, 47);
             this.Left.TabIndex = 59;
-            this.Left.Text = "Left";
+            this.Left.Text = "L";
             this.Left.UseVisualStyleBackColor = false;
             this.Left.Click += new System.EventHandler(this.Left_Click);
             // 
@@ -556,12 +557,12 @@
             // 
             this.Front.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Front.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Front.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Front.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Front.Location = new System.Drawing.Point(385, 245);
             this.Front.Name = "Front";
             this.Front.Size = new System.Drawing.Size(65, 47);
             this.Front.TabIndex = 61;
-            this.Front.Text = "Front";
+            this.Front.Text = "F";
             this.Front.UseVisualStyleBackColor = false;
             this.Front.Click += new System.EventHandler(this.Front_Click);
             // 
@@ -569,12 +570,12 @@
             // 
             this.Rear.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Rear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Rear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Rear.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Rear.Location = new System.Drawing.Point(244, 245);
             this.Rear.Name = "Rear";
             this.Rear.Size = new System.Drawing.Size(65, 47);
             this.Rear.TabIndex = 62;
-            this.Rear.Text = "Back";
+            this.Rear.Text = "B";
             this.Rear.UseVisualStyleBackColor = false;
             this.Rear.Click += new System.EventHandler(this.Rear_Click);
             // 
@@ -788,9 +789,9 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(250, 229);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(233, 13);
+            this.label9.Size = new System.Drawing.Size(237, 13);
             this.label9.TabIndex = 90;
-            this.label9.Text = "***หันหน้าสีแดงเข้าหาตัว ซ้ายสีน้ำเงิน  ขวาสีเขียว";
+            this.label9.Text = "***หันหน้าสีเขียวเข้าหาตัว ซ้ายสีน้ำเงิน  ขวาสีเขียว";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label11
@@ -850,99 +851,118 @@
             // 
             this.serialPort1.PortName = "COM3";
             // 
-            // button4
+            // U
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(530, 245);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(63, 48);
-            this.button4.TabIndex = 100;
-            this.button4.Text = "U";
-            this.button4.UseVisualStyleBackColor = true;
+            this.U.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.U.Location = new System.Drawing.Point(530, 245);
+            this.U.Name = "U";
+            this.U.Size = new System.Drawing.Size(63, 48);
+            this.U.TabIndex = 100;
+            this.U.Text = "U";
+            this.U.UseVisualStyleBackColor = true;
+            this.U.Click += new System.EventHandler(this.U_Click);
             // 
-            // button7
+            // D
             // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(639, 247);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(63, 47);
-            this.button7.TabIndex = 103;
-            this.button7.Text = "D";
-            this.button7.UseVisualStyleBackColor = true;
+            this.D.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.D.Location = new System.Drawing.Point(639, 247);
+            this.D.Name = "D";
+            this.D.Size = new System.Drawing.Size(63, 47);
+            this.D.TabIndex = 103;
+            this.D.Text = "D";
+            this.D.UseVisualStyleBackColor = true;
+            this.D.Click += new System.EventHandler(this.D_Click);
             // 
-            // button8
+            // Ddet
             // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(639, 298);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(63, 57);
-            this.button8.TabIndex = 109;
-            this.button8.Text = "D\'";
-            this.button8.UseVisualStyleBackColor = true;
+            this.Ddet.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ddet.Location = new System.Drawing.Point(639, 298);
+            this.Ddet.Name = "Ddet";
+            this.Ddet.Size = new System.Drawing.Size(63, 57);
+            this.Ddet.TabIndex = 109;
+            this.Ddet.Text = "D\'";
+            this.Ddet.UseVisualStyleBackColor = true;
+            this.Ddet.Click += new System.EventHandler(this.Ddet_Click);
             // 
-            // button9
+            // Ldet
             // 
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(313, 298);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(63, 58);
-            this.button9.TabIndex = 108;
-            this.button9.Text = "L\'";
-            this.button9.UseVisualStyleBackColor = true;
+            this.Ldet.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ldet.Location = new System.Drawing.Point(313, 298);
+            this.Ldet.Name = "Ldet";
+            this.Ldet.Size = new System.Drawing.Size(63, 58);
+            this.Ldet.TabIndex = 108;
+            this.Ldet.Text = "L\'";
+            this.Ldet.UseVisualStyleBackColor = true;
+            this.Ldet.Click += new System.EventHandler(this.Ldet_Click);
             // 
-            // button10
+            // Bdet
             // 
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(244, 298);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(63, 57);
-            this.button10.TabIndex = 107;
-            this.button10.Text = "B\'";
-            this.button10.UseVisualStyleBackColor = true;
+            this.Bdet.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bdet.Location = new System.Drawing.Point(244, 298);
+            this.Bdet.Name = "Bdet";
+            this.Bdet.Size = new System.Drawing.Size(63, 57);
+            this.Bdet.TabIndex = 107;
+            this.Bdet.Text = "B\'";
+            this.Bdet.UseVisualStyleBackColor = true;
+            this.Bdet.Click += new System.EventHandler(this.Bdet_Click);
             // 
-            // button11
+            // Udet
             // 
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(530, 298);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(63, 58);
-            this.button11.TabIndex = 106;
-            this.button11.Text = "U\'";
-            this.button11.UseVisualStyleBackColor = true;
+            this.Udet.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Udet.Location = new System.Drawing.Point(530, 298);
+            this.Udet.Name = "Udet";
+            this.Udet.Size = new System.Drawing.Size(63, 58);
+            this.Udet.TabIndex = 106;
+            this.Udet.Text = "U\'";
+            this.Udet.UseVisualStyleBackColor = true;
+            this.Udet.Click += new System.EventHandler(this.Udet_Click);
             // 
-            // button12
+            // Rdet
             // 
-            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(453, 298);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(63, 58);
-            this.button12.TabIndex = 105;
-            this.button12.Text = "R\'";
-            this.button12.UseVisualStyleBackColor = true;
+            this.Rdet.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Rdet.Location = new System.Drawing.Point(453, 298);
+            this.Rdet.Name = "Rdet";
+            this.Rdet.Size = new System.Drawing.Size(63, 58);
+            this.Rdet.TabIndex = 105;
+            this.Rdet.Text = "R\'";
+            this.Rdet.UseVisualStyleBackColor = true;
+            this.Rdet.Click += new System.EventHandler(this.Rdet_Click);
             // 
-            // button13
+            // Fdet
             // 
-            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.Location = new System.Drawing.Point(387, 298);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(63, 58);
-            this.button13.TabIndex = 104;
-            this.button13.Text = "F\'";
-            this.button13.UseVisualStyleBackColor = true;
+            this.Fdet.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fdet.Location = new System.Drawing.Point(387, 298);
+            this.Fdet.Name = "Fdet";
+            this.Fdet.Size = new System.Drawing.Size(63, 58);
+            this.Fdet.TabIndex = 104;
+            this.Fdet.Text = "F\'";
+            this.Fdet.UseVisualStyleBackColor = true;
+            this.Fdet.Click += new System.EventHandler(this.Fdet_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(609, 411);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(93, 22);
+            this.button1.TabIndex = 110;
+            this.button1.Text = "MeanButton";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1098, 441);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Ddet);
+            this.Controls.Add(this.Ldet);
+            this.Controls.Add(this.Bdet);
+            this.Controls.Add(this.Udet);
+            this.Controls.Add(this.Rdet);
+            this.Controls.Add(this.Fdet);
+            this.Controls.Add(this.D);
+            this.Controls.Add(this.U);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label14);
@@ -1136,14 +1156,15 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label15;
         private System.IO.Ports.SerialPort serialPort1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button U;
+        private System.Windows.Forms.Button D;
+        private System.Windows.Forms.Button Ddet;
+        private System.Windows.Forms.Button Ldet;
+        private System.Windows.Forms.Button Bdet;
+        private System.Windows.Forms.Button Udet;
+        private System.Windows.Forms.Button Rdet;
+        private System.Windows.Forms.Button Fdet;
+        private System.Windows.Forms.Button button1;
     }
 }
 
