@@ -335,17 +335,34 @@ namespace Rubik.V1
 
         }
 
-        public void rotate_right() // Right // Finish
+        public void rotate_right(int arrow) // Right // Finish
         {
-            rotate_Face(Rubik, 3,0);
+            if (arrow == 0)
+            {
+                rotate_Face(Rubik, 3, 0);
 
-            char[] tmp = new char[3];
-            tmp[0] = Rubik[0][2]; tmp[1] = Rubik[0][5]; ; tmp[2] = Rubik[0][8];
-            Rubik[0][2] = Rubik[5][2]; Rubik[0][5] = Rubik[5][5]; Rubik[0][8] = Rubik[5][8];
-            Rubik[5][2] = Rubik[4][2]; Rubik[5][5] = Rubik[4][5]; Rubik[5][8] = Rubik[4][8];
-            Rubik[4][2] = Rubik[2][2]; Rubik[4][5] = Rubik[2][5]; Rubik[4][8] = Rubik[2][8];
-            Rubik[2][2] = tmp[0]; Rubik[2][5] = tmp[1]; Rubik[2][8] = tmp[2];
+                char[] tmp = new char[3];
+                tmp[0] = Rubik[0][2]; tmp[1] = Rubik[0][5]; ; tmp[2] = Rubik[0][8];
+                Rubik[0][2] = Rubik[5][2]; Rubik[0][5] = Rubik[5][5]; Rubik[0][8] = Rubik[5][8];
+                Rubik[5][2] = Rubik[4][2]; Rubik[5][5] = Rubik[4][5]; Rubik[5][8] = Rubik[4][8];
+                Rubik[4][2] = Rubik[2][2]; Rubik[4][5] = Rubik[2][5]; Rubik[4][8] = Rubik[2][8];
+                Rubik[2][2] = tmp[0]; Rubik[2][5] = tmp[1]; Rubik[2][8] = tmp[2];
+            }
+            else if(arrow == 1)
+            {
+                rotate_Face(Rubik, 3, 1);
 
+                char[] tmp = new char[3];
+                tmp[0] = Rubik[2][2]; tmp[1] = Rubik[2][5]; tmp[2] = Rubik[2][8];
+
+                Rubik[2][2] = Rubik[4][2]; Rubik[2][5] = Rubik[4][5]; Rubik[2][8] = Rubik[4][8];
+                 Rubik[4][2] = Rubik[5][2]; Rubik[4][5] = Rubik[5][5];  Rubik[4][8] = Rubik[5][8];
+                Rubik[5][2] = Rubik[0][2]; Rubik[5][5] = Rubik[0][5]; Rubik[5][8] = Rubik[0][8];
+
+                Rubik[0][2] = tmp[0]; Rubik[0][5] = tmp[1]; ; Rubik[0][8] = tmp[2];
+                
+
+            }
         }
 
         public void rotate_top(int arrow) // Top or UP // //
@@ -1483,10 +1500,15 @@ namespace Rubik.V1
 
         private void Right_Click_1(object sender, EventArgs e)   //  R
         {
-           
+            rotate_right(1);
+            show_color(Rubik);
+            listBox1.Items.Add(numList + ": R");
+            numList++;
+            //  serialPort1.Write("a");
+
         }
 
-        
+
 
         private void Front_Click(object sender, EventArgs e) // F
         {
@@ -1555,9 +1577,9 @@ namespace Rubik.V1
 
         private void Rdet_Click(object sender, EventArgs e) // R'
         {
-            rotate_right();
+            rotate_right(0);
             show_color(Rubik);
-            listBox1.Items.Add(numList + ": Right");
+            listBox1.Items.Add(numList + ": R'");
             numList++;
             //  serialPort1.Write("a");
         }

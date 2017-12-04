@@ -128,12 +128,14 @@
             this.Rdet = new System.Windows.Forms.Button();
             this.Fdet = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.performanceCounter1 = new System.Diagnostics.PerformanceCounter();
             ((System.ComponentModel.ISupportInitialize)(this.Box2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).BeginInit();
             this.SuspendLayout();
             // 
             // A0
@@ -1060,6 +1062,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Box5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1165,6 +1168,7 @@
         private System.Windows.Forms.Button Rdet;
         private System.Windows.Forms.Button Fdet;
         private System.Windows.Forms.Button button1;
+        private System.Diagnostics.PerformanceCounter performanceCounter1;
     }
 }
 
