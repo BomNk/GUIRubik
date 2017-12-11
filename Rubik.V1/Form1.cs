@@ -1452,5 +1452,26 @@ namespace Rubik.V1
             Form3 fm3 = new Form3();
             fm3.Show();
         }
+
+
+        private void open_left_right_Click(object sender, EventArgs e) // เลื่อนออก ซ้าย---ขวา
+        {
+
+        }
+
+        private void close_left_right_Click(object sender, EventArgs e) // เลื่อนเข้า ซ้าย---ขวา
+        {
+
+        }
+
+        private void open_front_back_Click(object sender, EventArgs e)  // เลื่อนเข้า หน้า---หลัง
+        {
+
+        }
+
+        private void close_front_back_Click(object sender, EventArgs e) // เลื่อนออก หน้า---หลัง
+        {
+
+        }
     } // end class 
 }

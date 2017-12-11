@@ -128,6 +128,10 @@
             this.Rdet = new System.Windows.Forms.Button();
             this.Fdet = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.open_left_right = new System.Windows.Forms.Button();
+            this.close_left_right = new System.Windows.Forms.Button();
+            this.close_front_back = new System.Windows.Forms.Button();
+            this.open_front_back = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Box2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box4)).BeginInit();
@@ -941,7 +945,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(609, 411);
+            this.button1.Location = new System.Drawing.Point(718, 369);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 22);
             this.button1.TabIndex = 110;
@@ -949,11 +953,59 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // open_left_right
+            // 
+            this.open_left_right.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.open_left_right.Location = new System.Drawing.Point(244, 369);
+            this.open_left_right.Name = "open_left_right";
+            this.open_left_right.Size = new System.Drawing.Size(80, 42);
+            this.open_left_right.TabIndex = 111;
+            this.open_left_right.Text = "<<LR>>";
+            this.open_left_right.UseVisualStyleBackColor = true;
+            this.open_left_right.Click += new System.EventHandler(this.open_left_right_Click);
+            // 
+            // close_left_right
+            // 
+            this.close_left_right.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.close_left_right.Location = new System.Drawing.Point(330, 369);
+            this.close_left_right.Name = "close_left_right";
+            this.close_left_right.Size = new System.Drawing.Size(81, 42);
+            this.close_left_right.TabIndex = 112;
+            this.close_left_right.Text = ">>LR<<";
+            this.close_left_right.UseVisualStyleBackColor = true;
+            this.close_left_right.Click += new System.EventHandler(this.close_left_right_Click);
+            // 
+            // close_front_back
+            // 
+            this.close_front_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.close_front_back.Location = new System.Drawing.Point(621, 369);
+            this.close_front_back.Name = "close_front_back";
+            this.close_front_back.Size = new System.Drawing.Size(81, 42);
+            this.close_front_back.TabIndex = 115;
+            this.close_front_back.Text = ">>FB<<";
+            this.close_front_back.UseVisualStyleBackColor = true;
+            this.close_front_back.Click += new System.EventHandler(this.close_front_back_Click);
+            // 
+            // open_front_back
+            // 
+            this.open_front_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.open_front_back.Location = new System.Drawing.Point(535, 369);
+            this.open_front_back.Name = "open_front_back";
+            this.open_front_back.Size = new System.Drawing.Size(80, 42);
+            this.open_front_back.TabIndex = 114;
+            this.open_front_back.Text = "<<FB>>";
+            this.open_front_back.UseVisualStyleBackColor = true;
+            this.open_front_back.Click += new System.EventHandler(this.open_front_back_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1098, 441);
+            this.Controls.Add(this.close_front_back);
+            this.Controls.Add(this.open_front_back);
+            this.Controls.Add(this.close_left_right);
+            this.Controls.Add(this.open_left_right);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Ddet);
             this.Controls.Add(this.Ldet);
@@ -1165,6 +1217,10 @@
         private System.Windows.Forms.Button Rdet;
         private System.Windows.Forms.Button Fdet;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button open_left_right;
+        private System.Windows.Forms.Button close_left_right;
+        private System.Windows.Forms.Button close_front_back;
+        private System.Windows.Forms.Button open_front_back;
     }
 }
 
