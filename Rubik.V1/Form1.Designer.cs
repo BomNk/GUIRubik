@@ -128,16 +128,21 @@
             this.Rdet = new System.Windows.Forms.Button();
             this.Fdet = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+<<<<<<< HEAD
             this.open_left_right = new System.Windows.Forms.Button();
             this.close_left_right = new System.Windows.Forms.Button();
             this.close_front_back = new System.Windows.Forms.Button();
             this.open_front_back = new System.Windows.Forms.Button();
+=======
+            this.performanceCounter1 = new System.Diagnostics.PerformanceCounter();
+>>>>>>> 6660cc3015398fa2a960b8bd0d824c6d907f612f
             ((System.ComponentModel.ISupportInitialize)(this.Box2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).BeginInit();
             this.SuspendLayout();
             // 
             // A0
@@ -1112,6 +1117,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Box5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1217,10 +1223,14 @@
         private System.Windows.Forms.Button Rdet;
         private System.Windows.Forms.Button Fdet;
         private System.Windows.Forms.Button button1;
+<<<<<<< HEAD
         private System.Windows.Forms.Button open_left_right;
         private System.Windows.Forms.Button close_left_right;
         private System.Windows.Forms.Button close_front_back;
         private System.Windows.Forms.Button open_front_back;
+=======
+        private System.Diagnostics.PerformanceCounter performanceCounter1;
+>>>>>>> 6660cc3015398fa2a960b8bd0d824c6d907f612f
     }
 }
 
