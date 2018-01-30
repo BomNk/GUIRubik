@@ -81,3 +81,22 @@ C:\Users\BOM\Desktop\GuiRubik\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.csproj.Genera
 >>>>>>> f4cca2a58ccb6a61c4ea75ac8a050eaa69e582e0
 C:\Users\BOM\Desktop\GuiRubik\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.Form3.resources
 C:\Users\tanap\Desktop\Rubik.V1\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.Form3.resources
+C:\Users\tanap\Documents\GitHub\GUIRubik\Rubik.V1\bin\Debug\Rubik.V1.exe.config
+C:\Users\tanap\Documents\GitHub\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.exe
+C:\Users\tanap\Documents\GitHub\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.pdb
+C:\Users\tanap\Documents\GitHub\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.csprojResolveAssemblyReference.cache
+C:\Users\tanap\Documents\GitHub\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.Form1.resources
+C:\Users\tanap\Documents\GitHub\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.Form2.resources
+C:\Users\tanap\Documents\GitHub\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.Form3.resources
+C:\Users\tanap\Documents\GitHub\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.Properties.Resources.resources
+C:\Users\tanap\Documents\GitHub\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.csproj.GenerateResource.Cache
+C:\Users\tanap\Documents\GitHub\GUIRubik\Rubik.V1\bin\Debug\Rubik.V1.exe
+C:\Users\tanap\Documents\GitHub\GUIRubik\Rubik.V1\bin\Debug\Rubik.V1.pdb
+C:\Users\tanap\Documents\GitHub\GUIRubik\Rubik.V1\bin\Debug\AForge.dll
+C:\Users\tanap\Documents\GitHub\GUIRubik\Rubik.V1\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\tanap\Documents\GitHub\GUIRubik\Rubik.V1\bin\Debug\AForge.Video.dll
+C:\Users\tanap\Documents\GitHub\GUIRubik\Rubik.V1\bin\Debug\Microsoft.VisualStudio.DebuggerVisualizers.dll
+C:\Users\tanap\Documents\GitHub\GUIRubik\Rubik.V1\bin\Debug\Emgu.CV.UI.xml
+C:\Users\tanap\Documents\GitHub\GUIRubik\Rubik.V1\bin\Debug\Emgu.CV.UI.GL.xml
+C:\Users\tanap\Documents\GitHub\GUIRubik\Rubik.V1\bin\Debug\Emgu.CV.World.xml
+C:\Users\tanap\Documents\GitHub\GUIRubik\Rubik.V1\bin\Debug\Microsoft.VisualStudio.DebuggerVisualizers.xml

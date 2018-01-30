@@ -128,14 +128,11 @@
             this.Rdet = new System.Windows.Forms.Button();
             this.Fdet = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-<<<<<<< HEAD
             this.open_left_right = new System.Windows.Forms.Button();
             this.close_left_right = new System.Windows.Forms.Button();
             this.close_front_back = new System.Windows.Forms.Button();
             this.open_front_back = new System.Windows.Forms.Button();
-=======
             this.performanceCounter1 = new System.Diagnostics.PerformanceCounter();
->>>>>>> 6660cc3015398fa2a960b8bd0d824c6d907f612f
             ((System.ComponentModel.ISupportInitialize)(this.Box2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box4)).BeginInit();
@@ -554,7 +551,7 @@
             this.Top.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Top.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Top.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Top.Location = new System.Drawing.Point(530, 194);
+            this.Top.Location = new System.Drawing.Point(507, 182);
             this.Top.Name = "Top";
             this.Top.Size = new System.Drawing.Size(172, 47);
             this.Top.TabIndex = 60;
@@ -1223,14 +1220,14 @@
         private System.Windows.Forms.Button Rdet;
         private System.Windows.Forms.Button Fdet;
         private System.Windows.Forms.Button button1;
-<<<<<<< HEAD
+//<<<<<<< HEAD
         private System.Windows.Forms.Button open_left_right;
         private System.Windows.Forms.Button close_left_right;
         private System.Windows.Forms.Button close_front_back;
         private System.Windows.Forms.Button open_front_back;
-=======
+//=======
         private System.Diagnostics.PerformanceCounter performanceCounter1;
->>>>>>> 6660cc3015398fa2a960b8bd0d824c6d907f612f
+//>>>>>>> 6660cc3015398fa2a960b8bd0d824c6d907f612f
     }
 }
 
