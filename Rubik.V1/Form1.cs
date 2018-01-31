@@ -43,7 +43,7 @@ namespace Rubik.V1
         int numList = 1;
         int Time,Delay=0;
 
-        
+        // Test Commit
         // รูปต้นฉบับ
         // Image<Hsv, Byte> gray_image;   // รูปที่โดนเปลี่ยนเป็นแบบ GRY
         Image<Hsv, Byte> My_image_copy; // รูปที่ใช้แก้ใข 
