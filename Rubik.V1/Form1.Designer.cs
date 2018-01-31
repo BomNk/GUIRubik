@@ -132,8 +132,6 @@
             this.close_front_back = new System.Windows.Forms.Button();
             this.open_front_back = new System.Windows.Forms.Button();
             this.performanceCounter1 = new System.Diagnostics.PerformanceCounter();
-//<<<<<<< HEAD
-//=======
             this.Text_Result = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.Text_Time = new System.Windows.Forms.TextBox();
@@ -141,12 +139,8 @@
             this.Start_Auto = new System.Windows.Forms.Button();
             this.STOP_AUTO = new System.Windows.Forms.Button();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-//<<<<<<< HEAD
             this.Text_face = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-//=======
-//>>>>>>> 9388c61672a563c1bfc4288a1eec70d11014470a
-//>>>>>>> 4f71d9e57cdc25737cab73f0a24daa6ded1a945c
             ((System.ComponentModel.ISupportInitialize)(this.Box2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box4)).BeginInit();
@@ -560,22 +554,6 @@
             this.Left.UseVisualStyleBackColor = false;
             this.Left.Click += new System.EventHandler(this.Left_Click);
             // 
-/*<<<<<<< HEAD
-            // Top
-            // 
-            this.Top.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Top.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Top.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Top.Location = new System.Drawing.Point(344, 169);
-            this.Top.Name = "Top";
-            this.Top.Size = new System.Drawing.Size(172, 47);
-            this.Top.TabIndex = 60;
-            this.Top.Text = "Rotate_Rubik";
-            this.Top.UseVisualStyleBackColor = false;
-            this.Top.Click += new System.EventHandler(this.Top_Click);
-            // 
-=======
->>>>>>> 9388c61672a563c1bfc4288a1eec70d11014470a*/
             // Front
             // 
             this.Front.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -666,7 +644,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(887, 124);
+            this.comboBox1.Location = new System.Drawing.Point(887, 264);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(206, 21);
             this.comboBox1.TabIndex = 73;
@@ -709,7 +687,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(746, 127);
+            this.label1.Location = new System.Drawing.Point(708, 193);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 77;
@@ -718,7 +696,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(830, 127);
+            this.label2.Location = new System.Drawing.Point(754, 192);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 78;
@@ -821,7 +799,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(930, 264);
+            this.label11.Location = new System.Drawing.Point(923, 297);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(82, 13);
             this.label11.TabIndex = 92;
@@ -830,7 +808,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(960, 280);
+            this.label12.Location = new System.Drawing.Point(953, 313);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(69, 13);
             this.label12.TabIndex = 93;
@@ -839,7 +817,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(960, 293);
+            this.label13.Location = new System.Drawing.Point(953, 326);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(133, 13);
             this.label13.TabIndex = 94;
@@ -848,7 +826,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(960, 306);
+            this.label14.Location = new System.Drawing.Point(953, 339);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(129, 13);
             this.label14.TabIndex = 95;
@@ -1019,9 +997,9 @@
             // 
             // Text_Result
             // 
-            this.Text_Result.Location = new System.Drawing.Point(382, 155);
+            this.Text_Result.Location = new System.Drawing.Point(382, 154);
             this.Text_Result.Name = "Text_Result";
-            this.Text_Result.Size = new System.Drawing.Size(320, 20);
+            this.Text_Result.Size = new System.Drawing.Size(490, 20);
             this.Text_Result.TabIndex = 116;
             // 
             // label10
@@ -1035,7 +1013,7 @@
             // 
             // Text_Time
             // 
-            this.Text_Time.Location = new System.Drawing.Point(741, 156);
+            this.Text_Time.Location = new System.Drawing.Point(986, 127);
             this.Text_Time.Name = "Text_Time";
             this.Text_Time.Size = new System.Drawing.Size(100, 20);
             this.Text_Time.TabIndex = 118;
@@ -1043,7 +1021,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(705, 159);
+            this.label16.Location = new System.Drawing.Point(937, 132);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(30, 13);
             this.label16.TabIndex = 119;
@@ -1051,7 +1029,7 @@
             // 
             // Start_Auto
             // 
-            this.Start_Auto.Location = new System.Drawing.Point(382, 182);
+            this.Start_Auto.Location = new System.Drawing.Point(382, 184);
             this.Start_Auto.Name = "Start_Auto";
             this.Start_Auto.Size = new System.Drawing.Size(155, 35);
             this.Start_Auto.TabIndex = 120;
@@ -1061,7 +1039,7 @@
             // 
             // STOP_AUTO
             // 
-            this.STOP_AUTO.Location = new System.Drawing.Point(564, 181);
+            this.STOP_AUTO.Location = new System.Drawing.Point(564, 185);
             this.STOP_AUTO.Name = "STOP_AUTO";
             this.STOP_AUTO.Size = new System.Drawing.Size(131, 35);
             this.STOP_AUTO.TabIndex = 121;
@@ -1078,7 +1056,7 @@
             // 
             this.Text_face.Location = new System.Drawing.Point(382, 129);
             this.Text_face.Name = "Text_face";
-            this.Text_face.Size = new System.Drawing.Size(358, 20);
+            this.Text_face.Size = new System.Drawing.Size(533, 20);
             this.Text_face.TabIndex = 122;
             // 
             // label17
@@ -1212,7 +1190,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Box5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box1)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

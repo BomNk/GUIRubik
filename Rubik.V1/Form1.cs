@@ -127,7 +127,45 @@ namespace Rubik.V1
         private void Take_Click_1(object sender, EventArgs e)  // Finish
         {
             // My_Image = new Image<Hsv, Byte>();
-            read_color(numTake-1);
+            //read_color(numTake-1);
+            if (numTake == 1)
+            {
+
+                //Box1.Image = R_Image.ToBitmap();
+                read_color(1 - 1);
+            }
+            if (numTake == 2)
+            {
+
+                //Box5.Image = R_Image.ToBitmap();
+                read_color(5 - 1);
+            }
+            if (numTake == 3)
+            {
+
+                //Box2.Image = R_Image.ToBitmap();
+                read_color(2 - 1);
+            }
+            if (numTake == 4)
+            {
+
+                //Box4.Image = R_Image.ToBitmap();
+                read_color(4 - 1);
+            }
+            if (numTake == 5)
+            {
+
+                //Box3.Image = R_Image.ToBitmap();
+                read_color(3 - 1);
+            }
+            if (numTake == 6)
+            {
+
+                //Box6.Image = R_Image.ToBitmap();
+                read_color(6 - 1);
+            }
+
+
             numTake++;
             timer1.Enabled = true;
             //  String str = "";
@@ -137,14 +175,16 @@ namespace Rubik.V1
             label2.Text = "Cam_" + numTake + " Running";
 
             show_color(Rubik);
+
+            Text_face.Text = showRubik(Rubik);
             //  saveFileDialog1.InitialDirectory = @"d:\picture";
             //saveFileDialog1.FileName = str+i;
             //  if (DialogResult.OK == saveFileDialog1.ShowDialog())
             // {
             //         Box1.Image.Save(saveFileDialog1.FileName);
             //  }
-           // int a = numTake - 2;
-           // pictureBox1.Image = R_Image.ToBitmap();
+            // int a = numTake - 2;
+            // pictureBox1.Image = R_Image.ToBitmap();
 
             timer1.Stop();
             //numTake++;
@@ -1423,44 +1463,83 @@ namespace Rubik.V1
         {
             
             if (numPicture == 1)
-                str = "C:/Users/BOM/Desktop/New folder/2.jpg";
+                str = "C:/Users/BOM/Desktop/New folder/2.jpg"; // back
             else if (numPicture == 2)
-                str = "C:/Users/BOM/Desktop/New folder/1.jpg";
+                str = "C:/Users/BOM/Desktop/New folder/4.jpg"; // Front
             else if (numPicture == 3)
-                str = "C:/Users/BOM/Desktop/New folder/6.jpg";
+                str = "C:/Users/BOM/Desktop/New folder/1.jpg"; // left
             else if(numPicture == 4)
-                str = "C:/Users/BOM/Desktop/New folder/5.jpg";
+                str = "C:/Users/BOM/Desktop/New folder/5.jpg"; // Right
             else if(numPicture == 5)
-                str = "C:/Users/BOM/Desktop/New folder/4.jpg";
+                str = "C:/Users/BOM/Desktop/New folder/6.jpg"; // up
             else if(numPicture == 6)
+                str = "C:/Users/BOM/Desktop/New folder/3.jpg"; // Dow
 
 
-                str = "C:/Users/BOM/Desktop/New folder/3.jpg";
             R_Image = new Image<Hsv, Byte>(str);
 
             if (numPicture == 1)
+            {
+               
                 Box1.Image = R_Image.ToBitmap();
+                read_color(1 - 1);
+            }
             if (numPicture == 2)
-                Box2.Image = R_Image.ToBitmap();
-            if (numPicture == 3)
-                Box3.Image = R_Image.ToBitmap();
-            if (numPicture == 4)
-                Box4.Image = R_Image.ToBitmap();
-            if (numPicture == 5)
+            {
+               
                 Box5.Image = R_Image.ToBitmap();
+                read_color(5 - 1);
+            }
+            if (numPicture == 3)
+            {
+               
+                Box2.Image = R_Image.ToBitmap();
+                read_color(2 - 1);
+            }
+            if (numPicture == 4)
+            {
+                
+                Box4.Image = R_Image.ToBitmap();
+                read_color(4 - 1);
+            }
+            if (numPicture == 5)
+            {
+                
+                Box3.Image = R_Image.ToBitmap();
+                read_color(3 - 1);
+            }
             if (numPicture == 6)
+            {
+                
                 Box6.Image = R_Image.ToBitmap();
+                read_color(6 - 1);
+            }
 
-            read_color(numPicture - 1); 
+           // read_color()
 
             show_color(Rubik);
             numPicture++;
-            Text_face.Text = Rubik.ToString();
+
+            Text_face.Text = showRubik(Rubik);
 
 
 
 
         }
+        public String showRubik(char[][] Rubik)
+        {
+            String str = "";
+            for (int i = 0; i < 6; i++)
+            {
+                for(int j = 0; j < 9; j++)
+                {
+                    str = str + Rubik[i][j];
+                }
+            }
+            return str;
+        }
+
+
 
         private void RotateRight_CheckedChanged(object sender, EventArgs e)
         {
