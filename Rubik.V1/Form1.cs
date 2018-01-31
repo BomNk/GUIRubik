@@ -43,6 +43,8 @@ namespace Rubik.V1
         int numList = 1;
         int Time,Delay=0;
 
+        int NumTimer = 0;
+
         // Test Commit
         // รูปต้นฉบับ
         // Image<Hsv, Byte> gray_image;   // รูปที่โดนเปลี่ยนเป็นแบบ GRY
@@ -1717,12 +1719,15 @@ namespace Rubik.V1
 
         private void Start_Auto_Click(object sender, EventArgs e)
         {
-            Test_Click(sender,e);
+           
             timer1.Enabled = true;
             timer1.Start();
-            delay(5000);
-            STOP_AUTO_Click(sender, e);
-            delay(5000);
+            
+
+
+
+            //STOP_AUTO_Click(sender, e);
+            
             //Start_Auto_Click(sender, e);
 
 
@@ -1734,13 +1739,20 @@ namespace Rubik.V1
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Time++;
-            Text_Time.Text = " " + Time ;
+            Take_Click_1(sender, e);
+            NumTimer++;
+            if(NumTimer == 6)
+            {
+                timer1.Stop();
+            }
+            //Time++;
+            //Text_Time.Text = " " + Time ;
 
         }
 
         private void STOP_AUTO_Click(object sender, EventArgs e)
         {
+
             timer1.Stop();
         }
 
