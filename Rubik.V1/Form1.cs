@@ -41,6 +41,7 @@ namespace Rubik.V1
         String str = "";
         int numPicture = 1;
         int numList = 1;
+        int Time,Delay=0;
 
         
         // รูปต้นฉบับ
@@ -57,13 +58,13 @@ namespace Rubik.V1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            serialPort1.Open();
+            //serialPort1.Open();
             webcam = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo VideoCaptureDevice in webcam)
             {
                 comboBox1.Items.Add(VideoCaptureDevice.Name);
             }
-            comboBox1.SelectedIndex = 0;
+            //comboBox1.SelectedIndex = 0;
 
         }
 
@@ -299,110 +300,235 @@ namespace Rubik.V1
       
 
 
+        ///////////////////////////////// คำสั่งที่ใช้หมุนลูกรูบิค/////////////////////////////////////
 
 
-
-        public void rotate_left() //หมุนซ้าย // Finish
+        public void rotate_left(int arrow) //Left // Finish
         {
-           
-            rotate_Face(Rubik, 1);
+            if (arrow == 0)
+            {
+                rotate_Face(Rubik, 1, 0);
 
-            char[] tmp = new char[3];
-            tmp[0] = Rubik[0][0]; tmp[1] = Rubik[0][3]; ; tmp[2] = Rubik[0][6];
-            Rubik[0][0] = Rubik[2][0]; Rubik[0][3] = Rubik[2][3]; Rubik[0][6] = Rubik[2][6];
-            Rubik[2][0] = Rubik[4][0]; Rubik[2][3] = Rubik[4][3]; Rubik[2][6] = Rubik[4][6];
-            Rubik[4][0] = Rubik[5][0]; Rubik[4][3] = Rubik[5][3]; Rubik[4][6] = Rubik[5][6];
-            Rubik[5][0] = tmp[0]; Rubik[5][3] = tmp[1]; Rubik[5][6] = tmp[2];
+                char[] tmp = new char[3];
+                tmp[0] = Rubik[0][0]; tmp[1] = Rubik[0][3]; ; tmp[2] = Rubik[0][6];
+                Rubik[0][0] = Rubik[2][0]; Rubik[0][3] = Rubik[2][3]; Rubik[0][6] = Rubik[2][6];
+                Rubik[2][0] = Rubik[4][0]; Rubik[2][3] = Rubik[4][3]; Rubik[2][6] = Rubik[4][6];
+                Rubik[4][0] = Rubik[5][0]; Rubik[4][3] = Rubik[5][3]; Rubik[4][6] = Rubik[5][6];
+                Rubik[5][0] = tmp[0]; Rubik[5][3] = tmp[1]; Rubik[5][6] = tmp[2];
+            }
+            else if(arrow == 1)
+            {
+                rotate_Face(Rubik, 1, 1);
 
+                char[] tmp = new char[3];
 
+                tmp[0] = Rubik[5][0]; tmp[1] = Rubik[5][3]; tmp[2] = Rubik[5][6];
 
+                 Rubik[5][0]= Rubik[4][0] ;  Rubik[5][3] = Rubik[4][3];  Rubik[5][6] = Rubik[4][6];
+              
+                 Rubik[4][0] = Rubik[2][0] ;  Rubik[4][3] = Rubik[2][3]; Rubik[4][6] = Rubik[2][6];
+                 Rubik[2][0] = Rubik[0][0] ; Rubik[2][3] = Rubik[0][3];  Rubik[2][6] = Rubik[0][6] ;
+
+                Rubik[0][0] = tmp[0]; Rubik[0][3] = tmp[1]; Rubik[0][6] = tmp[2];
+               
+
+            }
+
+        }
+
+        public void rotate_right(int arrow) // Right // Finish
+        {
+            if (arrow == 0)
+            {
+                rotate_Face(Rubik, 3, 0);
+
+                char[] tmp = new char[3];
+                tmp[0] = Rubik[0][2]; tmp[1] = Rubik[0][5]; ; tmp[2] = Rubik[0][8];
+                Rubik[0][2] = Rubik[5][2]; Rubik[0][5] = Rubik[5][5]; Rubik[0][8] = Rubik[5][8];
+                Rubik[5][2] = Rubik[4][2]; Rubik[5][5] = Rubik[4][5]; Rubik[5][8] = Rubik[4][8];
+                Rubik[4][2] = Rubik[2][2]; Rubik[4][5] = Rubik[2][5]; Rubik[4][8] = Rubik[2][8];
+                Rubik[2][2] = tmp[0]; Rubik[2][5] = tmp[1]; Rubik[2][8] = tmp[2];
+            }
+            else if(arrow == 1)
+            {
+                rotate_Face(Rubik, 3, 1);
+
+                char[] tmp = new char[3];
+                tmp[0] = Rubik[2][2]; tmp[1] = Rubik[2][5]; tmp[2] = Rubik[2][8];
+
+                Rubik[2][2] = Rubik[4][2]; Rubik[2][5] = Rubik[4][5]; Rubik[2][8] = Rubik[4][8];
+                 Rubik[4][2] = Rubik[5][2]; Rubik[4][5] = Rubik[5][5];  Rubik[4][8] = Rubik[5][8];
+                Rubik[5][2] = Rubik[0][2]; Rubik[5][5] = Rubik[0][5]; Rubik[5][8] = Rubik[0][8];
+
+                Rubik[0][2] = tmp[0]; Rubik[0][5] = tmp[1]; ; Rubik[0][8] = tmp[2];
+                
+
+            }
+        }
+
+        public void rotate_top(int arrow) // Top or UP // //
+        {
+            if (arrow == 0)
+            {
+                rotate_Face(Rubik, 2, 0);
+
+                char[] tmp = new char[3];
+                tmp[0] = Rubik[0][6]; tmp[1] = Rubik[0][7]; ; tmp[2] = Rubik[0][8];
+                Rubik[0][6] = Rubik[3][0]; Rubik[0][7] = Rubik[3][3]; Rubik[0][8] = Rubik[3][6];
+                Rubik[3][0] = Rubik[4][2]; Rubik[3][3] = Rubik[4][1]; Rubik[3][6] = Rubik[4][0];
+                Rubik[4][2] = Rubik[1][8]; Rubik[4][1] = Rubik[1][5]; Rubik[4][0] = Rubik[1][2];
+                Rubik[1][8] = tmp[0]; Rubik[1][5] = tmp[1]; Rubik[1][2] = tmp[2];
+            }
+            else if(arrow == 1)
+            {
+                rotate_Face(Rubik, 2, 1);
+
+                char[] tmp = new char[3];
+                tmp[0] = Rubik[1][8]; tmp[1] = Rubik[1][5]; tmp[2] = Rubik[1][2];
+               
+                Rubik[1][8] = Rubik[4][2]; Rubik[1][5] = Rubik[4][1]; Rubik[1][2] = Rubik[4][0];
+               
+                 Rubik[4][2] = Rubik[3][0];  Rubik[4][1] = Rubik[3][3];  Rubik[4][0] = Rubik[3][6];
+                Rubik[3][0] = Rubik[0][6]; Rubik[3][3] = Rubik[0][7]; Rubik[3][6] = Rubik[0][8];
+
+                Rubik[0][6] = tmp[0]; Rubik[0][7] = tmp[1]; ; Rubik[0][8] = tmp[2];
+
+            }
+
+        }
+
+        public void rotate_front(int arrow) // Front // Finish
+        {
+            if (arrow == 0)
+            {
+                rotate_Face(Rubik, 4, 0);
+                char[] tmp = new char[3];
+                tmp[0] = Rubik[2][6]; tmp[1] = Rubik[2][7]; ; tmp[2] = Rubik[2][8];
+
+                Rubik[2][6] = Rubik[3][6]; Rubik[2][7] = Rubik[3][7]; Rubik[2][8] = Rubik[3][8];
+                Rubik[3][6] = Rubik[5][2]; Rubik[3][7] = Rubik[5][1]; Rubik[3][8] = Rubik[5][0];
+                Rubik[5][2] = Rubik[1][6]; Rubik[5][1] = Rubik[1][7]; Rubik[5][0] = Rubik[1][8];
+
+                Rubik[1][6] = tmp[0]; Rubik[1][7] = tmp[1]; Rubik[1][8] = tmp[2];
+            }
+            else if( arrow ==1)
+            {
+                rotate_Face(Rubik, 4, 1);
+                char[] tmp = new char[3];
+                tmp[0] = Rubik[1][6]; tmp[1] = Rubik[1][7]; tmp[2] = Rubik[1][8];
+                Rubik[1][6] = Rubik[5][2]; Rubik[1][7] = Rubik[5][1]; Rubik[1][8] = Rubik[5][0];
+                Rubik[5][2] = Rubik[3][6]; Rubik[5][1] = Rubik[3][7]; Rubik[5][0] = Rubik[3][8];
+                Rubik[3][6] = Rubik[2][6]; Rubik[3][7] = Rubik[2][7]; Rubik[3][8] = Rubik[2][8];
+                Rubik[2][6] = tmp[0] ; Rubik[2][7] = tmp[1] ; ; Rubik[2][8] = tmp[2] ;
+               
+                
+                 
+                
+                
+            }
 
 
         }
 
-        public void rotate_right() //หมุนขวา // Finish
+        public void rotate_rear(int arrow) // Back // Finish
         {
-            rotate_Face(Rubik, 3);
+            if (arrow == 0){
+            rotate_Face(Rubik, 0, 0);
 
             char[] tmp = new char[3];
-            tmp[0] = Rubik[0][2]; tmp[1] = Rubik[0][5]; ; tmp[2] = Rubik[0][8];
-            Rubik[0][2] = Rubik[5][2]; Rubik[0][5] = Rubik[5][5]; Rubik[0][8] = Rubik[5][8];
-            Rubik[5][2] = Rubik[4][2]; Rubik[5][5] = Rubik[4][5]; Rubik[5][8] = Rubik[4][8];
-            Rubik[4][2] = Rubik[2][2]; Rubik[4][5] = Rubik[2][5]; Rubik[4][8] = Rubik[2][8];
-            Rubik[2][2] = tmp[0]; Rubik[2][5] = tmp[1]; Rubik[2][8] = tmp[2];
 
-        }
-
-        public void rotate_top() // หมุนบน // Finish
-        {
-            rotate_Face_right(Rubik,3);
-            rotate_Face(Rubik, 1);
-
-            char[] rk = Rubik[0];
-            Rubik[0] = Rubik[2];
-            Rubik[2] = Rubik[4];
-            Rubik[4] = Rubik[5];
-            Rubik[5] = rk;
-
-
-            /*
-            rotate_Face(Rubik, 2);
-
-            char[] tmp = new char[3];
-            tmp[0] = Rubik[0][6]; tmp[1] = Rubik[0][7]; ; tmp[2] = Rubik[0][8];
-            Rubik[0][6] = Rubik[3][0]; Rubik[0][7] = Rubik[3][3]; Rubik[0][8] = Rubik[3][6];
-            Rubik[3][0] = Rubik[4][2]; Rubik[3][3] = Rubik[4][1]; Rubik[3][6] = Rubik[4][0];
-            Rubik[4][2] = Rubik[1][8]; Rubik[4][1] = Rubik[1][5]; Rubik[4][0] = Rubik[1][2];
-            Rubik[1][8] = tmp[0]; Rubik[1][5] = tmp[1]; Rubik[1][2] = tmp[2];
-            */
-        }
-
-       
-
-        public void rotate_front() // หมุนหน้า // Finish
-        {
-            rotate_Face(Rubik, 4);
-
-            char[] tmp = new char[3];
-            tmp[0] = Rubik[2][6]; tmp[1] = Rubik[2][7]; ; tmp[2] = Rubik[2][8];
-            Rubik[2][6] = Rubik[3][6]; Rubik[2][7] = Rubik[3][7]; Rubik[2][8] = Rubik[3][8];
-            Rubik[3][6] = Rubik[5][2]; Rubik[3][7] = Rubik[5][1]; Rubik[3][8] = Rubik[5][0];
-            Rubik[5][2] = Rubik[1][6]; Rubik[5][1] = Rubik[1][7]; Rubik[5][0] = Rubik[1][8];
-            Rubik[1][6] = tmp[0]; Rubik[1][7] = tmp[1]; Rubik[1][8] = tmp[2];
-
-        }
-
-        public void rotate_rear() // หมุนด้านหลัง // Finish
-        {
-            rotate_Face(Rubik, 0);
-
-
-            char[] tmp = new char[3];
             tmp[0] = Rubik[5][6]; tmp[1] = Rubik[5][7]; ; tmp[2] = Rubik[5][8];
+
             Rubik[5][6] = Rubik[3][2]; Rubik[5][7] = Rubik[3][1]; Rubik[5][8] = Rubik[3][0];
             Rubik[3][2] = Rubik[2][2]; Rubik[3][1] = Rubik[2][1]; Rubik[3][0] = Rubik[2][0];
             Rubik[2][2] = Rubik[1][2]; Rubik[2][1] = Rubik[1][1]; Rubik[2][0] = Rubik[1][0];
+
             Rubik[1][2] = tmp[0]; Rubik[1][1] = tmp[1]; Rubik[1][0] = tmp[2];
+            }
+            else if(arrow == 1)
+            {
+                rotate_Face(Rubik, 0, 1);
 
-
+                char[] tmp = new char[3];
+                tmp[0] = Rubik[1][2]; tmp[1] = Rubik[1][1]; tmp[2] = Rubik[1][0];
+                Rubik[1][2] = Rubik[2][2];  Rubik[1][1]= Rubik[2][1] ; Rubik[1][0] = Rubik[2][0] ;
+                Rubik[2][2] = Rubik[3][2];  Rubik[2][1] = Rubik[3][1] ;  Rubik[2][0] = Rubik[3][0] ;
+                Rubik[3][2] = Rubik[5][6] ;  Rubik[3][1] = Rubik[5][7] ;  Rubik[3][0] = Rubik[5][8] ;
+               
+              
+                Rubik[5][6] = tmp[0]; Rubik[5][7] = tmp[1]; ; Rubik[5][8] = tmp[2];
+            }
 
         }
 
-        public void rotate_Face(char[][] Rc,int F) //ไว้หมุนหน้าทุกด้าน // Finish
+        public void rotate_down(int arrow)
         {
-            char M = Rc[F][1];
+            if (arrow == 0)
+            {
+                rotate_Face(Rubik, 5, 0);
 
-            Rc[F][1] = Rc[F][5];
-            Rc[F][5] = Rc[F][7];
-            Rc[F][7] = Rc[F][3];
-            Rc[F][3] = M;
+                char[] tmp = new char[3];
+                tmp[0] = Rubik[4][6]; tmp[1] = Rubik[4][7]; ; tmp[2] = Rubik[4][8];
+                Rubik[4][6] = Rubik[3][8]; Rubik[4][7] = Rubik[3][5]; Rubik[4][8] = Rubik[3][2];
+                Rubik[3][2] = Rubik[0][0]; Rubik[3][5] = Rubik[0][1]; Rubik[3][8] = Rubik[0][2];
+                Rubik[0][0] = Rubik[1][6]; Rubik[0][1] = Rubik[1][3]; Rubik[0][2] = Rubik[1][0];
+                Rubik[1][0] = tmp[0]; Rubik[1][3] = tmp[1]; Rubik[1][6] = tmp[2];
+            }
+            else if(arrow == 1)
+            {
+                rotate_Face(Rubik, 5,1);
 
-            char C = Rc[F][0];
+                char[] tmp = new char[3];
 
-            Rc[F][0] = Rc[F][2];
-            Rc[F][2] = Rc[F][8];
-            Rc[F][8] = Rc[F][6];
-            Rc[F][6] = C;
+                tmp[0] = Rubik[1][0]; tmp[1] = Rubik[1][3]; tmp[2] = Rubik[1][6];
+
+                Rubik[1][6] = Rubik[0][0];  Rubik[1][3] = Rubik[0][1]; Rubik[1][0] = Rubik[0][2];
+                Rubik[0][0] = Rubik[3][2]; Rubik[0][1] = Rubik[3][5];  Rubik[0][2] = Rubik[3][8];
+                Rubik[3][8] = Rubik[4][6];  Rubik[3][5] = Rubik[4][7];  Rubik[3][2] = Rubik[4][8];
+
+                Rubik[4][6] = tmp[0]; Rubik[4][7] = tmp[1]; Rubik[4][8] = tmp[2];
+               
+            }
+
+        }
+
+        
+
+
+        public void rotate_Face(char[][] Rc,int F,int arrow) //ไว้หมุนหน้าทุกด้าน // Finish
+        {
+            if (arrow == 0)  // หมุนทวน
+            {
+                char M = Rc[F][1];
+
+                Rc[F][1] = Rc[F][5];
+                Rc[F][5] = Rc[F][7];
+                Rc[F][7] = Rc[F][3];
+                Rc[F][3] = M;
+
+                char C = Rc[F][0];
+
+                Rc[F][0] = Rc[F][2];
+                Rc[F][2] = Rc[F][8];
+                Rc[F][8] = Rc[F][6];
+                Rc[F][6] = C;
+            }
+            else if(arrow == 1)  // หมุนตามเข็ม
+            {
+                char M = Rc[F][3];
+
+                Rc[F][3] = Rc[F][7];
+                Rc[F][7] = Rc[F][5];
+                Rc[F][5] = Rc[F][1];
+                Rc[F][1] = M;
+
+                char C = Rc[F][6];
+
+                Rc[F][6] = Rc[F][8];
+                Rc[F][8] = Rc[F][2];
+                Rc[F][2] = Rc[F][0];
+                Rc[F][0] = C;
+            }
 
            
         }
@@ -1264,7 +1390,7 @@ namespace Rubik.V1
 
 
      
-        private void Test_Click(object sender, EventArgs e) // Reset //Finish
+        private void Test_Click(object sender, EventArgs e) // Reset Click125 //Finish
         {
             char[][] RK = new char[6][] {  new char[] {'B','B','B','B','B','B','B','B','B' },
                                                 new char[] {'P','P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},
@@ -1288,14 +1414,8 @@ namespace Rubik.V1
 
 
 
-        // ทิศในการหมุน
+       
         
-
-
-
-
-
-
 
       
         private void Ck_Color_Click(object sender, EventArgs e)
@@ -1303,6 +1423,7 @@ namespace Rubik.V1
             Form2 fm2 = new Form2();
             fm2.Show();
         }
+
 
         private void button2_Click(object sender, EventArgs e) // Test  TakePicture
         {
@@ -1361,91 +1482,128 @@ namespace Rubik.V1
 
         }
 
-        private void Left_Click(object sender, EventArgs e)    // Click L
-        {
-            rotate_left();
-            show_color(Rubik);
-            listBox1.Items.Add(numList + ": Left");
-            numList++;
-            serialPort1.Write("L");
-        }
 
-        private void Right_Click_1(object sender, EventArgs e)   // Click R
-        {
-            rotate_right();
-            show_color(Rubik);
-            listBox1.Items.Add(numList + ": Right");
-            numList++;
-            serialPort1.Write("R");
-        }
 
+        ///////////////////////// ทิศในการหมุน    ปุ่มควบคุม  //////////////////////////////////////////////////
         private void Top_Click(object sender, EventArgs e)   // Chang Face
         {
-            rotate_top();
+
+        }
+
+        private void Left_Click(object sender, EventArgs e)    //  L
+        {
+            rotate_left(1);
             show_color(Rubik);
-            listBox1.Items.Add(numList + ": Change_Face");
+            listBox1.Items.Add(numList + ":L");
             numList++;
+            // serialPort1.Write("c");
         }
 
-        private void Front_Click(object sender, EventArgs e) //Click F
+        private void Right_Click_1(object sender, EventArgs e)   //  R
         {
-            rotate_front();
+            rotate_right(1);
             show_color(Rubik);
-            listBox1.Items.Add(numList + ": Front");
+            listBox1.Items.Add(numList + ": R");
             numList++;
-            serialPort1.Write("F");// Tanapon Ninket
+            //  serialPort1.Write("a");
+
         }
 
-        private void Rear_Click(object sender, EventArgs e)  // Click B
+
+
+        private void Front_Click(object sender, EventArgs e) // F
         {
-            rotate_rear();
+            rotate_front(1);
             show_color(Rubik);
-            listBox1.Items.Add(numList + ": Rear");
+            listBox1.Items.Add(numList + ": F");
             numList++;
-            serialPort1.Write("B");
+            //serialPort1.Write("b");// Tanapon Ninket
+        }
+
+        private void Rear_Click(object sender, EventArgs e)  //  B
+        {
+            rotate_rear(1);
+            show_color(Rubik);
+            listBox1.Items.Add(numList + ":B");
+            numList++;
+            // serialPort1.Write("d");
         }
 
 
-        private void U_Click(object sender, EventArgs e)  
+        private void U_Click(object sender, EventArgs e)  //  Top
         {
-            
+            rotate_top(1);
+            show_color(Rubik);
+            listBox1.Items.Add(numList + ": U'");
+            numList++;
+
 
         }
 
-        private void D_Click(object sender, EventArgs e)
+        private void D_Click(object sender, EventArgs e)   // Down
         {
+            rotate_down(1);
+            show_color(Rubik);
+            listBox1.Items.Add(numList + ":D");
+            numList++;
 
         }
 
-        private void Bdet_Click(object sender, EventArgs e)
+        private void Bdet_Click(object sender, EventArgs e) //B'
         {
-            serialPort1.Write("b");
+            rotate_rear(0);
+            show_color(Rubik);
+            listBox1.Items.Add(numList + ": B'");
+            numList++;
+            // serialPort1.Write("d");
         }
 
-        private void Ldet_Click(object sender, EventArgs e)
+        private void Ldet_Click(object sender, EventArgs e)  // L'
         {
-            serialPort1.Write("l");
+            rotate_left(0);
+            show_color(Rubik);
+            listBox1.Items.Add(numList + ": L'");
+            //textBox1.Text = "L";
+            numList++;
+            // serialPort1.Write("c");
         }
 
-        private void Fdet_Click(object sender, EventArgs e)
+        private void Fdet_Click(object sender, EventArgs e)  // F'
         {
-            serialPort1.Write("f");
+            rotate_front(0);
+            show_color(Rubik);
+            listBox1.Items.Add(numList + ": F'");
+            Text_Result.Text = "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF";  //
+            numList++;
+            //serialPort1.Write("b");// Tanapon Ninket
         }
 
-        private void Rdet_Click(object sender, EventArgs e)
+        private void Rdet_Click(object sender, EventArgs e) // R'
         {
-            serialPort1.Write("r");
+            rotate_right(0);
+            show_color(Rubik);
+            listBox1.Items.Add(numList + ": R'");
+            numList++;
+            //  serialPort1.Write("a");
         }
 
-        private void Udet_Click(object sender, EventArgs e)
+        private void Udet_Click(object sender, EventArgs e) // U' 
         {
-
+            rotate_top(0);
+            show_color(Rubik);
+            listBox1.Items.Add(numList + ": U'");
+            numList++;
         }
 
         private void Ddet_Click(object sender, EventArgs e)
         {
-
+            rotate_down(0);
+            show_color(Rubik);
+            listBox1.Items.Add(numList + ":D'");
+            numList++;
         }
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -1453,29 +1611,80 @@ namespace Rubik.V1
             fm3.Show();
         }
 
+//<<<<<<< HEAD
 
         private void open_left_right_Click(object sender, EventArgs e) // เลื่อนออก ซ้าย---ขวา
         {
-            serialPort1.Write("K");
-            //ส่งค่าควบคุม Hardware  
+
         }
 
         private void close_left_right_Click(object sender, EventArgs e) // เลื่อนเข้า ซ้าย---ขวา
         {
-            serialPort1.Write("k");
-            // ส่งค่าควบคุม Hardware
+
         }
 
         private void open_front_back_Click(object sender, EventArgs e)  // เลื่อนเข้า หน้า---หลัง
         {
-            serialPort1.Write("J");
-            // ส่งค่าควบคุม Hardware
+
         }
 
         private void close_front_back_Click(object sender, EventArgs e) // เลื่อนออก หน้า---หลัง
         {
-            serialPort1.Write("j");
-            // ส่งค่าควบคุม Hardware
+
         }
+
+        private void Start_Auto_Click(object sender, EventArgs e)
+        {
+            Test_Click(sender,e);
+            timer1.Enabled = true;
+            timer1.Start();
+            delay(5000);
+            STOP_AUTO_Click(sender, e);
+            delay(5000);
+            //Start_Auto_Click(sender, e);
+
+
+
+
+
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Time++;
+            Text_Time.Text = " " + Time ;
+
+        }
+
+        private void STOP_AUTO_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            Delay++;
+        }
+
+        void delay(int d)
+        {
+            timer2.Enabled = true;
+            timer2.Start();
+            if(Delay == d)
+            {
+                timer2.Stop();
+                Delay = 0;
+            }
+            else
+            {
+                delay(d);
+            }
+        }
+
+
+        //=======
+        ///////////////////   สิ้นสุดการทำงานของปุ่ม
+        //>>>>>>> 6660cc3015398fa2a960b8bd0d824c6d907f612f
     } // end class 
 }

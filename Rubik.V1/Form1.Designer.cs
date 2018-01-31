@@ -85,7 +85,6 @@
             this.B0 = new System.Windows.Forms.Panel();
             this.Right = new System.Windows.Forms.Button();
             this.Left = new System.Windows.Forms.Button();
-            this.Top = new System.Windows.Forms.Button();
             this.Front = new System.Windows.Forms.Button();
             this.Rear = new System.Windows.Forms.Button();
             this.Test = new System.Windows.Forms.Button();
@@ -133,6 +132,13 @@
             this.close_front_back = new System.Windows.Forms.Button();
             this.open_front_back = new System.Windows.Forms.Button();
             this.performanceCounter1 = new System.Diagnostics.PerformanceCounter();
+            this.Text_Result = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.Text_Time = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.Start_Auto = new System.Windows.Forms.Button();
+            this.STOP_AUTO = new System.Windows.Forms.Button();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Box2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box4)).BeginInit();
@@ -546,19 +552,6 @@
             this.Left.UseVisualStyleBackColor = false;
             this.Left.Click += new System.EventHandler(this.Left_Click);
             // 
-            // Top
-            // 
-            this.Top.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Top.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Top.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Top.Location = new System.Drawing.Point(507, 182);
-            this.Top.Name = "Top";
-            this.Top.Size = new System.Drawing.Size(172, 47);
-            this.Top.TabIndex = 60;
-            this.Top.Text = "Rotate_Rubik";
-            this.Top.UseVisualStyleBackColor = false;
-            this.Top.Click += new System.EventHandler(this.Top_Click);
-            // 
             // Front
             // 
             this.Front.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -686,7 +679,8 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 50000;
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // label1
             // 
@@ -839,15 +833,15 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(718, 177);
+            this.listBox1.Location = new System.Drawing.Point(708, 256);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(162, 186);
+            this.listBox1.Size = new System.Drawing.Size(78, 173);
             this.listBox1.TabIndex = 96;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(712, 158);
+            this.label15.Location = new System.Drawing.Point(708, 240);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(62, 13);
             this.label15.TabIndex = 97;
@@ -947,7 +941,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(718, 369);
+            this.button1.Location = new System.Drawing.Point(603, 369);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 22);
             this.button1.TabIndex = 110;
@@ -980,7 +974,7 @@
             // close_front_back
             // 
             this.close_front_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.close_front_back.Location = new System.Drawing.Point(621, 369);
+            this.close_front_back.Location = new System.Drawing.Point(516, 369);
             this.close_front_back.Name = "close_front_back";
             this.close_front_back.Size = new System.Drawing.Size(81, 42);
             this.close_front_back.TabIndex = 115;
@@ -991,7 +985,7 @@
             // open_front_back
             // 
             this.open_front_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.open_front_back.Location = new System.Drawing.Point(535, 369);
+            this.open_front_back.Location = new System.Drawing.Point(428, 369);
             this.open_front_back.Name = "open_front_back";
             this.open_front_back.Size = new System.Drawing.Size(80, 42);
             this.open_front_back.TabIndex = 114;
@@ -999,11 +993,74 @@
             this.open_front_back.UseVisualStyleBackColor = true;
             this.open_front_back.Click += new System.EventHandler(this.open_front_back_Click);
             // 
+            // Text_Result
+            // 
+            this.Text_Result.Location = new System.Drawing.Point(382, 155);
+            this.Text_Result.Name = "Text_Result";
+            this.Text_Result.Size = new System.Drawing.Size(285, 20);
+            this.Text_Result.TabIndex = 116;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(339, 159);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(37, 13);
+            this.label10.TabIndex = 117;
+            this.label10.Text = "Result";
+            // 
+            // Text_Time
+            // 
+            this.Text_Time.Location = new System.Drawing.Point(741, 156);
+            this.Text_Time.Name = "Text_Time";
+            this.Text_Time.Size = new System.Drawing.Size(100, 20);
+            this.Text_Time.TabIndex = 118;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(705, 159);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(30, 13);
+            this.label16.TabIndex = 119;
+            this.label16.Text = "Time";
+            // 
+            // Start_Auto
+            // 
+            this.Start_Auto.Location = new System.Drawing.Point(382, 182);
+            this.Start_Auto.Name = "Start_Auto";
+            this.Start_Auto.Size = new System.Drawing.Size(155, 35);
+            this.Start_Auto.TabIndex = 120;
+            this.Start_Auto.Text = "START";
+            this.Start_Auto.UseVisualStyleBackColor = true;
+            this.Start_Auto.Click += new System.EventHandler(this.Start_Auto_Click);
+            // 
+            // STOP_AUTO
+            // 
+            this.STOP_AUTO.Location = new System.Drawing.Point(564, 181);
+            this.STOP_AUTO.Name = "STOP_AUTO";
+            this.STOP_AUTO.Size = new System.Drawing.Size(131, 35);
+            this.STOP_AUTO.TabIndex = 121;
+            this.STOP_AUTO.Text = "STOP";
+            this.STOP_AUTO.UseVisualStyleBackColor = true;
+            this.STOP_AUTO.Click += new System.EventHandler(this.STOP_AUTO_Click);
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 1;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1098, 441);
+            this.Controls.Add(this.STOP_AUTO);
+            this.Controls.Add(this.Start_Auto);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.Text_Time);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.Text_Result);
             this.Controls.Add(this.close_front_back);
             this.Controls.Add(this.open_front_back);
             this.Controls.Add(this.close_left_right);
@@ -1047,7 +1104,6 @@
             this.Controls.Add(this.Test);
             this.Controls.Add(this.Rear);
             this.Controls.Add(this.Front);
-            this.Controls.Add(this.Top);
             this.Controls.Add(this.Left);
             this.Controls.Add(this.Right);
             this.Controls.Add(this.B8);
@@ -1114,7 +1170,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Box5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1177,7 +1233,6 @@
         private System.Windows.Forms.Panel B0;
         private System.Windows.Forms.Button Right;
         private System.Windows.Forms.Button Left;
-        private System.Windows.Forms.Button Top;
         private System.Windows.Forms.Button Front;
         private System.Windows.Forms.Button Rear;
         private System.Windows.Forms.Button Test;
@@ -1227,7 +1282,14 @@
         private System.Windows.Forms.Button open_front_back;
 //=======
         private System.Diagnostics.PerformanceCounter performanceCounter1;
-//>>>>>>> 6660cc3015398fa2a960b8bd0d824c6d907f612f
+        private System.Windows.Forms.TextBox Text_Result;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox Text_Time;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button Start_Auto;
+        private System.Windows.Forms.Button STOP_AUTO;
+        private System.Windows.Forms.Timer timer2;
+        //>>>>>>> 6660cc3015398fa2a960b8bd0d824c6d907f612f
     }
 }
 
