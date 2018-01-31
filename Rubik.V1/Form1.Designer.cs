@@ -132,6 +132,8 @@
             this.close_front_back = new System.Windows.Forms.Button();
             this.open_front_back = new System.Windows.Forms.Button();
             this.performanceCounter1 = new System.Diagnostics.PerformanceCounter();
+<<<<<<< HEAD
+=======
             this.Text_Result = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.Text_Time = new System.Windows.Forms.TextBox();
@@ -139,8 +141,12 @@
             this.Start_Auto = new System.Windows.Forms.Button();
             this.STOP_AUTO = new System.Windows.Forms.Button();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+<<<<<<< HEAD
             this.Text_face = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
+=======
+>>>>>>> 9388c61672a563c1bfc4288a1eec70d11014470a
+>>>>>>> 4f71d9e57cdc25737cab73f0a24daa6ded1a945c
             ((System.ComponentModel.ISupportInitialize)(this.Box2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box4)).BeginInit();
@@ -554,6 +560,22 @@
             this.Left.UseVisualStyleBackColor = false;
             this.Left.Click += new System.EventHandler(this.Left_Click);
             // 
+<<<<<<< HEAD
+            // Top
+            // 
+            this.Top.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Top.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Top.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Top.Location = new System.Drawing.Point(344, 169);
+            this.Top.Name = "Top";
+            this.Top.Size = new System.Drawing.Size(172, 47);
+            this.Top.TabIndex = 60;
+            this.Top.Text = "Rotate_Rubik";
+            this.Top.UseVisualStyleBackColor = false;
+            this.Top.Click += new System.EventHandler(this.Top_Click);
+            // 
+=======
+>>>>>>> 9388c61672a563c1bfc4288a1eec70d11014470a
             // Front
             // 
             this.Front.BackColor = System.Drawing.SystemColors.ButtonFace;
