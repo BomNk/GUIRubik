@@ -139,6 +139,8 @@
             this.Start_Auto = new System.Windows.Forms.Button();
             this.STOP_AUTO = new System.Windows.Forms.Button();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.Text_face = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Box2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box4)).BeginInit();
@@ -642,9 +644,9 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(543, 124);
+            this.comboBox1.Location = new System.Drawing.Point(887, 124);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(550, 21);
+            this.comboBox1.Size = new System.Drawing.Size(206, 21);
             this.comboBox1.TabIndex = 73;
             // 
             // Take
@@ -685,7 +687,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(379, 127);
+            this.label1.Location = new System.Drawing.Point(746, 127);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 77;
@@ -694,7 +696,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(425, 127);
+            this.label2.Location = new System.Drawing.Point(830, 127);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 78;
@@ -997,7 +999,7 @@
             // 
             this.Text_Result.Location = new System.Drawing.Point(382, 155);
             this.Text_Result.Name = "Text_Result";
-            this.Text_Result.Size = new System.Drawing.Size(285, 20);
+            this.Text_Result.Size = new System.Drawing.Size(320, 20);
             this.Text_Result.TabIndex = 116;
             // 
             // label10
@@ -1050,11 +1052,29 @@
             this.timer2.Interval = 1;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // Text_face
+            // 
+            this.Text_face.Location = new System.Drawing.Point(382, 129);
+            this.Text_face.Name = "Text_face";
+            this.Text_face.Size = new System.Drawing.Size(358, 20);
+            this.Text_face.TabIndex = 122;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(343, 134);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(31, 13);
+            this.label17.TabIndex = 123;
+            this.label17.Text = "Face";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1098, 441);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.Text_face);
             this.Controls.Add(this.STOP_AUTO);
             this.Controls.Add(this.Start_Auto);
             this.Controls.Add(this.label16);
@@ -1289,6 +1309,8 @@
         private System.Windows.Forms.Button Start_Auto;
         private System.Windows.Forms.Button STOP_AUTO;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.TextBox Text_face;
+        private System.Windows.Forms.Label label17;
         //>>>>>>> 6660cc3015398fa2a960b8bd0d824c6d907f612f
     }
 }

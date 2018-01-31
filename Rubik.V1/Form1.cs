@@ -175,10 +175,7 @@ namespace Rubik.V1
 
 
 
-        public void take_pic()// ถ่ายภาพจากลูกรูบิค แล้ว save ภาพ  1 ภาพ ไว้ใช้เรียกหลายครั้ง
-        {
-
-        }
+     
 
 
         public void read_color(int Face) // อ่านสี ภาพ 1 ภาพ // Finish
@@ -292,10 +289,7 @@ namespace Rubik.V1
 
 
 
-        public void save_color() // บันทึกสีภาพของลูกรูบิค 6 ด้าน
-        {
-
-        }
+       
 
       
 
@@ -1440,6 +1434,7 @@ namespace Rubik.V1
                 str = "C:/Users/BOM/Desktop/New folder/4.jpg";
             else if(numPicture == 6)
 
+
                 str = "C:/Users/BOM/Desktop/New folder/3.jpg";
             R_Image = new Image<Hsv, Byte>(str);
 
@@ -1456,11 +1451,11 @@ namespace Rubik.V1
             if (numPicture == 6)
                 Box6.Image = R_Image.ToBitmap();
 
-            read_color(numPicture - 1);
+            read_color(numPicture - 1); 
 
             show_color(Rubik);
             numPicture++;
-
+            Text_face.Text = Rubik.ToString();
 
 
 
@@ -1496,7 +1491,7 @@ namespace Rubik.V1
             show_color(Rubik);
             listBox1.Items.Add(numList + ":L");
             numList++;
-            // serialPort1.Write("c");
+            // serialPort1.Write("L");
         }
 
         private void Right_Click_1(object sender, EventArgs e)   //  R
@@ -1505,7 +1500,7 @@ namespace Rubik.V1
             show_color(Rubik);
             listBox1.Items.Add(numList + ": R");
             numList++;
-            //  serialPort1.Write("a");
+            //  serialPort1.Write("R");
 
         }
 
@@ -1517,7 +1512,7 @@ namespace Rubik.V1
             show_color(Rubik);
             listBox1.Items.Add(numList + ": F");
             numList++;
-            //serialPort1.Write("b");// Tanapon Ninket
+            //serialPort1.Write("F");// Tanapon Ninket
         }
 
         private void Rear_Click(object sender, EventArgs e)  //  B
@@ -1526,7 +1521,7 @@ namespace Rubik.V1
             show_color(Rubik);
             listBox1.Items.Add(numList + ":B");
             numList++;
-            // serialPort1.Write("d");
+            // serialPort1.Write("B");
         }
 
 
@@ -1536,6 +1531,7 @@ namespace Rubik.V1
             show_color(Rubik);
             listBox1.Items.Add(numList + ": U'");
             numList++;
+            // serialPort1.Write("b");
 
 
         }
@@ -1546,6 +1542,7 @@ namespace Rubik.V1
             show_color(Rubik);
             listBox1.Items.Add(numList + ":D");
             numList++;
+            // serialPort1.Write("b");
 
         }
 
@@ -1555,7 +1552,7 @@ namespace Rubik.V1
             show_color(Rubik);
             listBox1.Items.Add(numList + ": B'");
             numList++;
-            // serialPort1.Write("d");
+            // serialPort1.Write("b");
         }
 
         private void Ldet_Click(object sender, EventArgs e)  // L'
@@ -1565,7 +1562,7 @@ namespace Rubik.V1
             listBox1.Items.Add(numList + ": L'");
             //textBox1.Text = "L";
             numList++;
-            // serialPort1.Write("c");
+            // serialPort1.Write("l");
         }
 
         private void Fdet_Click(object sender, EventArgs e)  // F'
@@ -1573,18 +1570,18 @@ namespace Rubik.V1
             rotate_front(0);
             show_color(Rubik);
             listBox1.Items.Add(numList + ": F'");
-            Text_Result.Text = "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF";  //
+            //Text_Result.Text = "FFFFFFFFFFFFFFFFFFFFFFFF";  //
             numList++;
-            //serialPort1.Write("b");// Tanapon Ninket
+            //serialPort1.Write("f");// Tanapon Ninket
         }
 
         private void Rdet_Click(object sender, EventArgs e) // R'
         {
             rotate_right(0);
             show_color(Rubik);
-            listBox1.Items.Add(numList + ": R'");
+            listBox1.Items.Add(numList + ": R'");  
             numList++;
-            //  serialPort1.Write("a");
+            //serialPort1.Write("r");
         }
 
         private void Udet_Click(object sender, EventArgs e) // U' 
@@ -1593,6 +1590,7 @@ namespace Rubik.V1
             show_color(Rubik);
             listBox1.Items.Add(numList + ": U'");
             numList++;
+            //serialPort1.Write("r");
         }
 
         private void Ddet_Click(object sender, EventArgs e)
@@ -1601,6 +1599,7 @@ namespace Rubik.V1
             show_color(Rubik);
             listBox1.Items.Add(numList + ":D'");
             numList++;
+            //serialPort1.Write("r");
         }
 
 
@@ -1630,6 +1629,10 @@ namespace Rubik.V1
 
         private void close_front_back_Click(object sender, EventArgs e) // เลื่อนออก หน้า---หลัง
         {
+
+
+
+
 
         }
 
