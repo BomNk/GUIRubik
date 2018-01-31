@@ -132,8 +132,8 @@
             this.close_front_back = new System.Windows.Forms.Button();
             this.open_front_back = new System.Windows.Forms.Button();
             this.performanceCounter1 = new System.Diagnostics.PerformanceCounter();
-<<<<<<< HEAD
-=======
+//<<<<<<< HEAD
+//=======
             this.Text_Result = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.Text_Time = new System.Windows.Forms.TextBox();
@@ -141,7 +141,7 @@
             this.Start_Auto = new System.Windows.Forms.Button();
             this.STOP_AUTO = new System.Windows.Forms.Button();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
->>>>>>> 9388c61672a563c1bfc4288a1eec70d11014470a
+//>>>>>>> 9388c61672a563c1bfc4288a1eec70d11014470a
             ((System.ComponentModel.ISupportInitialize)(this.Box2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box4)).BeginInit();
@@ -555,10 +555,10 @@
             this.Left.UseVisualStyleBackColor = false;
             this.Left.Click += new System.EventHandler(this.Left_Click);
             // 
-<<<<<<< HEAD
+//<<<<<<< HEAD
             // Top
             // 
-            this.Top.BackColor = System.Drawing.SystemColors.ButtonFace;
+           this.Top.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Top.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Top.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Top.Location = new System.Drawing.Point(344, 169);
@@ -569,8 +569,8 @@
             this.Top.UseVisualStyleBackColor = false;
             this.Top.Click += new System.EventHandler(this.Top_Click);
             // 
-=======
->>>>>>> 9388c61672a563c1bfc4288a1eec70d11014470a
+//=======
+//>>>>>>> 9388c61672a563c1bfc4288a1eec70d11014470a
             // Front
             // 
             this.Front.BackColor = System.Drawing.SystemColors.ButtonFace;
