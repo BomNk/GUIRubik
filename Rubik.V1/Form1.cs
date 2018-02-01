@@ -1757,7 +1757,12 @@ namespace Rubik.V1
            
             timer2.Enabled = true;
             timer2.Start();
-            
+
+            //if (NumTimer == 6)
+            //{
+                
+
+           // }
 
 
 
@@ -1791,6 +1796,11 @@ namespace Rubik.V1
             if (NumTimer == 6)
             {
                 timer2.Stop();
+                Front_Click(sender, e);
+                Front_Click(sender, e);
+                Front_Click(sender, e);
+                Rear_Click(sender, e);
+                D_Click(sender, e);
             }
             //Delay++;
         }
