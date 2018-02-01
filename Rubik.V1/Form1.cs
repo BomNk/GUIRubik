@@ -1728,28 +1728,24 @@ namespace Rubik.V1
 
 //<<<<<<< HEAD
 
-        private void open_left_right_Click(object sender, EventArgs e) // เลื่อนออก ซ้าย---ขวา
+        private void open_left_right_Click(object sender, EventArgs e) // เลื่อนออก ซ้าย---ขวา  <<LR>>
         {
-
+            //serialPort1.Write("j");
         }
 
-        private void close_left_right_Click(object sender, EventArgs e) // เลื่อนเข้า ซ้าย---ขวา
+        private void close_left_right_Click(object sender, EventArgs e) // เลื่อนเข้า ซ้าย---ขวา  >>LR<<
         {
-
+            //serialPort1.Write("J");
         }
 
-        private void open_front_back_Click(object sender, EventArgs e)  // เลื่อนเข้า หน้า---หลัง
+        private void open_front_back_Click(object sender, EventArgs e)  // เลื่อนเข้า หน้า---หลัง   <<FB>>
         {
-
+            //serialPort1.Write("K");
         }
 
-        private void close_front_back_Click(object sender, EventArgs e) // เลื่อนออก หน้า---หลัง
+        private void close_front_back_Click(object sender, EventArgs e) // เลื่อนออก หน้า---หลัง   >>FB<<
         {
-
-
-
-
-
+            //serialPort1.Write("k");
         }
 
         private void Start_Auto_Click(object sender, EventArgs e)
