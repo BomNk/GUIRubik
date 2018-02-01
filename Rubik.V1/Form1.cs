@@ -60,7 +60,7 @@ namespace Rubik.V1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //serialPort1.Open();
+            serialPort1.Open();
             webcam = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo VideoCaptureDevice in webcam)
             {
@@ -1815,6 +1815,155 @@ namespace Rubik.V1
                 delay(d);
             }
         }
+
+        void F()
+        {
+            serialPort1.Write("k");
+            serialPort1.Write("k");
+            serialPort1.Write("k");
+            serialPort1.Write("k");
+        }
+        void F_det()
+        {
+            serialPort1.Write("k");
+            serialPort1.Write("k");
+            serialPort1.Write("k");
+            serialPort1.Write("k");
+        }
+        void F_2()
+        {
+            serialPort1.Write("FF");
+        }
+        void F2_det()
+        {
+            serialPort1.Write("ff");
+        }
+
+        void B()
+        {
+            serialPort1.Write("B");
+            serialPort1.Write("K");
+            serialPort1.Write("b");
+            serialPort1.Write("k");
+        }
+        void B_det()
+        {
+            serialPort1.Write("b");
+            serialPort1.Write("K");
+            serialPort1.Write("B");
+            serialPort1.Write("k");
+        }
+        void B_2()
+        {
+            serialPort1.Write("BB");
+        }
+        void B2_det()
+        {
+            serialPort1.Write("bb");
+        }
+
+        void L()
+        {
+            serialPort1.Write("L");
+            serialPort1.Write("j");
+            serialPort1.Write("l");
+            serialPort1.Write("J");
+        }
+        void L_det()
+        {
+            serialPort1.Write("l");
+            serialPort1.Write("j");
+            serialPort1.Write("L");
+            serialPort1.Write("J");
+        }
+        void L_2()
+        {
+            serialPort1.Write("LL");
+        }
+        void L2_det()
+        {
+            serialPort1.Write("ll");
+        }
+
+
+        void R()
+        {
+            serialPort1.Write("R");
+            serialPort1.Write("j");
+            serialPort1.Write("r");
+            serialPort1.Write("J");
+        }
+        void R_det()
+        {
+            serialPort1.Write("r");
+            serialPort1.Write("j");
+            serialPort1.Write("R");
+            serialPort1.Write("J");
+        }
+        void R_2()
+        {
+            serialPort1.Write("RR");
+        }
+        void R2_det()
+        {
+            serialPort1.Write("rr");
+        }
+
+
+        /// <summary>
+        /// not Create Algo  you can insert new Algo
+        /// </summary>
+        void UU()
+        {
+            serialPort1.Write("U");
+            serialPort1.Write("K");
+            serialPort1.Write("b");
+            serialPort1.Write("k");
+        }
+        void U_det()
+        {
+            serialPort1.Write("b");
+            serialPort1.Write("K");
+            serialPort1.Write("B");
+            serialPort1.Write("k");
+        }
+        void U_2()
+        {
+            serialPort1.Write("UU");
+        }
+        void U2_det()
+        {
+            serialPort1.Write("uu");
+        }
+
+        void DD()
+        {
+            serialPort1.Write("U");
+            serialPort1.Write("K");
+            serialPort1.Write("b");
+            serialPort1.Write("k");
+        }
+        void D_det()
+        {
+            serialPort1.Write("b");
+            serialPort1.Write("K");
+            serialPort1.Write("B");
+            serialPort1.Write("k");
+        }
+        void D_2()
+        {
+            serialPort1.Write("UU");
+        }
+        void D2_det()
+        {
+            serialPort1.Write("uu");
+        }
+        // 
+           //  End to Insert
+        //
+
+
+
 
 
         //=======
