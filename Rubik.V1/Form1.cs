@@ -86,13 +86,13 @@ namespace Rubik.V1
             else if (numTake == 2)
             {
                 R_Image = My_Image.Copy();
-                Box2.Image = bit;
+                Box5.Image = bit;
                // My_Image1 = new Image<Hsv, byte>(new Bitmap(Box1.Image));
             }
             else if (numTake == 3)
             {
                 R_Image = My_Image.Copy();
-                Box3.Image = bit;
+                Box2.Image = bit;
               //  My_Image1 = new Image<Hsv, byte>(new Bitmap(Box1.Image));
             }
             else if (numTake == 4)
@@ -104,7 +104,7 @@ namespace Rubik.V1
             else if (numTake == 5)
             {
                 R_Image = My_Image.Copy();
-                Box5.Image = bit;
+                Box3.Image = bit;
               //  My_Image1 = new Image<Hsv, byte>(new Bitmap(Box1.Image));
             }
             else if (numTake == 6)
@@ -1720,8 +1720,8 @@ namespace Rubik.V1
         private void Start_Auto_Click(object sender, EventArgs e)
         {
            
-            timer1.Enabled = true;
-            timer1.Start();
+            timer2.Enabled = true;
+            timer2.Start();
             
 
 
@@ -1739,26 +1739,25 @@ namespace Rubik.V1
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Take_Click_1(sender, e);
-            NumTimer++;
-            if(NumTimer == 6)
-            {
-                timer1.Stop();
-            }
-            //Time++;
-            //Text_Time.Text = " " + Time ;
+            
 
         }
 
         private void STOP_AUTO_Click(object sender, EventArgs e)
         {
 
-            timer1.Stop();
+            timer2.Stop();
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            Delay++;
+            Take_Click_1(sender, e);
+            NumTimer++;
+            if (NumTimer == 6)
+            {
+                timer2.Stop();
+            }
+            //Delay++;
         }
 
         void delay(int d)
