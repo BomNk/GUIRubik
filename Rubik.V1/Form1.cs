@@ -1628,6 +1628,11 @@ namespace Rubik.V1
             show_color(Rubik);
             listBox1.Items.Add(numList + ": F");
             numList++;
+            /// Step of Work ///
+             
+
+            
+            ///
             //serialPort1.Write("F");// Tanapon Ninket
         }
 
