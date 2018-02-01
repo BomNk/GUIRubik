@@ -31,7 +31,7 @@ namespace Rubik.V1
                                                 new char[] {'G', 'G' , 'G' , 'G', 'G' , 'G' , 'G' , 'G','G' },
                                                 new char[] { 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y' } };
         // public char[][] Rubik_copy = new char[6][];
-
+        //public string Convert_RGB_to_Face(char Rubik);
         //Notebook
         private FilterInfoCollection webcam;
         private VideoCaptureDevice cam;
@@ -1528,18 +1528,53 @@ namespace Rubik.V1
 
 
         }
-        public String showRubik(char[][] Rubik)
+        public string showRubik(char[][] Rubik)    // Show data in Rubik
         {
             String str = "";
             for (int i = 0; i < 6; i++)
             {
                 for(int j = 0; j < 9; j++)
                 {
-                    str = str + Rubik[i][j];
+                    //if(Rubik[i][j] == 'B')
+                    str = str + Convert_RGB_to_Face(Rubik[i][j]);
                 }
             }
             return str;
         }
+
+
+        public string Convert_RGB_to_Face(char Rubik)
+        {
+            String str = "";
+            if (Rubik == 'B')
+            {
+                str = "B";
+            }
+            else if (Rubik == 'P')
+            {
+                str = "L";
+            }
+            else if (Rubik == 'W')
+            {
+                str = "U";
+            }
+            else if (Rubik == 'R')
+            {
+                str = "R";
+            }
+            else if (Rubik == 'G')
+            {
+                str = "F";
+            }
+            else if (Rubik == 'Y')
+            {
+                str = "D";
+            }
+            return str;
+        }
+
+
+
 
 
 
