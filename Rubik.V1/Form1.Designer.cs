@@ -34,6 +34,7 @@
             this.A2 = new System.Windows.Forms.Panel();
             this.A5 = new System.Windows.Forms.Panel();
             this.A4 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.A3 = new System.Windows.Forms.Panel();
             this.A8 = new System.Windows.Forms.Panel();
             this.A7 = new System.Windows.Forms.Panel();
@@ -43,6 +44,7 @@
             this.C6 = new System.Windows.Forms.Panel();
             this.C5 = new System.Windows.Forms.Panel();
             this.C4 = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
             this.C3 = new System.Windows.Forms.Panel();
             this.C2 = new System.Windows.Forms.Panel();
             this.C1 = new System.Windows.Forms.Panel();
@@ -52,6 +54,7 @@
             this.E6 = new System.Windows.Forms.Panel();
             this.E5 = new System.Windows.Forms.Panel();
             this.E4 = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
             this.E3 = new System.Windows.Forms.Panel();
             this.E2 = new System.Windows.Forms.Panel();
             this.E1 = new System.Windows.Forms.Panel();
@@ -61,6 +64,7 @@
             this.F6 = new System.Windows.Forms.Panel();
             this.F5 = new System.Windows.Forms.Panel();
             this.F4 = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
             this.F3 = new System.Windows.Forms.Panel();
             this.F2 = new System.Windows.Forms.Panel();
             this.F1 = new System.Windows.Forms.Panel();
@@ -70,6 +74,7 @@
             this.D6 = new System.Windows.Forms.Panel();
             this.D5 = new System.Windows.Forms.Panel();
             this.D4 = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
             this.D3 = new System.Windows.Forms.Panel();
             this.D2 = new System.Windows.Forms.Panel();
             this.D1 = new System.Windows.Forms.Panel();
@@ -79,6 +84,7 @@
             this.B6 = new System.Windows.Forms.Panel();
             this.B5 = new System.Windows.Forms.Panel();
             this.B4 = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
             this.B3 = new System.Windows.Forms.Panel();
             this.B2 = new System.Windows.Forms.Panel();
             this.B1 = new System.Windows.Forms.Panel();
@@ -140,6 +146,13 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.Text_face = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.A4.SuspendLayout();
+            this.C4.SuspendLayout();
+            this.E4.SuspendLayout();
+            this.F4.SuspendLayout();
+            this.D4.SuspendLayout();
+            this.B4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Box2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box4)).BeginInit();
@@ -179,10 +192,20 @@
             // 
             // A4
             // 
+            this.A4.Controls.Add(this.label9);
             this.A4.Location = new System.Drawing.Point(151, 54);
             this.A4.Name = "A4";
             this.A4.Size = new System.Drawing.Size(30, 29);
             this.A4.TabIndex = 5;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(8, 8);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(14, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "B";
             // 
             // A3
             // 
@@ -242,10 +265,20 @@
             // 
             // C4
             // 
+            this.C4.Controls.Add(this.label19);
             this.C4.Location = new System.Drawing.Point(151, 159);
             this.C4.Name = "C4";
             this.C4.Size = new System.Drawing.Size(30, 29);
             this.C4.TabIndex = 14;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(8, 8);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(15, 13);
+            this.label19.TabIndex = 125;
+            this.label19.Text = "U";
             // 
             // C3
             // 
@@ -305,10 +338,20 @@
             // 
             // E4
             // 
+            this.E4.Controls.Add(this.label21);
             this.E4.Location = new System.Drawing.Point(151, 264);
             this.E4.Name = "E4";
             this.E4.Size = new System.Drawing.Size(30, 29);
             this.E4.TabIndex = 23;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(8, 9);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(13, 13);
+            this.label21.TabIndex = 127;
+            this.label21.Text = "F";
             // 
             // E3
             // 
@@ -368,10 +411,20 @@
             // 
             // F4
             // 
+            this.F4.Controls.Add(this.label22);
             this.F4.Location = new System.Drawing.Point(151, 369);
             this.F4.Name = "F4";
             this.F4.Size = new System.Drawing.Size(30, 29);
             this.F4.TabIndex = 32;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(8, 8);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(15, 13);
+            this.label22.TabIndex = 128;
+            this.label22.Text = "D";
             // 
             // F3
             // 
@@ -431,10 +484,20 @@
             // 
             // D4
             // 
+            this.D4.Controls.Add(this.label20);
             this.D4.Location = new System.Drawing.Point(262, 159);
             this.D4.Name = "D4";
             this.D4.Size = new System.Drawing.Size(30, 29);
             this.D4.TabIndex = 41;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(8, 9);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(15, 13);
+            this.label20.TabIndex = 126;
+            this.label20.Text = "R";
             // 
             // D3
             // 
@@ -494,10 +557,20 @@
             // 
             // B4
             // 
+            this.B4.Controls.Add(this.label18);
             this.B4.Location = new System.Drawing.Point(43, 159);
             this.B4.Name = "B4";
             this.B4.Size = new System.Drawing.Size(30, 29);
             this.B4.TabIndex = 50;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(8, 8);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(13, 13);
+            this.label18.TabIndex = 124;
+            this.label18.Text = "L";
             // 
             // B3
             // 
@@ -1057,6 +1130,11 @@
             this.label17.TabIndex = 123;
             this.label17.Text = "Face";
             // 
+            // timer3
+            // 
+            this.timer3.Interval = 1;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1172,13 +1250,25 @@
             this.Name = "Form1";
             this.Text = "Rubik";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.A4.ResumeLayout(false);
+            this.A4.PerformLayout();
+            this.C4.ResumeLayout(false);
+            this.C4.PerformLayout();
+            this.E4.ResumeLayout(false);
+            this.E4.PerformLayout();
+            this.F4.ResumeLayout(false);
+            this.F4.PerformLayout();
+            this.D4.ResumeLayout(false);
+            this.D4.PerformLayout();
+            this.B4.ResumeLayout(false);
+            this.B4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Box2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box1)).EndInit();
-           // ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1298,6 +1388,13 @@
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.TextBox Text_face;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Timer timer3;
         //>>>>>>> 6660cc3015398fa2a960b8bd0d824c6d907f612f
     }
 }

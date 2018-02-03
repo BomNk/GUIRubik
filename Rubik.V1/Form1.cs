@@ -42,8 +42,10 @@ namespace Rubik.V1
         int numPicture = 1;
         int numList = 1;
         int Time,Delay=0;
-
+        //time counter = new time();
         int NumTimer = 0;
+        int min, sec, ssec;
+        
 
         // Test Commit
         // รูปต้นฉบับ
@@ -54,13 +56,14 @@ namespace Rubik.V1
         {
            
             InitializeComponent();
+            Text_Time.Text = min + " : " + sec + " : " + ssec;
         }
 
 
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            serialPort1.Open();
+            //serialPort1.Open();
             webcam = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo VideoCaptureDevice in webcam)
             {
@@ -1756,8 +1759,11 @@ namespace Rubik.V1
         private void Start_Auto_Click(object sender, EventArgs e)
         {
            
-            timer2.Enabled = true;
-            timer2.Start();
+            //timer2.Enabled = true;
+            //timer2.Start();
+
+            time_init();
+
 
             //if (NumTimer == 6)
             //{
@@ -1788,6 +1794,24 @@ namespace Rubik.V1
         {
 
             timer2.Stop();
+            timer3.Stop();
+        }
+
+        private void timer3_Tick_1(object sender, EventArgs e)
+        {
+            ssec++;
+            if (ssec % 100 == 0)
+            {
+                sec++;
+                ssec = 0;
+            }
+            if (sec  == 60)
+            {
+                min++;
+                sec = 0;
+            }
+            Text_Time.Text = min + " : " + sec + " : " + ssec;
+          
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -1805,9 +1829,24 @@ namespace Rubik.V1
             }
             //Delay++;
         }
+        public void time_init()
+        {
+            timer3.Enabled = true;
+            timer3.Start();
+         
+            min = 0;
+            sec = 0;
+            ssec = 0;
+            
 
-       
+        }
 
+
+
+
+
+
+        /*
         void F()
         {
             serialPort1.Write("k");
@@ -1962,7 +2001,7 @@ namespace Rubik.V1
             serialPort1.Write("J");
             serialPort1.Write("KdkLLjdJKDk");
         }
-       
+       */
 
 
 
