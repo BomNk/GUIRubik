@@ -1806,20 +1806,7 @@ namespace Rubik.V1
             //Delay++;
         }
 
-        void delay(int d)
-        {
-            timer2.Enabled = true;
-            timer2.Start();
-            if(Delay == d)
-            {
-                timer2.Stop();
-                Delay = 0;
-            }
-            else
-            {
-                delay(d);
-            }
-        }
+       
 
         void F()
         {
@@ -1843,6 +1830,7 @@ namespace Rubik.V1
         {
             serialPort1.Write("ff");
         }
+        
 
         void B()
         {
@@ -1866,6 +1854,7 @@ namespace Rubik.V1
         {
             serialPort1.Write("bb");
         }
+    
 
         void L()
         {
@@ -1914,58 +1903,66 @@ namespace Rubik.V1
             serialPort1.Write("rr");
         }
 
-        
-        /// <summary>
-        /// not Create Algo  you can insert new Algo
-        /// </summary>
-        void UU()//เสร็จ
+    
+        void UU()//เสร็จ   // U
         {
             serialPort1.Write("j");
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkRjrdJKDk");
         }
-        void U_det()
+        void U_det() // U'  //เสร็จ
         {
-            serialPort1.Write("b");
-            serialPort1.Write("K");
-            serialPort1.Write("B");
-            serialPort1.Write("k");
+            serialPort1.Write("j");
+            serialPort1.Write("D");
+            serialPort1.Write("J");
+            serialPort1.Write("KdkrjRdJKDk");
         }
-        void U_2()
+        void U_2() // เสร็จ
         {
-            serialPort1.Write("UU");
+            serialPort1.Write("j");
+            serialPort1.Write("D");
+            serialPort1.Write("J");
+            serialPort1.Write("KdkRRjdJKDk");
         }
-        void U2_det()
+        void U2_det() // เสร็จ
         {
-            serialPort1.Write("uu");
+            serialPort1.Write("j");
+            serialPort1.Write("D");
+            serialPort1.Write("J");
+            serialPort1.Write("KdkRRjdJKDk");
         }
 
-        void DD()
+        
+        void DD()  //เสร็จ
         {
-            serialPort1.Write("U");
-            serialPort1.Write("K");
-            serialPort1.Write("b");
-            serialPort1.Write("k");
+            serialPort1.Write("j");
+            serialPort1.Write("D");
+            serialPort1.Write("J");
+            serialPort1.Write("KdkLjldJKDk");
         }
-        void D_det()
+        void D_det()  // เสร็จ
         {
-            serialPort1.Write("b");
-            serialPort1.Write("K");
-            serialPort1.Write("B");
-            serialPort1.Write("k");
+            serialPort1.Write("j");
+            serialPort1.Write("D");
+            serialPort1.Write("J");
+            serialPort1.Write("KdkljLdJKDk");
         }
-        void D_2()
+        void D_2()   // เสร็จ
         {
-            serialPort1.Write("UU");
+            serialPort1.Write("j");
+            serialPort1.Write("D");
+            serialPort1.Write("J");
+            serialPort1.Write("KdkLLjdJKDk");
         }
-        void D2_det()
+        void D2_det()  // เสร็จ
         {
-            serialPort1.Write("uu");
+            serialPort1.Write("j");
+            serialPort1.Write("D");
+            serialPort1.Write("J");
+            serialPort1.Write("KdkLLjdJKDk");
         }
-        // 
-           //  End to Insert
-        //
+       
 
 
 
