@@ -110,7 +110,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -786,16 +785,6 @@
             this.label8.TabIndex = 89;
             this.label8.Text = "Down";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(250, 229);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(237, 13);
-            this.label9.TabIndex = 90;
-            this.label9.Text = "***หันหน้าสีเขียวเข้าหาตัว ซ้ายสีน้ำเงิน  ขวาสีเขียว";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -1100,7 +1089,6 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -1190,7 +1178,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Box5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box1)).EndInit();
-          //  ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1278,7 +1266,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;

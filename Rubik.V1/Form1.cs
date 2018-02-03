@@ -1909,16 +1909,16 @@ namespace Rubik.V1
             serialPort1.Write("rr");
         }
 
-
+        
         /// <summary>
         /// not Create Algo  you can insert new Algo
         /// </summary>
-        void UU()
+        void UU()//เสร็จ
         {
-            serialPort1.Write("U");
-            serialPort1.Write("K");
-            serialPort1.Write("b");
-            serialPort1.Write("k");
+            serialPort1.Write("j");
+            serialPort1.Write("D");
+            serialPort1.Write("J");
+            serialPort1.Write("KdkRjrdJKDk");
         }
         void U_det()
         {
