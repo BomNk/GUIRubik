@@ -45,6 +45,8 @@ namespace Rubik.V1
         //time counter = new time();
         int NumTimer = 0;
         int min, sec, ssec;
+
+        String Result, Face;
         
 
         // Test Commit
@@ -57,6 +59,7 @@ namespace Rubik.V1
            
             InitializeComponent();
             Text_Time.Text = min + " : " + sec + " : " + ssec;
+           
         }
 
 
@@ -1763,18 +1766,19 @@ namespace Rubik.V1
             //timer2.Start();
 
             time_init();
-
+            Result = Text_Result.Text;
+            Result_to_function(Result);
 
             //if (NumTimer == 6)
             //{
-                
 
-           // }
+
+            // }
 
 
 
             //STOP_AUTO_Click(sender, e);
-            
+
             //Start_Auto_Click(sender, e);
 
 
@@ -1844,7 +1848,7 @@ namespace Rubik.V1
 
 
 
-
+        // ////////////////////  Function Control  Rubik Cube Robot   Begin EiEi  ///////////////////////////////
 
         /*
         void F()
@@ -2004,8 +2008,158 @@ namespace Rubik.V1
        */
 
 
+        // ////////////////////  Function Control  Rubik Cube Robot   Finish   ///////////////////////////////
 
 
+
+        //////////////////////   Generate  Rusult //////////////////////
+
+        public void Result_to_function(string Result)
+        {
+            //Face = Face.Substring(3);  // เราต้องใส่ Index เพื่อระบุส่วนที่จะเอา(ตัดส่วนอื่นทิ้ง) (X,Y)   x คือ ตำแหน่ง   Y คือ ความยาวที่เราจะเอา
+            //Fcee = Face.Trim(new char[]{ '' , '*' ,'.' })  // ใน new char คือส่วนที่เราจะตัดว่ามีตัวอักษรใหนบ้าง
+            //first_string.Remove(first_string.IndexOf(" test"), " test".Length);
+            StringBuilder sb = new StringBuilder(Result);
+            sb.Remove(Result.IndexOf("."), 3);
+            Result = sb.ToString();
+
+
+            //Console.WriteLine(" Result = {0}", Result);
+            //Console.WriteLine(" {0}", Result.Length);
+            System.Diagnostics.Debug.WriteLine("Result length = " + (Result.Length -5) );
+            System.Diagnostics.Debug.WriteLine("Result = " + Result);
+            int x = 1;
+            
+            for (int i = 0; i < Result.Length-5 ; i += 3)
+            {
+
+
+               
+
+                if (Result.Substring(i, 2).Equals("L "))
+                {
+                    listBox1.Items.Add(x + ":L");
+
+                   
+                    x++;
+                }
+                else if (Result.Substring(i, 2).Equals("L'"))
+                {
+                    listBox1.Items.Add(x + ":L'");
+                    
+                    x++;
+                }
+                 else if (Result.Substring(i, 2).Equals("L2"))
+                {
+                    listBox1.Items.Add(x + ":L2");
+                  
+                    x++;
+                }
+
+
+                 else if (Result.Substring(i, 2).Equals("B "))
+                {
+                    listBox1.Items.Add(x + ":B ");
+                 
+                    x++;
+                }
+                 else if (Result.Substring(i, 2).Equals("B'"))
+                {
+                    listBox1.Items.Add(x + ":B'");
+               
+                    x++;
+                }
+                 else if (Result.Substring(i, 2).Equals("B2"))
+                {
+                    listBox1.Items.Add(x + ":B2");
+               
+                    x++;
+                }
+
+                 else if (Result.Substring(i, 2).Equals("R "))
+                {
+                    listBox1.Items.Add(x + ":R ");
+                
+                    x++;
+                }
+                 else if (Result.Substring(i, 2).Equals("R'"))
+                {
+                    listBox1.Items.Add(x + ":R'");
+                  
+                    x++;
+                }
+                 else if (Result.Substring(i, 2).Equals("R2"))
+                {
+                    listBox1.Items.Add(x + ":R2");
+                   
+                    x++;
+                }
+
+                 else if (Result.Substring(i, 2).Equals("U "))
+                {
+                    listBox1.Items.Add(x + ":U ");
+              
+                    x++;
+                }
+                 else if (Result.Substring(i, 2).Equals("U'"))
+                {
+                    listBox1.Items.Add(x + ":U'");
+               
+                    x++;
+                }
+                 else if (Result.Substring(i, 2).Equals("U2"))
+                {
+                    listBox1.Items.Add(x + ":U2");
+               
+                    x++;
+                }
+
+                 else if (Result.Substring(i, 2).Equals("D "))
+                {
+                    listBox1.Items.Add(x + ":D ");
+            
+                    x++;
+                }
+                else if (Result.Substring(i, 2).Equals("D'"))
+                {
+                    listBox1.Items.Add(x + ":D'");
+             
+                    x++;
+                }
+                else if (Result.Substring(i, 2).Equals("D2"))
+                {
+                    listBox1.Items.Add(x + ":D2");
+           ;
+                    x++;
+                }
+                else if (Result.Substring(i, 2).Equals("F "))
+                {
+              
+                    listBox1.Items.Add(x + ":F ");
+                    x++;
+                }
+                else if (Result.Substring(i, 2).Equals("F'"))
+                {
+                    listBox1.Items.Add(x + ":F'");
+              
+                    x++;
+                }
+                else if (Result.Substring(i, 2).Equals("F2"))
+                {
+                    listBox1.Items.Add(x + ":F2");
+               
+                    x++;
+                }
+
+
+            }
+            System.Diagnostics.Debug.WriteLine("x = " + x);
+
+
+
+        }
+
+        ////////////////////// Generate Result Finish ////////////////
 
         //=======
         ///////////////////   สิ้นสุดการทำงานของปุ่ม
