@@ -66,13 +66,13 @@ namespace Rubik.V1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //serialPort1.Open();
+            serialPort1.Open();
             webcam = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo VideoCaptureDevice in webcam)
             {
                 comboBox1.Items.Add(VideoCaptureDevice.Name);
             }
-            //comboBox1.SelectedIndex = 0;
+            comboBox1.SelectedIndex = 0;
 
         }
 
@@ -1607,6 +1607,9 @@ namespace Rubik.V1
 
         }
 
+
+
+
         private void Left_Click(object sender, EventArgs e)    //  L
         {
             rotate_left(1);
@@ -1614,6 +1617,7 @@ namespace Rubik.V1
             listBox1.Items.Add(numList + ":L");
             numList++;
             // serialPort1.Write("L");
+            L();
         }
 
         private void Right_Click_1(object sender, EventArgs e)   //  R
@@ -1623,7 +1627,7 @@ namespace Rubik.V1
             listBox1.Items.Add(numList + ": R");
             numList++;
             //  serialPort1.Write("R");
-
+            R();
         }
 
 
@@ -1635,7 +1639,7 @@ namespace Rubik.V1
             listBox1.Items.Add(numList + ": F");
             numList++;
             /// Step of Work ///
-             
+            F();
 
             
             ///
@@ -1649,6 +1653,7 @@ namespace Rubik.V1
             listBox1.Items.Add(numList + ":B");
             numList++;
             // serialPort1.Write("B");
+            B();
         }
 
 
@@ -1659,7 +1664,7 @@ namespace Rubik.V1
             listBox1.Items.Add(numList + ": U'");
             numList++;
             // serialPort1.Write("b");
-
+            UU();
 
         }
 
@@ -1670,7 +1675,7 @@ namespace Rubik.V1
             listBox1.Items.Add(numList + ":D");
             numList++;
             // serialPort1.Write("b");
-
+            DD();
         }
 
         private void Bdet_Click(object sender, EventArgs e) //B'
@@ -1680,6 +1685,7 @@ namespace Rubik.V1
             listBox1.Items.Add(numList + ": B'");
             numList++;
             // serialPort1.Write("b");
+            B_det();
         }
 
         private void Ldet_Click(object sender, EventArgs e)  // L'
@@ -1690,6 +1696,7 @@ namespace Rubik.V1
             //textBox1.Text = "L";
             numList++;
             // serialPort1.Write("l");
+            L_det();
         }
 
         private void Fdet_Click(object sender, EventArgs e)  // F'
@@ -1699,6 +1706,7 @@ namespace Rubik.V1
             listBox1.Items.Add(numList + ": F'");
             //Text_Result.Text = "FFFFFFFFFFFFFFFFFFFFFFFF";  //
             numList++;
+            F_det();
             //serialPort1.Write("f");// Tanapon Ninket
         }
 
@@ -1708,6 +1716,7 @@ namespace Rubik.V1
             show_color(Rubik);
             listBox1.Items.Add(numList + ": R'");  
             numList++;
+            R_det();
             //serialPort1.Write("r");
         }
 
@@ -1717,6 +1726,7 @@ namespace Rubik.V1
             show_color(Rubik);
             listBox1.Items.Add(numList + ": U'");
             numList++;
+            U_det();
             //serialPort1.Write("r");
         }
 
@@ -1726,6 +1736,7 @@ namespace Rubik.V1
             show_color(Rubik);
             listBox1.Items.Add(numList + ":D'");
             numList++;
+            D_det();
             //serialPort1.Write("r");
         }
 
@@ -1741,22 +1752,22 @@ namespace Rubik.V1
 
         private void open_left_right_Click(object sender, EventArgs e) // เลื่อนออก ซ้าย---ขวา  <<LR>>
         {
-            //serialPort1.Write("j");
+            serialPort1.Write("j");
         }
 
         private void close_left_right_Click(object sender, EventArgs e) // เลื่อนเข้า ซ้าย---ขวา  >>LR<<
         {
-            //serialPort1.Write("J");
+            serialPort1.Write("J");
         }
 
         private void open_front_back_Click(object sender, EventArgs e)  // เลื่อนเข้า หน้า---หลัง   <<FB>>
         {
-            //serialPort1.Write("K");
+            serialPort1.Write("K");
         }
 
         private void close_front_back_Click(object sender, EventArgs e) // เลื่อนออก หน้า---หลัง   >>FB<<
         {
-            //serialPort1.Write("k");
+            serialPort1.Write("k");
         }
 
         private void Start_Auto_Click(object sender, EventArgs e)
@@ -1850,19 +1861,19 @@ namespace Rubik.V1
 
         // ////////////////////  Function Control  Rubik Cube Robot   Begin EiEi  ///////////////////////////////
 
-        /*
+        
         void F()
         {
-            serialPort1.Write("k");
-            serialPort1.Write("k");
-            serialPort1.Write("k");
+            serialPort1.Write("F");
+            serialPort1.Write("K");
+            serialPort1.Write("f");
             serialPort1.Write("k");
         }
         void F_det()
         {
-            serialPort1.Write("k");
-            serialPort1.Write("k");
-            serialPort1.Write("k");
+            serialPort1.Write("f");
+            serialPort1.Write("K");
+            serialPort1.Write("F");
             serialPort1.Write("k");
         }
         void F_2()
@@ -2005,7 +2016,7 @@ namespace Rubik.V1
             serialPort1.Write("J");
             serialPort1.Write("KdkLLjdJKDk");
         }
-       */
+       
 
 
         // ////////////////////  Function Control  Rubik Cube Robot   Finish   ///////////////////////////////
@@ -2039,20 +2050,20 @@ namespace Rubik.V1
                 if (Result.Substring(i, 2).Equals("L "))
                 {
                     listBox1.Items.Add(x + ":L");
-
+                    L();
                    
                     x++;
                 }
                 else if (Result.Substring(i, 2).Equals("L'"))
                 {
                     listBox1.Items.Add(x + ":L'");
-                    
+                    L_det();
                     x++;
                 }
                  else if (Result.Substring(i, 2).Equals("L2"))
                 {
                     listBox1.Items.Add(x + ":L2");
-                  
+                    L_2();
                     x++;
                 }
 
@@ -2060,94 +2071,95 @@ namespace Rubik.V1
                  else if (Result.Substring(i, 2).Equals("B "))
                 {
                     listBox1.Items.Add(x + ":B ");
-                 
+                    B();
                     x++;
                 }
                  else if (Result.Substring(i, 2).Equals("B'"))
                 {
                     listBox1.Items.Add(x + ":B'");
-               
+                    B_det();
                     x++;
                 }
                  else if (Result.Substring(i, 2).Equals("B2"))
                 {
                     listBox1.Items.Add(x + ":B2");
-               
+                    B_2();
                     x++;
                 }
 
                  else if (Result.Substring(i, 2).Equals("R "))
                 {
                     listBox1.Items.Add(x + ":R ");
-                
+                    R();
                     x++;
                 }
                  else if (Result.Substring(i, 2).Equals("R'"))
                 {
                     listBox1.Items.Add(x + ":R'");
-                  
+                    R_det();
                     x++;
                 }
                  else if (Result.Substring(i, 2).Equals("R2"))
                 {
                     listBox1.Items.Add(x + ":R2");
-                   
+                    R_2();
                     x++;
                 }
 
                  else if (Result.Substring(i, 2).Equals("U "))
                 {
                     listBox1.Items.Add(x + ":U ");
-              
+                    UU();
                     x++;
                 }
                  else if (Result.Substring(i, 2).Equals("U'"))
                 {
                     listBox1.Items.Add(x + ":U'");
-               
+                    U_det();
                     x++;
                 }
                  else if (Result.Substring(i, 2).Equals("U2"))
                 {
                     listBox1.Items.Add(x + ":U2");
-               
+                    U_2();
                     x++;
                 }
 
                  else if (Result.Substring(i, 2).Equals("D "))
                 {
                     listBox1.Items.Add(x + ":D ");
-            
+                    DD();
                     x++;
                 }
                 else if (Result.Substring(i, 2).Equals("D'"))
                 {
                     listBox1.Items.Add(x + ":D'");
-             
+                    D_det();
                     x++;
                 }
                 else if (Result.Substring(i, 2).Equals("D2"))
                 {
                     listBox1.Items.Add(x + ":D2");
-           ;
+                    D_2();       
                     x++;
                 }
                 else if (Result.Substring(i, 2).Equals("F "))
                 {
               
                     listBox1.Items.Add(x + ":F ");
+                    F();
                     x++;
                 }
                 else if (Result.Substring(i, 2).Equals("F'"))
                 {
                     listBox1.Items.Add(x + ":F'");
-              
+                    F_det();
                     x++;
                 }
                 else if (Result.Substring(i, 2).Equals("F2"))
                 {
                     listBox1.Items.Add(x + ":F2");
-               
+                    F_2();
                     x++;
                 }
 
