@@ -1998,6 +1998,9 @@ namespace Rubik.V1
             serialPort1.Write("J");
             serialPort1.Write("KdkLLjdJKDk");
         }
+
+
+
         void D2_det()  // เสร็จ
         {
             serialPort1.Write("j");
@@ -2006,7 +2009,7 @@ namespace Rubik.V1
             serialPort1.Write("KdkLLjdJKDk");
         }
        */
-
+        
 
         // ////////////////////  Function Control  Rubik Cube Robot   Finish   ///////////////////////////////
 
