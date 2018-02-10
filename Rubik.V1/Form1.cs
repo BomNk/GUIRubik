@@ -182,7 +182,9 @@ namespace Rubik.V1
 
             show_color(Rubik);
 
-            Text_face.Text = showRubik(Rubik);
+            
+                 Text_face.Text = showRubik(Rubik);
+            Face = showRubik(Rubik);
             //  saveFileDialog1.InitialDirectory = @"d:\picture";
             //saveFileDialog1.FileName = str+i;
             //  if (DialogResult.OK == saveFileDialog1.ShowDialog())
@@ -197,7 +199,8 @@ namespace Rubik.V1
             if (numTake == 7)
             {
                 label2.Text = " Complete";
-                Write_Face();
+                //timer2.Stop();
+               
             }
             cam.Start();
         }
@@ -1523,6 +1526,8 @@ namespace Rubik.V1
                 Box6.Image = R_Image.ToBitmap();
                 read_color(6 - 1);
             }
+            
+
 
            // read_color()
 
@@ -1774,13 +1779,13 @@ namespace Rubik.V1
         private void Start_Auto_Click(object sender, EventArgs e)
         {
            
-            //timer2.Enabled = true;
-            //timer2.Start();
-
+            timer2.Enabled = true;
+            timer2.Start();
+            /*
             time_init();
             Result = Text_Result.Text;
             Result_to_function(Result);
-
+            */
             //if (NumTimer == 6)
             //{
 
@@ -1829,15 +1834,15 @@ namespace Rubik.V1
         private void timer2_Tick(object sender, EventArgs e)   //////// Timer for TakePicture  ////////////
         {
             Take_Click_1(sender, e);
+            //
             NumTimer++;
+            
             if (NumTimer == 6)
             {
                 timer2.Stop();
-                Front_Click(sender, e);
-                Front_Click(sender, e);
-                Front_Click(sender, e);
-                Rear_Click(sender, e);
-                D_Click(sender, e);
+                Text_face.Text = Face;
+
+                Write_Face();
             }
             //Delay++;
         }
@@ -2189,10 +2194,11 @@ namespace Rubik.V1
         }
         public void Write_Face()
         {
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"D:\\Face.txt", true))
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"D:\\Face.txt"))
             {
                 Text_face.Text = Face;
-                file.WriteLine(Face);
+                
+                file.Write(Face);
                 //ReadFile
             }
         }
