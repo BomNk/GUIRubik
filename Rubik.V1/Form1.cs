@@ -16,9 +16,7 @@ using Emgu.CV;
 using Emgu.CV.UI;
 using Emgu.Util;
 using Emgu.CV.Structure;
-
-
-
+using System.IO;
 
 namespace Rubik.V1
 {
@@ -46,7 +44,7 @@ namespace Rubik.V1
         int NumTimer = 0;
         int min, sec, ssec;
 
-        String Result, Face;
+        String Result ="", Face ="" ;
         
 
         // Test Commit
@@ -197,7 +195,10 @@ namespace Rubik.V1
             timer1.Stop();
             //numTake++;
             if (numTake == 7)
+            {
                 label2.Text = " Complete";
+                Write_Face();
+            }
             cam.Start();
         }
 
@@ -1748,7 +1749,7 @@ namespace Rubik.V1
             fm3.Show();
         }
 
-//<<<<<<< HEAD
+
 
         private void open_left_right_Click(object sender, EventArgs e) // เลื่อนออก ซ้าย---ขวา  <<LR>>
         {
@@ -1793,10 +1794,6 @@ namespace Rubik.V1
             //Start_Auto_Click(sender, e);
 
 
-
-
-
-
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -1805,14 +1802,14 @@ namespace Rubik.V1
 
         }
 
-        private void STOP_AUTO_Click(object sender, EventArgs e)
+        private void STOP_AUTO_Click(object sender, EventArgs e)   /////  Button  STOP  for Auto CLick //////////////
         {
 
             timer2.Stop();
             timer3.Stop();
         }
 
-        private void timer3_Tick_1(object sender, EventArgs e)
+        private void timer3_Tick_1(object sender, EventArgs e)   //////  Timer for Counter  //////////
         {
             ssec++;
             if (ssec % 100 == 0)
@@ -1829,7 +1826,7 @@ namespace Rubik.V1
           
         }
 
-        private void timer2_Tick(object sender, EventArgs e)
+        private void timer2_Tick(object sender, EventArgs e)   //////// Timer for TakePicture  ////////////
         {
             Take_Click_1(sender, e);
             NumTimer++;
@@ -1854,14 +1851,19 @@ namespace Rubik.V1
             ssec = 0;
             
 
-        }
+        }   ////////////////  Timne init /////////////////
 
+        private void timer_read_result_Tick(object sender, EventArgs e)
+        {
+            ///////////////// for wite Read File /////////////////
+
+        }
 
 
 
         // ////////////////////  Function Control  Rubik Cube Robot   Begin EiEi  ///////////////////////////////
 
-        
+
         void F()
         {
             serialPort1.Write("F");
@@ -1916,14 +1918,15 @@ namespace Rubik.V1
             serialPort1.Write("j");
             serialPort1.Write("l");
             serialPort1.Write("J");
-        }
+        }  //เสร็จ
         void L_det()
         {
             serialPort1.Write("l");
             serialPort1.Write("j");
             serialPort1.Write("L");
             serialPort1.Write("J");
-        }
+        }   /// <summary>
+        /// </summary>
         void L_2()
         {
             serialPort1.Write("LL");
@@ -1940,18 +1943,18 @@ namespace Rubik.V1
             serialPort1.Write("j");
             serialPort1.Write("r");
             serialPort1.Write("J");
-        }
+        }  //เสร็จ
         void R_det()
         {
             serialPort1.Write("r");
             serialPort1.Write("j");
             serialPort1.Write("R");
             serialPort1.Write("J");
-        }
+        }  //เสร็จ
         void R_2()
         {
             serialPort1.Write("RR");
-        }
+        }   //เสร็จ
         void R2_det()
         {
             serialPort1.Write("rr");
@@ -2009,9 +2012,6 @@ namespace Rubik.V1
             serialPort1.Write("J");
             serialPort1.Write("KdkLLjdJKDk");
         }
-
-
-
         void D2_det()  // เสร็จ
         {
             serialPort1.Write("j");
@@ -2019,13 +2019,7 @@ namespace Rubik.V1
             serialPort1.Write("J");
             serialPort1.Write("KdkLLjdJKDk");
         }
-<<<<<<< HEAD
-       */
-        
-=======
-       
 
->>>>>>> 3ff8bc78818b846eb39c6878551d28741ae763ba
 
         // ////////////////////  Function Control  Rubik Cube Robot   Finish   ///////////////////////////////
 
@@ -2181,8 +2175,32 @@ namespace Rubik.V1
 
         ////////////////////// Generate Result Finish ////////////////
 
+
+        ////////////////////////////////Read / Write File Face and Result  /////////////////////////////////////
+        
+        public void Read_Result()
+        {
+            using (StreamReader readtext = new StreamReader(@"D:\\Result.txt"))
+            {
+                string readMeText = readtext.ReadLine();
+                Text_Result.Text = readMeText;
+                //Console.WriteLine(Result);
+            }
+        }
+        public void Write_Face()
+        {
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"D:\\Face.txt", true))
+            {
+                Text_face.Text = Face;
+                file.WriteLine(Face);
+                //ReadFile
+            }
+        }
+        ////////////////////////////////  END  File IO  ////////////////////////////////////////////////////////
+
+
         //=======
         ///////////////////   สิ้นสุดการทำงานของปุ่ม
-        //>>>>>>> 6660cc3015398fa2a960b8bd0d824c6d907f612f
+     
     } // end class 
 }

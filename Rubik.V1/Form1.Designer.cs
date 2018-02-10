@@ -147,6 +147,7 @@
             this.Text_face = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.timer_read_result = new System.Windows.Forms.Timer(this.components);
             this.A4.SuspendLayout();
             this.C4.SuspendLayout();
             this.E4.SuspendLayout();
@@ -1135,6 +1136,10 @@
             this.timer3.Interval = 1;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick_1);
             // 
+            // timer_read_result
+            // 
+            this.timer_read_result.Tick += new System.EventHandler(this.timer_read_result_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1268,7 +1273,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Box5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box1)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1395,6 +1400,7 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Timer timer3;
+        private System.Windows.Forms.Timer timer_read_result;
         //>>>>>>> 6660cc3015398fa2a960b8bd0d824c6d907f612f
     }
 }
