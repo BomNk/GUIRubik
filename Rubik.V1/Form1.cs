@@ -199,7 +199,7 @@ namespace Rubik.V1
             if (numTake == 7)
             {
                 label2.Text = " Complete";
-                //timer2.Stop();
+                timer2.Stop();
                
             }
             cam.Start();
@@ -1780,7 +1780,7 @@ namespace Rubik.V1
         {
            
             timer2.Enabled = true;
-            timer_read_result.Enabled = true;
+            timer2.Start();
            
             /*
             time_init();
@@ -1844,7 +1844,7 @@ namespace Rubik.V1
                 Text_face.Text = Face;
                 Write_Face();
                 //Timer Rubik Start
-                timer2.Start();
+                timer_read_result.Enabled = true;
                 timer_read_result.Start();
             }
             //Delay++;
