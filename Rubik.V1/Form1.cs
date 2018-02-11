@@ -1781,6 +1781,7 @@ namespace Rubik.V1
            
             timer2.Enabled = true;
             timer2.Start();
+            Read_Result();
             /*
             time_init();
             Result = Text_Result.Text;
@@ -2188,6 +2189,7 @@ namespace Rubik.V1
             using (StreamReader readtext = new StreamReader(@"D:\\Result.txt"))
             {
                 string readMeText = readtext.ReadLine();
+                Result = readMeText;
                 Text_Result.Text = readMeText;
                 //Console.WriteLine(Result);
             }
