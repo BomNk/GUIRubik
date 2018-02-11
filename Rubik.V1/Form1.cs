@@ -1780,7 +1780,8 @@ namespace Rubik.V1
         {
            
             timer2.Enabled = true;
-            timer2.Start();
+            timer_read_result.Enabled = true;
+           
             /*
             time_init();
             Result = Text_Result.Text;
@@ -1841,8 +1842,9 @@ namespace Rubik.V1
             {
                 timer2.Stop();
                 Text_face.Text = Face;
-
                 Write_Face();
+                timer2.Start();
+                timer_read_result.Start();
             }
             //Delay++;
         }
@@ -1860,7 +1862,13 @@ namespace Rubik.V1
 
         private void timer_read_result_Tick(object sender, EventArgs e)
         {
+            Read_Result();
             ///////////////// for wite Read File /////////////////
+            if(Result.Length > 5)
+            {
+                timer_read_result.Stop();
+            }
+
 
         }
 
