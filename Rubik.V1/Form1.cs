@@ -1780,13 +1780,8 @@ namespace Rubik.V1
         {
            
             timer2.Enabled = true;
-<<<<<<< HEAD
-            timer2.Start();
-            Read_Result();
-=======
             timer_read_result.Enabled = true;
            
->>>>>>> 545d25cfa4881ed423d39fc7adaba063677198bb
             /*
             time_init();
             Result = Text_Result.Text;
@@ -1848,6 +1843,7 @@ namespace Rubik.V1
                 timer2.Stop();
                 Text_face.Text = Face;
                 Write_Face();
+                //Timer Rubik Start
                 timer2.Start();
                 timer_read_result.Start();
             }
@@ -2201,7 +2197,6 @@ namespace Rubik.V1
             using (StreamReader readtext = new StreamReader(@"D:\\Result.txt"))
             {
                 string readMeText = readtext.ReadLine();
-                Result = readMeText;
                 Text_Result.Text = readMeText;
                 //Console.WriteLine(Result);
             }
@@ -2213,7 +2208,7 @@ namespace Rubik.V1
                 Text_face.Text = Face;
                 
                 file.Write(Face);
-                //ReadFile
+                //ReadFile Naja//
             }
         }
         ////////////////////////////////  END  File IO  ////////////////////////////////////////////////////////
