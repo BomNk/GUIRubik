@@ -17,6 +17,7 @@ using Emgu.CV.UI;
 using Emgu.Util;
 using Emgu.CV.Structure;
 using System.IO;
+using System.Threading;
 
 namespace Rubik.V1
 {
@@ -173,6 +174,7 @@ namespace Rubik.V1
 
 
             numTake++;
+           
             timer1.Enabled = true;
             //  String str = "";
             
@@ -199,9 +201,10 @@ namespace Rubik.V1
             if (numTake == 7)
             {
                 label2.Text = " Complete";
-                timer2.Stop();
-               
+               // timer2.Stop();
+
             }
+
             cam.Start();
         }
 
@@ -1778,15 +1781,20 @@ namespace Rubik.V1
 
         private void Start_Auto_Click(object sender, EventArgs e)
         {
-           
+
             timer2.Enabled = true;
             timer2.Start();
-           
-            /*
-            time_init();
-            Result = Text_Result.Text;
-            Result_to_function(Result);
-            */
+
+            //Robot_Start();
+
+            //timer_read_result.Enabled = true;
+            //timer_read_result.Start();
+            //time_init();
+
+
+            //esult = Text_Result.Text;
+            //Result_to_function(Result);
+
             //if (NumTimer == 6)
             //{
 
@@ -1817,6 +1825,7 @@ namespace Rubik.V1
 
         private void timer3_Tick_1(object sender, EventArgs e)   //////  Timer for Counter  //////////
         {
+           
             ssec++;
             if (ssec % 100 == 0)
             {
@@ -1834,19 +1843,73 @@ namespace Rubik.V1
 
         private void timer2_Tick(object sender, EventArgs e)   //////// Timer for TakePicture  ////////////
         {
-            Take_Click_1(sender, e);
-            //
-            NumTimer++;
+
+            if (NumTimer == 0)
+            {
+                serialPort1.Write("KA");
+                Thread.Sleep(9000);
+                Take_Click_1(sender, e);
+
+            }
+            else if(NumTimer == 1)
+            {
+                serialPort1.Write("aa");
+                Thread.Sleep(9500);
+                Take_Click_1(sender, e);
+                serialPort1.Write("Ak");
+                Thread.Sleep(6000);
+            }
+            else if(NumTimer == 2)
+            {
+                serialPort1.Write("jD");
+                Thread.Sleep(7000);
+                Take_Click_1(sender, e);
+            }
+            else if(NumTimer == 3)
+            {
+                serialPort1.Write("dd");
+                Thread.Sleep(9500);
+                Take_Click_1(sender, e);
+                serialPort1.Write("D");
+                Thread.Sleep(5000);
+            }
+            else if(NumTimer == 4)
+            {
+                serialPort1.Write("aJK");
+                Thread.Sleep(9500);
+                Take_Click_1(sender, e);
+
+            }
+            else if(NumTimer == 5)
+            {
+                serialPort1.Write("AA");
+                Thread.Sleep(9500);
+                Take_Click_1(sender, e);
+                serialPort1.Write("aakjAJ");
+                Thread.Sleep(5000);
+
+            }
+           
+           
             
             if (NumTimer == 6)
             {
-                timer2.Stop();
+               
                 Text_face.Text = Face;
                 Write_Face();
                 //Timer Rubik Start
+
                 timer_read_result.Enabled = true;
                 timer_read_result.Start();
+
+               
+               
+                timer2.Stop();
+                // Thread.Sleep(3000);
+               
+
             }
+            NumTimer++;
             //Delay++;
         }
         public void time_init()
@@ -1860,15 +1923,27 @@ namespace Rubik.V1
             
 
         }   ////////////////  Timne init /////////////////
+        public void Robot_Start()
+        {
+            time_init();
+            Result = Text_Result.Text;
+            Result_to_function(Result);
+        }
 
         private void timer_read_result_Tick(object sender, EventArgs e)
         {
+
             Read_Result();
             ///////////////// for wite Read File /////////////////
-            if(Result.Length > 5)
+            if(Result.Length != null)
             {
+                //Thread.Sleep(1000);
+               // Robot_Start();
+
                 timer_read_result.Stop();
+               
             }
+
 
 
         }
@@ -1977,10 +2052,13 @@ namespace Rubik.V1
     
         void UU()//เสร็จ   // U
         {
+           
             serialPort1.Write("j");
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkRjrdJKDk");
+            Thread.Sleep(25000);
+
         }
         void U_det() // U'  //เสร็จ
         {
@@ -1988,13 +2066,16 @@ namespace Rubik.V1
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkrjRdJKDk");
+            Thread.Sleep(25000);
         }
+
         void U_2() // เสร็จ
         {
             serialPort1.Write("j");
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkRRjdJKDk");
+            Thread.Sleep(25000);
         }
         void U2_det() // เสร็จ
         {
@@ -2002,6 +2083,7 @@ namespace Rubik.V1
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkRRjdJKDk");
+            Thread.Sleep(25000);
         }
 
         
@@ -2011,6 +2093,7 @@ namespace Rubik.V1
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkLjldJKDk");
+            Thread.Sleep(25000);
         }
         void D_det()  // เสร็จ
         {
@@ -2018,6 +2101,7 @@ namespace Rubik.V1
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkljLdJKDk");
+            Thread.Sleep(25000);
         }
         void D_2()   // เสร็จ
         {
@@ -2025,13 +2109,26 @@ namespace Rubik.V1
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkLLjdJKDk");
+            Thread.Sleep(25000);
         }
+
+        private void Box1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Robot_Start();
+        }
+
         void D2_det()  // เสร็จ
         {
             serialPort1.Write("j");
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkLLjdJKDk");
+            Thread.Sleep(25000);
         }
 
 
@@ -2205,7 +2302,12 @@ namespace Rubik.V1
         {
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"D:\\Face.txt"))
             {
+                //Face= "LRUUURFULDFLURDFLBRLBLFRBRRDBUFDBBDLFBDLLFUURFDDBBDUFR";
+
                 Text_face.Text = Face;
+                //Text_face.Text = Face;
+
+
                 
                 file.Write(Face);
                 //ReadFile Naja//

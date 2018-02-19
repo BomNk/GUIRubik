@@ -148,6 +148,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer_read_result = new System.Windows.Forms.Timer(this.components);
+            this.button3 = new System.Windows.Forms.Button();
             this.A4.SuspendLayout();
             this.C4.SuspendLayout();
             this.E4.SuspendLayout();
@@ -784,6 +785,7 @@
             this.Box1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Box1.TabIndex = 81;
             this.Box1.TabStop = false;
+            this.Box1.Click += new System.EventHandler(this.Box1_Click);
             // 
             // Ck_Color
             // 
@@ -1092,11 +1094,11 @@
             // 
             // Start_Auto
             // 
-            this.Start_Auto.Location = new System.Drawing.Point(382, 184);
+            this.Start_Auto.Location = new System.Drawing.Point(453, 185);
             this.Start_Auto.Name = "Start_Auto";
-            this.Start_Auto.Size = new System.Drawing.Size(155, 35);
+            this.Start_Auto.Size = new System.Drawing.Size(84, 35);
             this.Start_Auto.TabIndex = 120;
-            this.Start_Auto.Text = "START";
+            this.Start_Auto.Text = "START_IMG";
             this.Start_Auto.UseVisualStyleBackColor = true;
             this.Start_Auto.Click += new System.EventHandler(this.Start_Auto_Click);
             // 
@@ -1112,7 +1114,7 @@
             // 
             // timer2
             // 
-            this.timer2.Interval = 3000;
+            this.timer2.Interval = 2000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // Text_face
@@ -1138,14 +1140,25 @@
             // 
             // timer_read_result
             // 
-            this.timer_read_result.Interval = 250;
+            this.timer_read_result.Interval = 200;
             this.timer_read_result.Tick += new System.EventHandler(this.timer_read_result_Tick);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(358, 185);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(89, 35);
+            this.button3.TabIndex = 124;
+            this.button3.Text = "START_HW";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1098, 441);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.Text_face);
             this.Controls.Add(this.STOP_AUTO);
@@ -1274,7 +1287,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Box5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box1)).EndInit();
-          //  ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
+           //((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1402,6 +1415,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Timer timer_read_result;
+        private System.Windows.Forms.Button button3;
         //>>>>>>> 6660cc3015398fa2a960b8bd0d824c6d907f612f
     }
 }
