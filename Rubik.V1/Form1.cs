@@ -29,6 +29,7 @@ namespace Rubik.V1
                                                 new char[] { 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R' },
                                                 new char[] {'G', 'G' , 'G' , 'G', 'G' , 'G' , 'G' , 'G','G' },
                                                 new char[] { 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y' } };
+        public char[][] Rubik_tmp = new char[6][];
         // public char[][] Rubik_copy = new char[6][];
         //public string Convert_RGB_to_Face(char Rubik);
         //Notebook
@@ -45,7 +46,7 @@ namespace Rubik.V1
         int NumTimer = 0;
         int min, sec, ssec;
 
-        String Result ="", Face ="" ;
+        String Result ="", Face ="",FF="" ;
         
 
         // Test Commit
@@ -75,6 +76,17 @@ namespace Rubik.V1
 
         }
 
+        private void convert_Face_Rubik()
+        {
+            Rubik_tmp[0] = Rubik[2] ;
+            Rubik_tmp[1] =  Rubik[3];
+            Rubik_tmp[2] =  Rubik[4];
+            Rubik_tmp[3] =  Rubik[5];
+            Rubik_tmp[4] =  Rubik[1];
+            Rubik_tmp[5] =  Rubik[0];
+        }
+
+
 
         void cam_NewFrame(object sender, NewFrameEventArgs eventArgs)   // Finish
         {
@@ -83,7 +95,7 @@ namespace Rubik.V1
             My_Image = new Image<Hsv, byte>(bit);
             if (numTake == 1)
             {
-                Box1.Image = bit;
+                Box3.Image = bit;
                 R_Image = My_Image.Copy();
                // My_Image1 = new Image<Hsv, byte>(bit);
             }
@@ -91,31 +103,31 @@ namespace Rubik.V1
             else if (numTake == 2)
             {
                 R_Image = My_Image.Copy();
-                Box5.Image = bit;
+                Box4.Image = bit;
                // My_Image1 = new Image<Hsv, byte>(new Bitmap(Box1.Image));
             }
             else if (numTake == 3)
             {
                 R_Image = My_Image.Copy();
-                Box2.Image = bit;
+                Box5.Image = bit;
               //  My_Image1 = new Image<Hsv, byte>(new Bitmap(Box1.Image));
             }
             else if (numTake == 4)
             {
                 R_Image = My_Image.Copy();
-                Box4.Image = bit;
+                Box6.Image = bit;
                 //My_Image1 = new Image<Hsv, byte>(new Bitmap(Box1.Image));
             }
             else if (numTake == 5)
             {
                 R_Image = My_Image.Copy();
-                Box3.Image = bit;
+                Box2.Image = bit;
               //  My_Image1 = new Image<Hsv, byte>(new Bitmap(Box1.Image));
             }
             else if (numTake == 6)
             {
                 R_Image = My_Image.Copy();
-                Box6.Image = bit;
+                Box1.Image = bit;
                 //My_Image1 = new Image<Hsv, byte>(new Bitmap(Box1.Image));
             }
 
@@ -139,37 +151,41 @@ namespace Rubik.V1
             {
 
                 //Box1.Image = R_Image.ToBitmap();
-                read_color(1 - 1);
+               
+                read_color(3 - 1); //U
             }
             if (numTake == 2)
             {
 
                 //Box5.Image = R_Image.ToBitmap();
-                read_color(5 - 1);
+                
+               
+                read_color(4 - 1); //R
             }
             if (numTake == 3)
             {
 
                 //Box2.Image = R_Image.ToBitmap();
-                read_color(2 - 1);
+                read_color(5 - 1); //F
+              
             }
             if (numTake == 4)
             {
-
-                //Box4.Image = R_Image.ToBitmap();
-                read_color(4 - 1);
+               
+                                   //Box4.Image = R_Image.ToBitmap();
+                read_color(6 - 1); //D
             }
             if (numTake == 5)
             {
+                read_color(2 - 1); //L
+                                   //Box3.Image = R_Image.ToBitmap();
 
-                //Box3.Image = R_Image.ToBitmap();
-                read_color(3 - 1);
             }
             if (numTake == 6)
             {
+                read_color(1 - 1); //B
+                                   //Box6.Image = R_Image.ToBitmap();
 
-                //Box6.Image = R_Image.ToBitmap();
-                read_color(6 - 1);
             }
 
 
@@ -1846,47 +1862,49 @@ namespace Rubik.V1
 
             if (NumTimer == 0)
             {
-                serialPort1.Write("KA");
-                Thread.Sleep(9000);
+                serialPort1.Write("Kdkj");
+                Thread.Sleep(6000);
                 Take_Click_1(sender, e);
 
             }
             else if(NumTimer == 1)
             {
-                serialPort1.Write("aa");
-                Thread.Sleep(9500);
+                serialPort1.Write("JKadkjad");
+                Thread.Sleep(9000);
                 Take_Click_1(sender, e);
-                serialPort1.Write("Ak");
-                Thread.Sleep(6000);
+                //serialPort1.Write("JKdk");
+                //Thread.Sleep(3700);
             }
             else if(NumTimer == 2)
             {
-                serialPort1.Write("jD");
-                Thread.Sleep(7000);
+                serialPort1.Write("DJKdkj");
+                Thread.Sleep(5000);
                 Take_Click_1(sender, e);
             }
             else if(NumTimer == 3)
             {
-                serialPort1.Write("dd");
-                Thread.Sleep(9500);
+                serialPort1.Write("JKda");
+                Thread.Sleep(4500);
                 Take_Click_1(sender, e);
-                serialPort1.Write("D");
-                Thread.Sleep(5000);
+                //serialPort1.Write("DJKA");
+                //Thread.Sleep(2000);
             }
             else if(NumTimer == 4)
             {
-                serialPort1.Write("aJK");
-                Thread.Sleep(9500);
+                //serialPort1.Write("aa");
+                 serialPort1.Write("AkjD");
+                Thread.Sleep(5000);
+                //Thread.Sleep(3700);
                 Take_Click_1(sender, e);
 
             }
             else if(NumTimer == 5)
             {
-                serialPort1.Write("AA");
-                Thread.Sleep(9500);
-                Take_Click_1(sender, e);
-                serialPort1.Write("aakjAJ");
+                serialPort1.Write("JKdkjD");
                 Thread.Sleep(5000);
+                Take_Click_1(sender, e);
+                serialPort1.Write("DDJKdAkjAJ");
+                Thread.Sleep(4000);
 
             }
            
@@ -2303,21 +2321,27 @@ namespace Rubik.V1
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"D:\\Face.txt"))
             {
                 //Face= "LRUUURFULDFLURDFLBRLBLFRBRRDBUFDBBDLFBDLLFUURFDDBBDUFR";
+                //Form1 test = new Form1();
+                convert_Face_Rubik();
+                FF = showRubik(Rubik_tmp);
 
-                Text_face.Text = Face;
+
+                Text_face.Text = FF;
                 //Text_face.Text = Face;
 
 
                 
-                file.Write(Face);
+                file.Write(FF);
                 //ReadFile Naja//
             }
         }
+
+        
         ////////////////////////////////  END  File IO  ////////////////////////////////////////////////////////
 
 
         //=======
         ///////////////////   สิ้นสุดการทำงานของปุ่ม
-     
+
     } // end class 
 }
