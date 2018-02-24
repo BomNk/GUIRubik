@@ -149,6 +149,7 @@
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer_read_result = new System.Windows.Forms.Timer(this.components);
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.A4.SuspendLayout();
             this.C4.SuspendLayout();
             this.E4.SuspendLayout();
@@ -864,7 +865,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(923, 297);
+            this.label11.Location = new System.Drawing.Point(923, 312);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(82, 13);
             this.label11.TabIndex = 92;
@@ -873,7 +874,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(953, 313);
+            this.label12.Location = new System.Drawing.Point(953, 328);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(69, 13);
             this.label12.TabIndex = 93;
@@ -882,7 +883,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(953, 326);
+            this.label13.Location = new System.Drawing.Point(953, 341);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(133, 13);
             this.label13.TabIndex = 94;
@@ -891,7 +892,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(953, 339);
+            this.label14.Location = new System.Drawing.Point(953, 354);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(129, 13);
             this.label14.TabIndex = 95;
@@ -1153,11 +1154,21 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(1018, 291);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 125;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1098, 441);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.Text_face);
@@ -1287,7 +1298,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Box5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box1)).EndInit();
-           //((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1416,6 +1427,7 @@
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Timer timer_read_result;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
         //>>>>>>> 6660cc3015398fa2a960b8bd0d824c6d907f612f
     }
 }
