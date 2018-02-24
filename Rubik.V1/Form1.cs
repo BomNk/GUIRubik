@@ -18,6 +18,7 @@ using Emgu.Util;
 using Emgu.CV.Structure;
 using System.IO;
 using System.Threading;
+using System.IO.Ports;
 
 namespace Rubik.V1
 {
@@ -47,7 +48,7 @@ namespace Rubik.V1
         int min, sec, ssec;
 
         String Result ="", Face ="",FF="" ;
-        
+        //private SerialPort SerialPort1;
 
         // Test Commit
         // รูปต้นฉบับ
@@ -56,17 +57,24 @@ namespace Rubik.V1
 
         public Form1()
         {
-           
+            
             InitializeComponent();
+            getAvailableComponent();
             Text_Time.Text = min + " : " + sec + " : " + ssec;
            
-        }
 
+        }
+        void getAvailableComponent()
+        {
+            String[] Ports = SerialPort.GetPortNames();
+            comboBox2_connect.Items.AddRange(Ports);
+        }
 
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            serialPort1.Open();
+          
+
             webcam = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo VideoCaptureDevice in webcam)
             {
@@ -2137,6 +2145,11 @@ namespace Rubik.V1
         private void Box1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)  /////// CONNECT  ////////////////
+        {
+            serialPort1.Open();
         }
 
         private void button3_Click(object sender, EventArgs e)
