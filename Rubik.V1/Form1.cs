@@ -157,7 +157,8 @@ namespace Rubik.V1
             if (numTake == 2)
             {
 
-                //Box5.Image = R_Image.ToBitmap();
+                //Box5.Image = R_Image.ToBitmap();v
+
                 
                
                 read_color(4 - 1); //R
@@ -258,10 +259,10 @@ namespace Rubik.V1
             float sumHue = 0, sumSatuation = 0, sumValue = 0;
             //ดึงค่าใส่ในตัวแปร
 
-            for (int y = 110; y < 360; y += 120)    // แกน YYYYYYYYYYY
+            for (int y = 120; y < 380; y += 120)    // แกน YYYYYYYYYYY
             {
 
-                for (int x = 220; x < 470; x += 120)   // แกน XXXXXXXXXXXXX
+                for (int x = 227; x < 480; x += 120)   // แกน XXXXXXXXXXXXX
                 {
                     collum = y - 5;
                     roll = x - 5;
@@ -319,27 +320,27 @@ namespace Rubik.V1
                 H = col[i, 0];
                 g = col[i, 1];
                 r = col[i, 2];
-                if (H > 87 && H < 99)    // white
+                if ((H > 87 && H < 105) || (g > 30 && g<45)  )    // white
                 {
                     Rubik[Face][i] = 'W';
                 }
 
-                if (H > 99 && H < 115)   //blue
+                if (H >= 105 && H < 115)   //blue
                 {
                     Rubik[Face][i] = 'B';
                 }
 
-                if (H > 140 && H < 160)   // ม่วง
+                if (H > 143 && H < 160)   // ม่วง
                 {
                     Rubik[Face][i] = 'P';
                 }
 
-                if (H >= 62 && H < 83)   //Green
+                if (H >= 55 && H < 80)   //Green
                 {
                     Rubik[Face][i] = 'G';
                 }
 
-                if (H > 28 && H < 49) //yellow
+                if (H > 30 && H < 49) //yellow
                 {
                     Rubik[Face][i] = 'Y';
                 }
@@ -1869,8 +1870,10 @@ namespace Rubik.V1
             }
             else if(NumTimer == 1)
             {
-                serialPort1.Write("JKadkjad");
-                Thread.Sleep(9000);
+                serialPort1.Write("JKd");
+                Thread.Sleep(2000);
+                serialPort1.Write("akjad");
+                Thread.Sleep(7000);
                 Take_Click_1(sender, e);
                 //serialPort1.Write("JKdk");
                 //Thread.Sleep(3700);
@@ -2012,6 +2015,7 @@ namespace Rubik.V1
         void B_2()
         {
             serialPort1.Write("BB");
+            Thread.Sleep(100);
         }
         void B2_det()
         {
@@ -2075,7 +2079,7 @@ namespace Rubik.V1
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkRjrdJKDk");
-            Thread.Sleep(25000);
+            Thread.Sleep(15000);
 
         }
         void U_det() // U'  //เสร็จ
@@ -2084,7 +2088,7 @@ namespace Rubik.V1
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkrjRdJKDk");
-            Thread.Sleep(25000);
+            Thread.Sleep(15000);
         }
 
         void U_2() // เสร็จ
@@ -2101,7 +2105,7 @@ namespace Rubik.V1
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkRRjdJKDk");
-            Thread.Sleep(25000);
+            Thread.Sleep(15000);
         }
 
         
@@ -2111,7 +2115,7 @@ namespace Rubik.V1
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkLjldJKDk");
-            Thread.Sleep(25000);
+            Thread.Sleep(15000);
         }
         void D_det()  // เสร็จ
         {
@@ -2119,7 +2123,7 @@ namespace Rubik.V1
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkljLdJKDk");
-            Thread.Sleep(25000);
+            Thread.Sleep(15000);
         }
         void D_2()   // เสร็จ
         {
@@ -2127,7 +2131,7 @@ namespace Rubik.V1
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkLLjdJKDk");
-            Thread.Sleep(25000);
+            Thread.Sleep(15000);
         }
 
         private void Box1_Click(object sender, EventArgs e)
@@ -2146,7 +2150,7 @@ namespace Rubik.V1
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkLLjdJKDk");
-            Thread.Sleep(25000);
+            Thread.Sleep(15000);
         }
 
 
