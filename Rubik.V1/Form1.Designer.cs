@@ -659,6 +659,7 @@
             // Test
             // 
             this.Test.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Test.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.Test.Location = new System.Drawing.Point(7, 19);
             this.Test.Name = "Test";
             this.Test.Size = new System.Drawing.Size(104, 47);
@@ -1311,7 +1312,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Box5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box1)).EndInit();
-         //   ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
