@@ -2149,10 +2149,11 @@ namespace Rubik.V1
 
         private void button4_Click(object sender, EventArgs e)  /////// CONNECT  ////////////////
         {
+            serialPort1.PortName = comboBox2_connect.Text ;
             serialPort1.Open();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)   ////// HW  Start /////////
         {
             Robot_Start();
         }
