@@ -267,10 +267,10 @@ namespace Rubik.V1
             float sumHue = 0, sumSatuation = 0, sumValue = 0;
             //ดึงค่าใส่ในตัวแปร
 
-            for (int y = 120; y < 380; y += 120)    // แกน YYYYYYYYYYY
+            for (int y = 126; y < 385; y += 120)    // แกน YYYYYYYYYYY
             {
 
-                for (int x = 227; x < 480; x += 120)   // แกน XXXXXXXXXXXXX
+                for (int x = 214; x < 500; x += 120)   // แกน XXXXXXXXXXXXX
                 {
                     collum = y - 5;
                     roll = x - 5;
@@ -328,34 +328,30 @@ namespace Rubik.V1
                 H = col[i, 0];
                 g = col[i, 1];
                 r = col[i, 2];
-                if ((H > 87 && H < 105) || (g > 30 && g<45)  )    // white
+                if (g < 20)    // white
                 {
                     Rubik[Face][i] = 'W';
                 }
-
-                if (H >= 105 && H < 115)   //blue
+                else if ((H >= 0 && H < 10) || (H > 160 && H<=180 )) // RED
                 {
-                    Rubik[Face][i] = 'B';
+                    Rubik[Face][i] = 'R';
                 }
-
-                if (H > 143 && H < 160)   // ม่วง
+                else if (H > 13 && H < 27)   // ม่วง
                 {
                     Rubik[Face][i] = 'P';
                 }
-
-                if (H >= 55 && H < 80)   //Green
+                else if (H > 27 && H < 52) //yellow
+                {
+                    Rubik[Face][i] = 'Y';
+                }
+               else if (H >= 52 && H < 97)   //Green
                 {
                     Rubik[Face][i] = 'G';
                 }
 
-                if (H > 30 && H < 49) //yellow
+                else if (H >= 97 && H < 130)   //blue
                 {
-                    Rubik[Face][i] = 'Y';
-                }
-
-                if ((H > 162 && H < 180) || (H >= 0 && H < 13)) // RED
-                {
-                    Rubik[Face][i] = 'R';
+                    Rubik[Face][i] = 'B';
                 }
 
             }
@@ -641,23 +637,23 @@ namespace Rubik.V1
                         if (rk[i][j] == 'P')
                         {//สีม่วง
                             if (j == 0)
-                                A0.BackColor = Color.Purple;
+                                A0.BackColor = Color.Orange;
                             else if (j == 1)
-                                A1.BackColor = Color.Purple;
+                                A1.BackColor = Color.Orange;
                             else if (j == 2)
-                                A2.BackColor = Color.Purple;
+                                A2.BackColor = Color.Orange;
                             else if (j == 3)
-                                A3.BackColor = Color.Purple;
+                                A3.BackColor = Color.Orange;
                             else if (j == 4)
-                                A4.BackColor = Color.Purple;
+                                A4.BackColor = Color.Orange;
                             else if (j == 5)
-                                A5.BackColor = Color.Purple;
+                                A5.BackColor = Color.Orange;
                             else if (j == 6)
-                                A6.BackColor = Color.Purple;
+                                A6.BackColor = Color.Orange;
                             else if (j == 7)
-                                A7.BackColor = Color.Purple;
+                                A7.BackColor = Color.Orange;
                             else if (j == 8)
-                                A8.BackColor = Color.Purple;
+                                A8.BackColor = Color.Orange;
                         }
 
 
@@ -778,23 +774,23 @@ namespace Rubik.V1
                         if (rk[i][j] == 'P')
                         {//สีม่วง
                             if (j == 0)
-                                B0.BackColor = Color.Purple;
+                                B0.BackColor = Color.Orange;
                             else if (j == 1)
-                                B1.BackColor = Color.Purple;
+                                B1.BackColor = Color.Orange;
                             else if (j == 2)
-                                B2.BackColor = Color.Purple;
+                                B2.BackColor = Color.Orange;
                             else if (j == 3)
-                                B3.BackColor = Color.Purple;
+                                B3.BackColor = Color.Orange;
                             else if (j == 4)
-                                B4.BackColor = Color.Purple;
+                                B4.BackColor = Color.Orange;
                             else if (j == 5)
-                                B5.BackColor = Color.Purple;
+                                B5.BackColor = Color.Orange;
                             else if (j == 6)
-                                B6.BackColor = Color.Purple;
+                                B6.BackColor = Color.Orange;
                             else if (j == 7)
-                                B7.BackColor = Color.Purple;
+                                B7.BackColor = Color.Orange;
                             else if (j == 8)
-                                B8.BackColor = Color.Purple;
+                                B8.BackColor = Color.Orange;
                         }
 
 
@@ -915,23 +911,23 @@ namespace Rubik.V1
                         if (rk[i][j] == 'P')
                         {//สีม่วง
                             if (j == 0)
-                                C0.BackColor = Color.Purple;
+                                C0.BackColor = Color.Orange;
                             else if (j == 1)
-                                C1.BackColor = Color.Purple;
+                                C1.BackColor = Color.Orange;
                             else if (j == 2)
-                                C2.BackColor = Color.Purple;
+                                C2.BackColor = Color.Orange;
                             else if (j == 3)
-                                C3.BackColor = Color.Purple;
+                                C3.BackColor = Color.Orange;
                             else if (j == 4)
-                                C4.BackColor = Color.Purple;
+                                C4.BackColor = Color.Orange;
                             else if (j == 5)
-                                C5.BackColor = Color.Purple;
+                                C5.BackColor = Color.Orange;
                             else if (j == 6)
-                                C6.BackColor = Color.Purple;
+                                C6.BackColor = Color.Orange;
                             else if (j == 7)
-                                C7.BackColor = Color.Purple;
+                                C7.BackColor = Color.Orange;
                             else if (j == 8)
-                                C8.BackColor = Color.Purple;
+                                C8.BackColor = Color.Orange;
                         }
 
 
@@ -1052,23 +1048,23 @@ namespace Rubik.V1
                         if (rk[i][j] == 'P')
                         {//สีม่วง
                             if (j == 0)
-                                D0.BackColor = Color.Purple;
+                                D0.BackColor = Color.Orange;
                             else if (j == 1)
-                                D1.BackColor = Color.Purple;
+                                D1.BackColor = Color.Orange;
                             else if (j == 2)
-                                D2.BackColor = Color.Purple;
+                                D2.BackColor = Color.Orange;
                             else if (j == 3)
-                                D3.BackColor = Color.Purple;
+                                D3.BackColor = Color.Orange;
                             else if (j == 4)
-                                D4.BackColor = Color.Purple;
+                                D4.BackColor = Color.Orange;
                             else if (j == 5)
-                                D5.BackColor = Color.Purple;
+                                D5.BackColor = Color.Orange;
                             else if (j == 6)
-                                D6.BackColor = Color.Purple;
+                                D6.BackColor = Color.Orange;
                             else if (j == 7)
-                                D7.BackColor = Color.Purple;
+                                D7.BackColor = Color.Orange;
                             else if (j == 8)
-                                D8.BackColor = Color.Purple;
+                                D8.BackColor = Color.Orange;
                         }
 
 
@@ -1188,23 +1184,23 @@ namespace Rubik.V1
                         if (rk[i][j] == 'P')
                         {//สีม่วง
                             if (j == 0)
-                                E0.BackColor = Color.Purple;
+                                E0.BackColor = Color.Orange;
                             else if (j == 1)
-                                E1.BackColor = Color.Purple;
+                                E1.BackColor = Color.Orange;
                             else if (j == 2)
-                                E2.BackColor = Color.Purple;
+                                E2.BackColor = Color.Orange;
                             else if (j == 3)
-                                E3.BackColor = Color.Purple;
+                                E3.BackColor = Color.Orange;
                             else if (j == 4)
-                                E4.BackColor = Color.Purple;
+                                E4.BackColor = Color.Orange;
                             else if (j == 5)
-                                E5.BackColor = Color.Purple;
+                                E5.BackColor = Color.Orange;
                             else if (j == 6)
-                                E6.BackColor = Color.Purple;
+                                E6.BackColor = Color.Orange;
                             else if (j == 7)
-                                E7.BackColor = Color.Purple;
+                                E7.BackColor = Color.Orange;
                             else if (j == 8)
-                                E8.BackColor = Color.Purple;
+                                E8.BackColor = Color.Orange;
                         }
 
 
@@ -1324,23 +1320,23 @@ namespace Rubik.V1
                         if (rk[i][j] == 'P')
                         {//สีม่วง
                             if (j == 0)
-                                F0.BackColor = Color.Purple;
+                                F0.BackColor = Color.Orange;
                             else if (j == 1)
-                                F1.BackColor = Color.Purple;
+                                F1.BackColor = Color.Orange;
                             else if (j == 2)
-                                F2.BackColor = Color.Purple;
+                                F2.BackColor = Color.Orange;
                             else if (j == 3)
-                                F3.BackColor = Color.Purple;
+                                F3.BackColor = Color.Orange;
                             else if (j == 4)
-                                F4.BackColor = Color.Purple;
+                                F4.BackColor = Color.Orange;
                             else if (j == 5)
-                                F5.BackColor = Color.Purple;
+                                F5.BackColor = Color.Orange;
                             else if (j == 6)
-                                F6.BackColor = Color.Purple;
+                                F6.BackColor = Color.Orange;
                             else if (j == 7)
-                                F7.BackColor = Color.Purple;
+                                F7.BackColor = Color.Orange;
                             else if (j == 8)
-                                F8.BackColor = Color.Purple;
+                                F8.BackColor = Color.Orange;
                         }
 
 
@@ -1872,8 +1868,9 @@ namespace Rubik.V1
             if (NumTimer == 0)
             {
                 serialPort1.Write("Kdkj");
-                Thread.Sleep(6000);
+                Thread.Sleep(4000);
                 Take_Click_1(sender, e);
+                Thread.Sleep(1000);
 
             }
             else if(NumTimer == 1)
@@ -1927,7 +1924,7 @@ namespace Rubik.V1
                 Text_face.Text = Face;
                 Write_Face();
                 //Timer Rubik Start
-
+                Thread.Sleep(1000);
                 timer_read_result.Enabled = true;
                 timer_read_result.Start();
 
@@ -2087,7 +2084,7 @@ namespace Rubik.V1
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkRjrdJKDk");
-            Thread.Sleep(15000);
+            Thread.Sleep(11000);
 
         }
         void U_det() // U'  //เสร็จ
@@ -2096,7 +2093,7 @@ namespace Rubik.V1
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkrjRdJKDk");
-            Thread.Sleep(15000);
+            Thread.Sleep(11000);
         }
 
         void U_2() // เสร็จ
@@ -2105,7 +2102,7 @@ namespace Rubik.V1
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkRRjdJKDk");
-            Thread.Sleep(25000);
+            Thread.Sleep(11000);
         }
         void U2_det() // เสร็จ
         {
@@ -2113,7 +2110,7 @@ namespace Rubik.V1
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkRRjdJKDk");
-            Thread.Sleep(15000);
+            Thread.Sleep(11000);
         }
 
         
@@ -2123,7 +2120,7 @@ namespace Rubik.V1
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkLjldJKDk");
-            Thread.Sleep(15000);
+            Thread.Sleep(11000);
         }
         void D_det()  // เสร็จ
         {
@@ -2131,7 +2128,7 @@ namespace Rubik.V1
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkljLdJKDk");
-            Thread.Sleep(15000);
+            Thread.Sleep(11000);
         }
         void D_2()   // เสร็จ
         {
@@ -2139,7 +2136,7 @@ namespace Rubik.V1
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkLLjdJKDk");
-            Thread.Sleep(15000);
+            Thread.Sleep(11000);
         }
 
         private void Box1_Click(object sender, EventArgs e)
