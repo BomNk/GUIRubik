@@ -1290,7 +1290,7 @@
             this.Controls.Add(this.A2);
             this.Controls.Add(this.A1);
             this.Controls.Add(this.A0);
-            this.Cursor = System.Windows.Forms.Cursors.NoMove2D;
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Name = "Form1";
             this.Text = "Rubik";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1312,7 +1312,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.Box5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box1)).EndInit();
+<<<<<<< HEAD
         //    ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
+=======
+           // ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
+>>>>>>> 31d3262380880775693a5dd40acf6a43fef55e72
             this.ResumeLayout(false);
             this.PerformLayout();
 
