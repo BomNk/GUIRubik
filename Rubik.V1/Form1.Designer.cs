@@ -1312,11 +1312,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.Box5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box1)).EndInit();
-<<<<<<< HEAD
+//<<<<<<< HEAD
         //    ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
-=======
+//=======
            // ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
->>>>>>> 31d3262380880775693a5dd40acf6a43fef55e72
+//>>>>>>> 31d3262380880775693a5dd40acf6a43fef55e72
             this.ResumeLayout(false);
             this.PerformLayout();
 

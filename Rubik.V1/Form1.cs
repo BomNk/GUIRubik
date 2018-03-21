@@ -31,9 +31,7 @@ namespace Rubik.V1
                                                 new char[] {'G', 'G' , 'G' , 'G', 'G' , 'G' , 'G' , 'G','G' },
                                                 new char[] { 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y' } };
         public char[][] Rubik_tmp = new char[6][];
-        // public char[][] Rubik_copy = new char[6][];
-        //public string Convert_RGB_to_Face(char Rubik);
-        //Notebook
+       
         private FilterInfoCollection webcam;
         private VideoCaptureDevice cam;
         int numTake = 1;
@@ -80,7 +78,7 @@ namespace Rubik.V1
             {
                 comboBox1.Items.Add(VideoCaptureDevice.Name);
             }
-            comboBox1.SelectedIndex = 0;
+            //comboBox1.SelectedIndex = 0;
 
         }
 
@@ -92,7 +90,7 @@ namespace Rubik.V1
             Rubik_tmp[3] =  Rubik[5];
             Rubik_tmp[4] =  Rubik[1];
             Rubik_tmp[5] =  Rubik[0];
-        }
+        }  // Finish
 
 
 
@@ -1846,7 +1844,7 @@ namespace Rubik.V1
 
         private void timer3_Tick_1(object sender, EventArgs e)   //////  Timer for Counter  //////////
         {
-           
+            
             ssec++;
             if (ssec % 100 == 0)
             {
