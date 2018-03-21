@@ -1097,9 +1097,9 @@
             // 
             // Start_Auto
             // 
-            this.Start_Auto.Location = new System.Drawing.Point(453, 185);
+            this.Start_Auto.Location = new System.Drawing.Point(456, 186);
             this.Start_Auto.Name = "Start_Auto";
-            this.Start_Auto.Size = new System.Drawing.Size(84, 35);
+            this.Start_Auto.Size = new System.Drawing.Size(102, 34);
             this.Start_Auto.TabIndex = 120;
             this.Start_Auto.Text = "START_IMG";
             this.Start_Auto.UseVisualStyleBackColor = true;
@@ -1148,9 +1148,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(358, 185);
+            this.button3.Location = new System.Drawing.Point(346, 187);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(89, 35);
+            this.button3.Size = new System.Drawing.Size(104, 33);
             this.button3.TabIndex = 124;
             this.button3.Text = "START_HW";
             this.button3.UseVisualStyleBackColor = true;
@@ -1312,7 +1312,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.Box5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box1)).EndInit();
+<<<<<<< HEAD
+        //    ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
+=======
            // ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
+>>>>>>> 31d3262380880775693a5dd40acf6a43fef55e72
             this.ResumeLayout(false);
             this.PerformLayout();
 
