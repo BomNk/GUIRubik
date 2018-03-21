@@ -1180,6 +1180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1098, 441);
             this.Controls.Add(this.comboBox2_connect);
             this.Controls.Add(this.connect);
@@ -1312,11 +1313,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Box5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box1)).EndInit();
-//<<<<<<< HEAD
-        //    ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
-//=======
-           // ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
-//>>>>>>> 31d3262380880775693a5dd40acf6a43fef55e72
+            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

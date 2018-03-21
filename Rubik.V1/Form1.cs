@@ -299,14 +299,7 @@ namespace Rubik.V1
                             col[i, j] = (int)((sumSatuation / 100) * 100);
                         else if (j == 2)
                             col[i, j] = (int)((sumValue / 100) * 100);
-                        /*
-                        if (j == 0)
-                            col[i, j] = My_Image[y, x].Blue;
-                        else if (j == 1)
-                            col[i, j] = My_Image[y, x].Green;
-                        else if (j == 2)
-                            col[i, j] = My_Image[y, x].Red;
-                           */
+                      
 
                     }
 
@@ -314,12 +307,7 @@ namespace Rubik.V1
                     i++;
                 }
             }
-            /*
-            label10.Text = "sumB = " + sumB;
-            label11.Text = "sumG = " + sumG;
-            label12.Text = "sumG = " + sumR;
-            */
-            //set_label(col);
+      
             double H, g, r;
             for (i = 0; i < 9; i++)
             {
