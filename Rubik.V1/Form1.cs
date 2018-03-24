@@ -19,6 +19,7 @@ using Emgu.CV.Structure;
 using System.IO;
 using System.Threading;
 using System.IO.Ports;
+using System.Diagnostics;
 
 namespace Rubik.V1
 {
@@ -41,9 +42,15 @@ namespace Rubik.V1
         int numPicture = 1;
         int numList = 1;
         int Time,Delay=0;
+        Stopwatch stopwatch = new Stopwatch();
         //time counter = new time();
-        int NumTimer = 0;
-        int min, sec, ssec;
+        int NumTimer = 11000;   // Delay of Tread.Sleep
+
+      
+        int UD = 0;
+        
+
+
 
         String Result ="", Face ="",FF="" ;
         //private SerialPort SerialPort1;
@@ -58,7 +65,7 @@ namespace Rubik.V1
             
             InitializeComponent();
             getAvailableComponent();
-            Text_Time.Text = min + " : " + sec + " : " + ssec;
+            //Text_Time.Text = min + " : " + sec + " : " + ssec;
            
 
         }
@@ -71,8 +78,9 @@ namespace Rubik.V1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-          
 
+
+            Stopwatch_timer.Start();
             webcam = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo VideoCaptureDevice in webcam)
             {
@@ -468,6 +476,7 @@ namespace Rubik.V1
                 Rubik[1][6] = tmp[0]; Rubik[1][7] = tmp[1]; Rubik[1][8] = tmp[2];
             }
             else if( arrow ==1)
+
             {
                 rotate_Face(Rubik, 4, 1);
                 char[] tmp = new char[3];
@@ -1672,7 +1681,6 @@ namespace Rubik.V1
             B();
         }
 
-
         private void U_Click(object sender, EventArgs e)  //  Top
         {
             rotate_top(1);
@@ -1827,26 +1835,11 @@ namespace Rubik.V1
         {
 
             timer2.Stop();
-            timer3.Stop();
+            Stopwatch_timer.Stop();
         }
 
-        private void timer3_Tick_1(object sender, EventArgs e)   //////  Timer for Counter  //////////
-        {
-            
-            ssec++;
-            if (ssec % 100 == 0)
-            {
-                sec++;
-                ssec = 0;
-            }
-            if (sec  == 60)
-            {
-                min++;
-                sec = 0;
-            }
-            Text_Time.Text = min + " : " + sec + " : " + ssec;
-          
-        }
+       
+
 
         private void timer2_Tick(object sender, EventArgs e)   //////// Timer for TakePicture  ////////////
         {
@@ -1924,20 +1917,10 @@ namespace Rubik.V1
             NumTimer++;
             //Delay++;
         }
-        public void time_init()
-        {
-            timer3.Enabled = true;
-            timer3.Start();
-         
-            min = 0;
-            sec = 0;
-            ssec = 0;
-            
-
-        }   ////////////////  Timne init /////////////////
+        
         public void Robot_Start()
         {
-            time_init();
+            
             Result = Text_Result.Text;
             Result_to_function(Result);
         }
@@ -2070,7 +2053,7 @@ namespace Rubik.V1
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkRjrdJKDk");
-            Thread.Sleep(11000);
+            Thread.Sleep(UD);
 
         }
         void U_det() // U'  //เสร็จ
@@ -2079,7 +2062,7 @@ namespace Rubik.V1
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkrjRdJKDk");
-            Thread.Sleep(11000);
+            Thread.Sleep(UD);
         }
 
         void U_2() // เสร็จ
@@ -2088,7 +2071,7 @@ namespace Rubik.V1
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkRRjdJKDk");
-            Thread.Sleep(11000);
+            Thread.Sleep(UD);
         }
         void U2_det() // เสร็จ
         {
@@ -2096,7 +2079,7 @@ namespace Rubik.V1
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkRRjdJKDk");
-            Thread.Sleep(11000);
+            Thread.Sleep(UD);
         }
 
         
@@ -2106,7 +2089,7 @@ namespace Rubik.V1
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkLjldJKDk");
-            Thread.Sleep(11000);
+            Thread.Sleep(UD);
         }
         void D_det()  // เสร็จ
         {
@@ -2114,7 +2097,7 @@ namespace Rubik.V1
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkljLdJKDk");
-            Thread.Sleep(11000);
+            Thread.Sleep(UD);
         }
         void D_2()   // เสร็จ
         {
@@ -2122,12 +2105,28 @@ namespace Rubik.V1
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkLLjdJKDk");
-            Thread.Sleep(11000);
+            Thread.Sleep(UD);
         }
+        void D2_det()  // เสร็จ
+        {
+            serialPort1.Write("j");
+            serialPort1.Write("D");
+            serialPort1.Write("J");
+            serialPort1.Write("KdkLLjdJKDk");
+            Thread.Sleep(UD);
+        }
+
+
 
         private void Box1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Stopwatch_timer_Tick(object sender, EventArgs e) ////// Stopwatch _Timer////
+        {
+
+            Text_Time.Text = stopwatch.Elapsed.ToString().Substring(3, 8);
         }
 
         private void button4_Click(object sender, EventArgs e)  /////// CONNECT  ////////////////
@@ -2138,17 +2137,11 @@ namespace Rubik.V1
 
         private void button3_Click(object sender, EventArgs e)   ////// HW  Start /////////
         {
+            stopwatch.Start();
             Robot_Start();
         }
 
-        void D2_det()  // เสร็จ
-        {
-            serialPort1.Write("j");
-            serialPort1.Write("D");
-            serialPort1.Write("J");
-            serialPort1.Write("KdkLLjdJKDk");
-            Thread.Sleep(15000);
-        }
+       
 
 
         // ////////////////////  Function Control  Rubik Cube Robot   Finish   ///////////////////////////////
