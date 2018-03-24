@@ -139,18 +139,18 @@
             this.performanceCounter1 = new System.Diagnostics.PerformanceCounter();
             this.Text_Result = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.Text_Time = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.Start_Auto = new System.Windows.Forms.Button();
             this.STOP_AUTO = new System.Windows.Forms.Button();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.Text_face = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer_read_result = new System.Windows.Forms.Timer(this.components);
             this.button3 = new System.Windows.Forms.Button();
             this.connect = new System.Windows.Forms.Button();
             this.comboBox2_connect = new System.Windows.Forms.ComboBox();
+            this.Text_Time = new System.Windows.Forms.Label();
+            this.Stopwatch_timer = new System.Windows.Forms.Timer(this.components);
             this.A4.SuspendLayout();
             this.C4.SuspendLayout();
             this.E4.SuspendLayout();
@@ -764,7 +764,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(708, 193);
+            this.label1.Location = new System.Drawing.Point(820, 343);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 77;
@@ -773,7 +773,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(754, 192);
+            this.label2.Location = new System.Drawing.Point(866, 342);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 78;
@@ -1079,17 +1079,10 @@
             this.label10.TabIndex = 117;
             this.label10.Text = "Result";
             // 
-            // Text_Time
-            // 
-            this.Text_Time.Location = new System.Drawing.Point(986, 127);
-            this.Text_Time.Name = "Text_Time";
-            this.Text_Time.Size = new System.Drawing.Size(100, 20);
-            this.Text_Time.TabIndex = 118;
-            // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(937, 132);
+            this.label16.Location = new System.Drawing.Point(706, 197);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(30, 13);
             this.label16.TabIndex = 119;
@@ -1136,11 +1129,6 @@
             this.label17.TabIndex = 123;
             this.label17.Text = "Face";
             // 
-            // timer3
-            // 
-            this.timer3.Interval = 1;
-            this.timer3.Tick += new System.EventHandler(this.timer3_Tick_1);
-            // 
             // timer_read_result
             // 
             this.timer_read_result.Interval = 200;
@@ -1176,12 +1164,28 @@
             this.comboBox2_connect.Size = new System.Drawing.Size(121, 21);
             this.comboBox2_connect.TabIndex = 126;
             // 
+            // Text_Time
+            // 
+            this.Text_Time.AutoSize = true;
+            this.Text_Time.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.Text_Time.Location = new System.Drawing.Point(744, 187);
+            this.Text_Time.Name = "Text_Time";
+            this.Text_Time.Size = new System.Drawing.Size(128, 31);
+            this.Text_Time.TabIndex = 127;
+            this.Text_Time.Text = "00:00:00";
+            // 
+            // Stopwatch_timer
+            // 
+            this.Stopwatch_timer.Interval = 10;
+            this.Stopwatch_timer.Tick += new System.EventHandler(this.Stopwatch_timer_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1098, 441);
+            this.Controls.Add(this.Text_Time);
             this.Controls.Add(this.comboBox2_connect);
             this.Controls.Add(this.connect);
             this.Controls.Add(this.button3);
@@ -1190,7 +1194,6 @@
             this.Controls.Add(this.STOP_AUTO);
             this.Controls.Add(this.Start_Auto);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.Text_Time);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.Text_Result);
             this.Controls.Add(this.close_front_back);
@@ -1426,7 +1429,6 @@
         private System.Diagnostics.PerformanceCounter performanceCounter1;
         private System.Windows.Forms.TextBox Text_Result;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox Text_Time;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button Start_Auto;
         private System.Windows.Forms.Button STOP_AUTO;
@@ -1439,11 +1441,12 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Timer timer_read_result;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button connect;
         private System.Windows.Forms.ComboBox comboBox2_connect;
+        private System.Windows.Forms.Label Text_Time;
+        private System.Windows.Forms.Timer Stopwatch_timer;
         //>>>>>>> 6660cc3015398fa2a960b8bd0d824c6d907f612f
     }
 }
