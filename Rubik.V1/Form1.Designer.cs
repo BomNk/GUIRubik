@@ -140,7 +140,6 @@
             this.Text_Result = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.Start_Auto = new System.Windows.Forms.Button();
             this.STOP_AUTO = new System.Windows.Forms.Button();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.Text_face = new System.Windows.Forms.TextBox();
@@ -151,6 +150,7 @@
             this.comboBox2_connect = new System.Windows.Forms.ComboBox();
             this.Text_Time = new System.Windows.Forms.Label();
             this.Stopwatch_timer = new System.Windows.Forms.Timer(this.components);
+            this.button4 = new System.Windows.Forms.Button();
             this.A4.SuspendLayout();
             this.C4.SuspendLayout();
             this.E4.SuspendLayout();
@@ -1088,16 +1088,6 @@
             this.label16.TabIndex = 119;
             this.label16.Text = "Time";
             // 
-            // Start_Auto
-            // 
-            this.Start_Auto.Location = new System.Drawing.Point(456, 186);
-            this.Start_Auto.Name = "Start_Auto";
-            this.Start_Auto.Size = new System.Drawing.Size(102, 34);
-            this.Start_Auto.TabIndex = 120;
-            this.Start_Auto.Text = "START_IMG";
-            this.Start_Auto.UseVisualStyleBackColor = true;
-            this.Start_Auto.Click += new System.EventHandler(this.Start_Auto_Click);
-            // 
             // STOP_AUTO
             // 
             this.STOP_AUTO.Location = new System.Drawing.Point(564, 185);
@@ -1179,12 +1169,23 @@
             this.Stopwatch_timer.Interval = 10;
             this.Stopwatch_timer.Tick += new System.EventHandler(this.Stopwatch_timer_Tick);
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(465, 190);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(86, 29);
+            this.button4.TabIndex = 128;
+            this.button4.Text = "START_IMG";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1098, 441);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.Text_Time);
             this.Controls.Add(this.comboBox2_connect);
             this.Controls.Add(this.connect);
@@ -1192,7 +1193,6 @@
             this.Controls.Add(this.label17);
             this.Controls.Add(this.Text_face);
             this.Controls.Add(this.STOP_AUTO);
-            this.Controls.Add(this.Start_Auto);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.Text_Result);
@@ -1316,7 +1316,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Box5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box1)).EndInit();
-           // ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1430,7 +1430,6 @@
         private System.Windows.Forms.TextBox Text_Result;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button Start_Auto;
         private System.Windows.Forms.Button STOP_AUTO;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.TextBox Text_face;
@@ -1447,6 +1446,7 @@
         private System.Windows.Forms.ComboBox comboBox2_connect;
         private System.Windows.Forms.Label Text_Time;
         private System.Windows.Forms.Timer Stopwatch_timer;
+        private System.Windows.Forms.Button button4;
         //>>>>>>> 6660cc3015398fa2a960b8bd0d824c6d907f612f
     }
 }
