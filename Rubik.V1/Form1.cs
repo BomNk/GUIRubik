@@ -80,7 +80,7 @@ namespace Rubik.V1
         {
 
 
-            Stopwatch_timer.Start();
+            //opwatch_timer.Start();
             webcam = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo VideoCaptureDevice in webcam)
             {
@@ -2330,7 +2330,42 @@ namespace Rubik.V1
             }
         }
 
-        
+
+        private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            try
+            {
+                string str = serialPort1.ReadLine();
+
+                // data_serialport.Enabled = true;
+                //data_serialport.Start();
+                this.BeginInvoke(new LineReceivedEvent(LineReceived), str);
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message, "Error");
+            }
+
+            //Data_table.Text = in_data;
+        }
+        private delegate void LineReceivedEvent(string line);
+        private void LineReceived(string str)
+        {
+            try
+            {
+                listBox1.Items.Add(1+ ":" + str);
+              
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message, "Error");
+            }
+
+            //circularProgressBar1.Update();
+
+
+        }
+
         ////////////////////////////////  END  File IO  ////////////////////////////////////////////////////////
 
 
