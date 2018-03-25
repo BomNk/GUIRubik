@@ -44,7 +44,7 @@ namespace Rubik.V1
         int Time,Delay=0;
         Stopwatch stopwatch = new Stopwatch();
         //time counter = new time();
-        int NumTimer = 11000;   // Delay of Tread.Sleep
+        int NumTimer = 0;   
 
       
         int UD = 0;
@@ -80,13 +80,12 @@ namespace Rubik.V1
         {
 
 
-            Stopwatch_timer.Start();
             webcam = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo VideoCaptureDevice in webcam)
             {
                 comboBox1.Items.Add(VideoCaptureDevice.Name);
             }
-            //comboBox1.SelectedIndex = 0;
+            comboBox1.SelectedIndex = 0;
 
         }
 
@@ -1468,6 +1467,7 @@ namespace Rubik.V1
             numList = 0;
             Rubik = RK ;
             show_color(Rubik);
+            Text_Time.Text = "00:00:00";
 
         } 
 
@@ -1642,7 +1642,9 @@ namespace Rubik.V1
             listBox1.Items.Add(numList + ":L");
             numList++;
             // serialPort1.Write("L");
+            serialPort1.Write("1");
             L();
+            serialPort1.Write("0");
         }
 
         private void Right_Click_1(object sender, EventArgs e)   //  R
@@ -1652,7 +1654,9 @@ namespace Rubik.V1
             listBox1.Items.Add(numList + ": R");
             numList++;
             //  serialPort1.Write("R");
+            serialPort1.Write("1");
             R();
+            serialPort1.Write("0");
         }
 
 
@@ -1664,9 +1668,10 @@ namespace Rubik.V1
             listBox1.Items.Add(numList + ": F");
             numList++;
             /// Step of Work ///
+            serialPort1.Write("1");
             F();
+            serialPort1.Write("0");
 
-            
             ///
             //serialPort1.Write("F");// Tanapon Ninket
         }
@@ -1677,8 +1682,12 @@ namespace Rubik.V1
             show_color(Rubik);
             listBox1.Items.Add(numList + ":B");
             numList++;
+            serialPort1.Write("1");
             // serialPort1.Write("B");
+
+           
             B();
+            serialPort1.Write("0");
         }
 
         private void U_Click(object sender, EventArgs e)  //  Top
@@ -1688,7 +1697,10 @@ namespace Rubik.V1
             listBox1.Items.Add(numList + ": U'");
             numList++;
             // serialPort1.Write("b");
+            serialPort1.Write("1");
             UU();
+            
+            serialPort1.Write("0");
 
         }
 
@@ -1699,7 +1711,10 @@ namespace Rubik.V1
             listBox1.Items.Add(numList + ":D");
             numList++;
             // serialPort1.Write("b");
+            serialPort1.Write("1");
             DD();
+          
+            serialPort1.Write("0");
         }
 
         private void Bdet_Click(object sender, EventArgs e) //B'
@@ -1709,7 +1724,10 @@ namespace Rubik.V1
             listBox1.Items.Add(numList + ": B'");
             numList++;
             // serialPort1.Write("b");
+            serialPort1.Write("1");
             B_det();
+           
+            serialPort1.Write("0");
         }
 
         private void Ldet_Click(object sender, EventArgs e)  // L'
@@ -1720,7 +1738,10 @@ namespace Rubik.V1
             //textBox1.Text = "L";
             numList++;
             // serialPort1.Write("l");
+            serialPort1.Write("1");
             L_det();
+           
+            serialPort1.Write("0");
         }
 
         private void Fdet_Click(object sender, EventArgs e)  // F'
@@ -1730,7 +1751,10 @@ namespace Rubik.V1
             listBox1.Items.Add(numList + ": F'");
             //Text_Result.Text = "FFFFFFFFFFFFFFFFFFFFFFFF";  //
             numList++;
+            serialPort1.Write("1");
             F_det();
+            
+            serialPort1.Write("0");
             //serialPort1.Write("f");// Tanapon Ninket
         }
 
@@ -1740,7 +1764,9 @@ namespace Rubik.V1
             show_color(Rubik);
             listBox1.Items.Add(numList + ": R'");  
             numList++;
+            serialPort1.Write("1");
             R_det();
+            serialPort1.Write("0");
             //serialPort1.Write("r");
         }
 
@@ -1750,7 +1776,10 @@ namespace Rubik.V1
             show_color(Rubik);
             listBox1.Items.Add(numList + ": U'");
             numList++;
+            serialPort1.Write("1");
             U_det();
+           
+            serialPort1.Write("0");
             //serialPort1.Write("r");
         }
 
@@ -1760,7 +1789,10 @@ namespace Rubik.V1
             show_color(Rubik);
             listBox1.Items.Add(numList + ":D'");
             numList++;
+            serialPort1.Write("1");
             D_det();
+           
+            serialPort1.Write("0");
             //serialPort1.Write("r");
         }
 
@@ -1797,8 +1829,7 @@ namespace Rubik.V1
         private void Start_Auto_Click(object sender, EventArgs e)
         {
 
-            timer2.Enabled = true;
-            timer2.Start();
+           
 
             //Robot_Start();
 
@@ -1833,8 +1864,9 @@ namespace Rubik.V1
 
         private void STOP_AUTO_Click(object sender, EventArgs e)   /////  Button  STOP  for Auto CLick //////////////
         {
-
+            timer2.Enabled = false;
             timer2.Stop();
+            Stopwatch_timer.Enabled = false;
             Stopwatch_timer.Stop();
         }
 
@@ -1843,6 +1875,7 @@ namespace Rubik.V1
 
         private void timer2_Tick(object sender, EventArgs e)   //////// Timer for TakePicture  ////////////
         {
+            serialPort1.Write("0");
 
             if (NumTimer == 0)
             {
@@ -1904,11 +1937,12 @@ namespace Rubik.V1
                 Write_Face();
                 //Timer Rubik Start
                 Thread.Sleep(1000);
+                serialPort1.Write("1");
                 timer_read_result.Enabled = true;
                 timer_read_result.Start();
 
                
-               
+                
                 timer2.Stop();
                 // Thread.Sleep(3000);
                
@@ -1951,170 +1985,180 @@ namespace Rubik.V1
         void F()
         {
             serialPort1.Write("F");
+            /*
+            serialPort1.Write("F");
             serialPort1.Write("K");
             serialPort1.Write("f");
             serialPort1.Write("k");
+            */
         }
         void F_det()
         {
             serialPort1.Write("f");
+            /*
+            serialPort1.Write("f");
             serialPort1.Write("K");
             serialPort1.Write("F");
             serialPort1.Write("k");
+            */
         }
         void F_2()
         {
-            serialPort1.Write("FF");
+            serialPort1.Write("I");
         }
-        void F2_det()
-        {
-            serialPort1.Write("ff");
-        }
+     
         
 
         void B()
         {
             serialPort1.Write("B");
+            /*
+            serialPort1.Write("B");
             serialPort1.Write("K");
             serialPort1.Write("b");
             serialPort1.Write("k");
+            */
         }
         void B_det()
         {
             serialPort1.Write("b");
+            /*
+            serialPort1.Write("b");
             serialPort1.Write("K");
             serialPort1.Write("B");
             serialPort1.Write("k");
+            */
         }
         void B_2()
         {
-            serialPort1.Write("BB");
-            Thread.Sleep(100);
+            serialPort1.Write("K");
+            //Thread.Sleep(100);
         }
-        void B2_det()
-        {
-            serialPort1.Write("bb");
-        }
+     
     
 
         void L()
         {
             serialPort1.Write("L");
+            /*
+            serialPort1.Write("L");
             serialPort1.Write("j");
             serialPort1.Write("l");
             serialPort1.Write("J");
+            */
         }  //เสร็จ
         void L_det()
         {
             serialPort1.Write("l");
+            /*
+            serialPort1.Write("l");
             serialPort1.Write("j");
             serialPort1.Write("L");
             serialPort1.Write("J");
+            */
         }   /// <summary>
         /// </summary>
         void L_2()
         {
-            serialPort1.Write("LL");
+            serialPort1.Write("J");
         }
-        void L2_det()
-        {
-            serialPort1.Write("ll");
-        }
+      
 
 
         void R()
         {
             serialPort1.Write("R");
+            /*
+            serialPort1.Write("R");
             serialPort1.Write("j");
             serialPort1.Write("r");
             serialPort1.Write("J");
+            */
         }  //เสร็จ
         void R_det()
         {
             serialPort1.Write("r");
+            /*
+            serialPort1.Write("r");
             serialPort1.Write("j");
             serialPort1.Write("R");
             serialPort1.Write("J");
+            */
         }  //เสร็จ
         void R_2()
         {
-            serialPort1.Write("RR");
+            serialPort1.Write("M");
         }   //เสร็จ
-        void R2_det()
-        {
-            serialPort1.Write("rr");
-        }
+      
 
     
         void UU()//เสร็จ   // U
         {
-           
-            serialPort1.Write("j");
-            serialPort1.Write("D");
-            serialPort1.Write("J");
-            serialPort1.Write("KdkRjrdJKDk");
-            Thread.Sleep(UD);
+            serialPort1.Write("U");
+            /*
+             serialPort1.Write("j");
+             serialPort1.Write("D");
+             serialPort1.Write("J");
+             serialPort1.Write("KdkRjrdJKDk");
+             Thread.Sleep(UD);*/
 
         }
         void U_det() // U'  //เสร็จ
         {
+            serialPort1.Write("u");
+            /*
             serialPort1.Write("j");
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkrjRdJKDk");
             Thread.Sleep(UD);
+            */
         }
 
         void U_2() // เสร็จ
         {
-            serialPort1.Write("j");
+            serialPort1.Write("O");
+           /* serialPort1.Write("j");
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkRRjdJKDk");
-            Thread.Sleep(UD);
+            Thread.Sleep(UD);*/
         }
-        void U2_det() // เสร็จ
-        {
-            serialPort1.Write("j");
-            serialPort1.Write("D");
-            serialPort1.Write("J");
-            serialPort1.Write("KdkRRjdJKDk");
-            Thread.Sleep(UD);
-        }
+       
 
         
         void DD()  //เสร็จ
         {
+            serialPort1.Write("D");
+            /*
             serialPort1.Write("j");
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkLjldJKDk");
-            Thread.Sleep(UD);
+            Thread.Sleep(UD);*/
         }
         void D_det()  // เสร็จ
         {
+            serialPort1.Write("d");
+            /*
             serialPort1.Write("j");
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkljLdJKDk");
             Thread.Sleep(UD);
+            */
         }
         void D_2()   // เสร็จ
         {
+            serialPort1.Write("P");
+            /*
             serialPort1.Write("j");
             serialPort1.Write("D");
             serialPort1.Write("J");
             serialPort1.Write("KdkLLjdJKDk");
-            Thread.Sleep(UD);
+            Thread.Sleep(UD);*/
         }
-        void D2_det()  // เสร็จ
-        {
-            serialPort1.Write("j");
-            serialPort1.Write("D");
-            serialPort1.Write("J");
-            serialPort1.Write("KdkLLjdJKDk");
-            Thread.Sleep(UD);
-        }
+       
 
 
 
@@ -2137,11 +2181,19 @@ namespace Rubik.V1
 
         private void button3_Click(object sender, EventArgs e)   ////// HW  Start /////////
         {
+            Stopwatch_timer.Enabled = true;
             stopwatch.Start();
+            Stopwatch_timer.Start();
             Robot_Start();
         }
 
-       
+        private void button4_Click_1(object sender, EventArgs e) // Start image
+        {
+            timer2.Enabled = true;
+            timer2.Start();
+        }
+
+
 
 
         // ////////////////////  Function Control  Rubik Cube Robot   Finish   ///////////////////////////////
