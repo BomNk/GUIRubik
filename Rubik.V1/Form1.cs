@@ -44,7 +44,7 @@ namespace Rubik.V1
         int Time,Delay=0;
         Stopwatch stopwatch = new Stopwatch();
         //time counter = new time();
-        int NumTimer = 0;   
+        int NumTimer = 0;   // Dela
 
       
         int UD = 0;
@@ -2342,7 +2342,7 @@ namespace Rubik.V1
 
 
             }
-            System.Diagnostics.Debug.WriteLine("x = " + x);
+           // System.Diagnostics.Debug.WriteLine("x = " + x);
 
 
 
