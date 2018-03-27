@@ -1317,7 +1317,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.Box5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box1)).EndInit();
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
+=======
+           // ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
+>>>>>>> 60792091c25eac3eb37c179bcae2a6c3d17a82d2
             this.ResumeLayout(false);
             this.PerformLayout();
 
