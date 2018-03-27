@@ -80,10 +80,9 @@ namespace Rubik.V1
         {
 
 
-<<<<<<< HEAD
             //opwatch_timer.Start();
-=======
->>>>>>> 93c132673a75d54788355eef5187a7f33946c0b5
+
+
             webcam = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo VideoCaptureDevice in webcam)
             {
@@ -2038,7 +2037,7 @@ namespace Rubik.V1
             serialPort1.Write("K");
             //Thread.Sleep(100);
         }
-     
+
     
 
         void L()
@@ -2181,7 +2180,43 @@ namespace Rubik.V1
         {
             serialPort1.PortName = comboBox2_connect.Text ;
             serialPort1.Open();
+            serialPort1.DataReceived += SerialPort1_DataReceived;
         }
+
+        private void SerialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            throw new NotImplementedException();
+            try
+            {
+                string str = serialPort1.ReadLine();
+
+                // data_serialport.Enabled = true;
+                //data_serialport.Start();
+                this.BeginInvoke(new LineReceivedEvent(LineReceived), str);
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message, "Error");
+            }
+        }
+        private delegate void LineReceivedEvent(string line);
+        private void LineReceived(string str)
+        {
+            try
+            {
+                listBox1.Items.Add(1 + ":" + str);
+
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message, "Error");
+            }
+
+            //circularProgressBar1.Update();
+
+
+        }
+
 
         private void button3_Click(object sender, EventArgs e)   ////// HW  Start /////////
         {
@@ -2386,41 +2421,13 @@ namespace Rubik.V1
             }
         }
 
-
-        private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
-            {
-                string str = serialPort1.ReadLine();
-
-                // data_serialport.Enabled = true;
-                //data_serialport.Start();
-                this.BeginInvoke(new LineReceivedEvent(LineReceived), str);
-            }
-            catch (Exception ex)
-            {
-                //MessageBox.Show(ex.Message, "Error");
-            }
-
-            //Data_table.Text = in_data;
-        }
-        private delegate void LineReceivedEvent(string line);
-        private void LineReceived(string str)
-        {
-            try
-            {
-                listBox1.Items.Add(1+ ":" + str);
-              
-            }
-            catch (Exception ex)
-            {
-                //MessageBox.Show(ex.Message, "Error");
-            }
-
-            //circularProgressBar1.Update();
-
 
         }
+
+   
+
 
         ////////////////////////////////  END  File IO  ////////////////////////////////////////////////////////
 
