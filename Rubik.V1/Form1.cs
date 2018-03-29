@@ -1612,29 +1612,12 @@ namespace Rubik.V1
 
 
 
-        private void RotateRight_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RotateLeft_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
 
 
         ///////////////////////// ทิศในการหมุน    ปุ่มควบคุม  //////////////////////////////////////////////////
-        private void Top_Click(object sender, EventArgs e)   // Chang Face
-        {
-
-        }
-
+    
 
 
 
@@ -1865,13 +1848,7 @@ namespace Rubik.V1
 
         }
 
-        private void STOP_AUTO_Click(object sender, EventArgs e)   /////  Button  STOP  for Auto CLick //////////////
-        {
-            timer2.Enabled = false;
-            timer2.Stop();
-            Stopwatch_timer.Enabled = false;
-            Stopwatch_timer.Stop();
-        }
+     
 
        
 
@@ -2038,8 +2015,6 @@ namespace Rubik.V1
             //Thread.Sleep(100);
         }
 
-    
-
         void L()
         {
             serialPort1.Write("L");
@@ -2117,7 +2092,6 @@ namespace Rubik.V1
             Thread.Sleep(UD);
             */
         }
-
         void U_2() // เสร็จ
         {
             serialPort1.Write("O");
@@ -2126,10 +2100,7 @@ namespace Rubik.V1
             serialPort1.Write("J");
             serialPort1.Write("KdkRRjdJKDk");
             Thread.Sleep(UD);*/
-        }
-       
-
-        
+        }       
         void DD()  //เสร็จ
         {
             serialPort1.Write("D");
@@ -2218,19 +2189,9 @@ namespace Rubik.V1
         }
 
 
-        private void button3_Click(object sender, EventArgs e)   ////// HW  Start /////////
-        {
-            Stopwatch_timer.Enabled = true;
-            stopwatch.Start();
-            Stopwatch_timer.Start();
-            Robot_Start();
-        }
+       
 
-        private void button4_Click_1(object sender, EventArgs e) // Start image
-        {
-            timer2.Enabled = true;
-            timer2.Start();
-        }
+     
 
 
 
@@ -2426,7 +2387,7 @@ namespace Rubik.V1
 
         }
 
-   
+
 
 
         ////////////////////////////////  END  File IO  ////////////////////////////////////////////////////////
@@ -2435,5 +2396,26 @@ namespace Rubik.V1
         //=======
         ///////////////////   สิ้นสุดการทำงานของปุ่ม
 
+        ////////Button Control ////////////
+        private void button3_Click(object sender, EventArgs e)   ////// HW  Start /////////
+        {
+            Stopwatch_timer.Enabled = true;
+            stopwatch.Start();
+            Stopwatch_timer.Start();
+            Robot_Start();
+        }
+
+        private void button4_Click_1(object sender, EventArgs e) // Start image
+        {
+            timer2.Enabled = true;
+            timer2.Start();
+        }
+        private void STOP_AUTO_Click(object sender, EventArgs e)   /////  Button  STOP  for Auto CLick //////////////
+        {
+            timer2.Enabled = false;
+            timer2.Stop();
+            Stopwatch_timer.Enabled = false;
+            Stopwatch_timer.Stop();
+        }
     } // end class 
 }
