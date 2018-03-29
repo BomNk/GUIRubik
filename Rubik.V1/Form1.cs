@@ -1457,22 +1457,7 @@ namespace Rubik.V1
 
 
      
-        private void Test_Click(object sender, EventArgs e) // Reset Click125 //Finish
-        {
-            char[][] RK = new char[6][] {  new char[] {'B','B','B','B','B','B','B','B','B' },
-                                                new char[] {'P','P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},
-                                                new char[] { 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W'  },
-                                                new char[] { 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R' },
-                                                new char[] {'G', 'G' , 'G' , 'G', 'G' , 'G' , 'G' , 'G','G' },
-                                                new char[] { 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y' } };
-
-            listBox1.Items.Clear();
-            numList = 0;
-            Rubik = RK ;
-            show_color(Rubik);
-            Text_Time.Text = "00:00:00";
-
-        } 
+      
 
 
 
@@ -2416,6 +2401,22 @@ namespace Rubik.V1
             timer2.Stop();
             Stopwatch_timer.Enabled = false;
             Stopwatch_timer.Stop();
+        }
+        private void Test_Click(object sender, EventArgs e) // Reset Click125 //Finish
+        {
+            char[][] RK = new char[6][] {  new char[] {'B','B','B','B','B','B','B','B','B' },
+                                                new char[] {'P','P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},
+                                                new char[] { 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W'  },
+                                                new char[] { 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R' },
+                                                new char[] {'G', 'G' , 'G' , 'G', 'G' , 'G' , 'G' , 'G','G' },
+                                                new char[] { 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y' } };
+
+            listBox1.Items.Clear();
+            numList = 0;
+            Rubik = RK;
+            show_color(Rubik);
+            Text_Time.Text = "00:00:00";
+
         }
     } // end class 
 }
