@@ -2188,11 +2188,13 @@ namespace Rubik.V1
             throw new NotImplementedException();
             try
             {
+
                 string str = serialPort1.ReadLine();
 
                 // data_serialport.Enabled = true;
                 //data_serialport.Start();
                 this.BeginInvoke(new LineReceivedEvent(LineReceived), str);
+
             }
             catch (Exception ex)
             {
