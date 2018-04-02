@@ -88,7 +88,7 @@ namespace Rubik.V1
             {
                 comboBox1.Items.Add(VideoCaptureDevice.Name);
             }
-            comboBox1.SelectedIndex = 0;
+            //comboBox1.SelectedIndex = 0;
 
         }
 
@@ -1608,10 +1608,10 @@ namespace Rubik.V1
 
         private void Left_Click(object sender, EventArgs e)    //  L
         {
-            rotate_left(1);
-            show_color(Rubik);
-            listBox1.Items.Add(numList + ":L");
-            numList++;
+            //rotate_left(1);
+            //show_color(Rubik);
+            //listBox1.Items.Add(numList + ":L");
+            //numList++;
             // serialPort1.Write("L");
             serialPort1.Write("1");
             L();
@@ -1620,10 +1620,10 @@ namespace Rubik.V1
 
         private void Right_Click_1(object sender, EventArgs e)   //  R
         {
-            rotate_right(1);
-            show_color(Rubik);
-            listBox1.Items.Add(numList + ": R");
-            numList++;
+            //rotate_right(1);
+            //show_color(Rubik);
+            //listBox1.Items.Add(numList + ": R");
+            //numList++;
             //  serialPort1.Write("R");
             serialPort1.Write("1");
             R();
@@ -1634,10 +1634,10 @@ namespace Rubik.V1
 
         private void Front_Click(object sender, EventArgs e) // F
         {
-            rotate_front(1);
-            show_color(Rubik);
-            listBox1.Items.Add(numList + ": F");
-            numList++;
+            //rotate_front(1);
+            //show_color(Rubik);
+            //listBox1.Items.Add(numList + ": F");
+            //numList++;
             /// Step of Work ///
             serialPort1.Write("1");
             F();
@@ -1649,10 +1649,10 @@ namespace Rubik.V1
 
         private void Rear_Click(object sender, EventArgs e)  //  B
         {
-            rotate_rear(1);
-            show_color(Rubik);
-            listBox1.Items.Add(numList + ":B");
-            numList++;
+            //rotate_rear(1);
+            //show_color(Rubik);
+            //listBox1.Items.Add(numList + ":B");
+            //numList++;
             serialPort1.Write("1");
             // serialPort1.Write("B");
 
@@ -1663,10 +1663,10 @@ namespace Rubik.V1
 
         private void U_Click(object sender, EventArgs e)  //  Top
         {
-            rotate_top(1);
-            show_color(Rubik);
-            listBox1.Items.Add(numList + ": U'");
-            numList++;
+            //rotate_top(1);
+            //show_color(Rubik);
+            //listBox1.Items.Add(numList + ": U'");
+            //numList++;
             // serialPort1.Write("b");
             serialPort1.Write("1");
             UU();
@@ -1677,10 +1677,10 @@ namespace Rubik.V1
 
         private void D_Click(object sender, EventArgs e)   // Down
         {
-            rotate_down(1);
-            show_color(Rubik);
-            listBox1.Items.Add(numList + ":D");
-            numList++;
+            //rotate_down(1);
+           // show_color(Rubik);
+            //listBox1.Items.Add(numList + ":D");
+            //numList++;
             // serialPort1.Write("b");
             serialPort1.Write("1");
             DD();
@@ -1690,10 +1690,10 @@ namespace Rubik.V1
 
         private void Bdet_Click(object sender, EventArgs e) //B'
         {
-            rotate_rear(0);
-            show_color(Rubik);
-            listBox1.Items.Add(numList + ": B'");
-            numList++;
+            //rotate_rear(0);
+            //show_color(Rubik);
+           // listBox1.Items.Add(numList + ": B'");
+            //numList++;
             // serialPort1.Write("b");
             serialPort1.Write("1");
             B_det();
@@ -1703,11 +1703,11 @@ namespace Rubik.V1
 
         private void Ldet_Click(object sender, EventArgs e)  // L'
         {
-            rotate_left(0);
-            show_color(Rubik);
-            listBox1.Items.Add(numList + ": L'");
+            //rotate_left(0);
+           // show_color(Rubik);
+            //listBox1.Items.Add(numList + ": L'");
             //textBox1.Text = "L";
-            numList++;
+           // numList++;
             // serialPort1.Write("l");
             serialPort1.Write("1");
             L_det();
@@ -1717,11 +1717,11 @@ namespace Rubik.V1
 
         private void Fdet_Click(object sender, EventArgs e)  // F'
         {
-            rotate_front(0);
-            show_color(Rubik);
-            listBox1.Items.Add(numList + ": F'");
+           // rotate_front(0);
+            //show_color(Rubik);
+            //listBox1.Items.Add(numList + ": F'");
             //Text_Result.Text = "FFFFFFFFFFFFFFFFFFFFFFFF";  //
-            numList++;
+            //numList++;
             serialPort1.Write("1");
             F_det();
             
@@ -1731,10 +1731,10 @@ namespace Rubik.V1
 
         private void Rdet_Click(object sender, EventArgs e) // R'
         {
-            rotate_right(0);
-            show_color(Rubik);
-            listBox1.Items.Add(numList + ": R'");  
-            numList++;
+            //rotate_right(0);
+           // show_color(Rubik);
+            //listBox1.Items.Add(numList + ": R'");  
+            //numList++;
             serialPort1.Write("1");
             R_det();
             serialPort1.Write("0");
@@ -1743,10 +1743,10 @@ namespace Rubik.V1
 
         private void Udet_Click(object sender, EventArgs e) // U' 
         {
-            rotate_top(0);
-            show_color(Rubik);
-            listBox1.Items.Add(numList + ": U'");
-            numList++;
+            //rotate_top(0);
+           // show_color(Rubik);
+           // listBox1.Items.Add(numList + ": U'");
+            //numList++;
             serialPort1.Write("1");
             U_det();
            
@@ -1756,10 +1756,10 @@ namespace Rubik.V1
 
         private void Ddet_Click(object sender, EventArgs e)
         {
-            rotate_down(0);
-            show_color(Rubik);
-            listBox1.Items.Add(numList + ":D'");
-            numList++;
+           //rotate_down(0);
+           // show_color(Rubik);
+           // listBox1.Items.Add(numList + ":D'");
+            //numList++;
             serialPort1.Write("1");
             D_det();
            
@@ -1779,21 +1779,25 @@ namespace Rubik.V1
 
         private void open_left_right_Click(object sender, EventArgs e) // เลื่อนออก ซ้าย---ขวา  <<LR>>
         {
+            listBox1.Items.Add(numList + ": " +"Left-Right  Open");
             serialPort1.Write("j");
         }
 
         private void close_left_right_Click(object sender, EventArgs e) // เลื่อนเข้า ซ้าย---ขวา  >>LR<<
         {
+            listBox1.Items.Add(numList + ": " + "Left-Right  Close");
             serialPort1.Write("J");
         }
 
         private void open_front_back_Click(object sender, EventArgs e)  // เลื่อนเข้า หน้า---หลัง   <<FB>>
         {
+            listBox1.Items.Add(numList + ": " + "Front-Back  Open");
             serialPort1.Write("K");
         }
 
         private void close_front_back_Click(object sender, EventArgs e) // เลื่อนออก หน้า---หลัง   >>FB<<
         {
+            listBox1.Items.Add(numList + ": " + "Front-Back  Close");
             serialPort1.Write("k");
         }
 
@@ -2132,48 +2136,7 @@ namespace Rubik.V1
             Text_Time.Text = stopwatch.Elapsed.ToString().Substring(3, 8);
         }
 
-        private void button4_Click(object sender, EventArgs e)  /////// CONNECT  ////////////////
-        {
-            serialPort1.PortName = comboBox2_connect.Text ;
-            serialPort1.Open();
-            serialPort1.DataReceived += SerialPort1_DataReceived;
-        }
-
-        private void SerialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
-        {
-            throw new NotImplementedException();
-            try
-            {
-
-                string str = serialPort1.ReadLine();
-
-                // data_serialport.Enabled = true;
-                //data_serialport.Start();
-                this.BeginInvoke(new LineReceivedEvent(LineReceived), str);
-
-            }
-            catch (Exception ex)
-            {
-                //MessageBox.Show(ex.Message, "Error");
-            }
-        }
-        private delegate void LineReceivedEvent(string line);
-        private void LineReceived(string str)
-        {
-            try
-            {
-                listBox1.Items.Add(1 + ":" + str);
-
-            }
-            catch (Exception ex)
-            {
-                //MessageBox.Show(ex.Message, "Error");
-            }
-
-            //circularProgressBar1.Update();
-
-
-        }
+       
 
 
        
@@ -2188,7 +2151,7 @@ namespace Rubik.V1
 
 
         //////////////////////   Generate  Rusult //////////////////////
-
+ 
         public void Result_to_function(string Result)
         {
             //Face = Face.Substring(3);  // เราต้องใส่ Index เพื่อระบุส่วนที่จะเอา(ตัดส่วนอื่นทิ้ง) (X,Y)   x คือ ตำแหน่ง   Y คือ ความยาวที่เราจะเอา
@@ -2207,26 +2170,33 @@ namespace Rubik.V1
             
             for (int i = 0; i < Result.Length-5 ; i += 3)
             {
-
+                serialPort1.Write("1");
 
                
 
                 if (Result.Substring(i, 2).Equals("L "))
                 {
-                    listBox1.Items.Add(x + ":L");
+                    //listBox1.Items.Add(x + ":L");
+                    //rotate_left(1);
+                    //show_color(Rubik);
                     L();
-                   
-                    x++;
+                    
+                    //x++;
                 }
                 else if (Result.Substring(i, 2).Equals("L'"))
                 {
-                    listBox1.Items.Add(x + ":L'");
+                    //listBox1.Items.Add(x + ":L'");
+                    //rotate_left(0);
+                    //show_color(Rubik);
                     L_det();
                     x++;
                 }
                  else if (Result.Substring(i, 2).Equals("L2"))
                 {
-                    listBox1.Items.Add(x + ":L2");
+                    //listBox1.Items.Add(x + ":L2");
+                    //rotate_left(1);
+                    //rotate_left(1);
+                    //show_color(Rubik);
                     L_2();
                     x++;
                 }
@@ -2234,100 +2204,135 @@ namespace Rubik.V1
 
                  else if (Result.Substring(i, 2).Equals("B "))
                 {
-                    listBox1.Items.Add(x + ":B ");
+                    //listBox1.Items.Add(x + ":B ");
+                    //rotate_rear(1);
+                    //show_color(Rubik);
                     B();
                     x++;
                 }
                  else if (Result.Substring(i, 2).Equals("B'"))
                 {
-                    listBox1.Items.Add(x + ":B'");
+                    // listBox1.Items.Add(x + ":B'");
+                   // rotate_rear(0);
+                   // show_color(Rubik);
                     B_det();
                     x++;
                 }
                  else if (Result.Substring(i, 2).Equals("B2"))
                 {
-                    listBox1.Items.Add(x + ":B2");
+                    //listBox1.Items.Add(x + ":B2");
+                    //rotate_rear(1);
+                    //rotate_rear(1);
+                    //show_color(Rubik);
                     B_2();
                     x++;
                 }
 
                  else if (Result.Substring(i, 2).Equals("R "))
                 {
-                    listBox1.Items.Add(x + ":R ");
+                    //listBox1.Items.Add(x + ":R ");
+                   // rotate_right(1);
+                   // show_color(Rubik);
                     R();
                     x++;
                 }
                  else if (Result.Substring(i, 2).Equals("R'"))
                 {
-                    listBox1.Items.Add(x + ":R'");
+                    // listBox1.Items.Add(x + ":R'");
+                    //rotate_right(0);
+                   // show_color(Rubik);
                     R_det();
                     x++;
                 }
                  else if (Result.Substring(i, 2).Equals("R2"))
                 {
-                    listBox1.Items.Add(x + ":R2");
+                    // listBox1.Items.Add(x + ":R2");
+                   // rotate_right(1);
+                   // rotate_right(1);
+                    //show_color(Rubik);
                     R_2();
                     x++;
                 }
 
                  else if (Result.Substring(i, 2).Equals("U "))
                 {
-                    listBox1.Items.Add(x + ":U ");
+                    // listBox1.Items.Add(x + ":U ");
+                    ///rotate_top(1);
+                    //show_color(Rubik);
                     UU();
                     x++;
                 }
                  else if (Result.Substring(i, 2).Equals("U'"))
                 {
-                    listBox1.Items.Add(x + ":U'");
+                    //listBox1.Items.Add(x + ":U'");
+                   // rotate_top(0);
+                   // show_color(Rubik);
                     U_det();
                     x++;
                 }
                  else if (Result.Substring(i, 2).Equals("U2"))
                 {
-                    listBox1.Items.Add(x + ":U2");
+                    // listBox1.Items.Add(x + ":U2");
+                    //rotate_top(0);
+                    //rotate_top(0);
+                    //show_color(Rubik);
                     U_2();
                     x++;
                 }
 
                  else if (Result.Substring(i, 2).Equals("D "))
                 {
-                    listBox1.Items.Add(x + ":D ");
+                    // listBox1.Items.Add(x + ":D ");
+                    //rotate_down(1);
+                   // show_color(Rubik);
                     DD();
                     x++;
                 }
                 else if (Result.Substring(i, 2).Equals("D'"))
                 {
-                    listBox1.Items.Add(x + ":D'");
+                    //listBox1.Items.Add(x + ":D'");
+                    //rotate_down(0);
+                    //show_color(Rubik);
                     D_det();
                     x++;
                 }
                 else if (Result.Substring(i, 2).Equals("D2"))
                 {
-                    listBox1.Items.Add(x + ":D2");
+                    // listBox1.Items.Add(x + ":D2");
+                    //rotate_down(1);
+                    //rotate_down(1);
+                    //show_color(Rubik);
                     D_2();       
                     x++;
                 }
                 else if (Result.Substring(i, 2).Equals("F "))
                 {
-              
-                    listBox1.Items.Add(x + ":F ");
+
+                    //listBox1.Items.Add(x + ":F ");
+                    //rotate_front(1);
+                    //show_color(Rubik);
                     F();
                     x++;
                 }
                 else if (Result.Substring(i, 2).Equals("F'"))
                 {
-                    listBox1.Items.Add(x + ":F'");
+                    //listBox1.Items.Add(x + ":F'");
+                    //rotate_front(0);
+                    //show_color(Rubik);
                     F_det();
                     x++;
                 }
                 else if (Result.Substring(i, 2).Equals("F2"))
                 {
-                    listBox1.Items.Add(x + ":F2");
+                    //listBox1.Items.Add(x + ":F2");
+                   // rotate_front(1);
+                   // rotate_front(1);
+                    //show_color(Rubik);
                     F_2();
                     x++;
                 }
 
-
+                serialPort1.Write("0");
             }
            // System.Diagnostics.Debug.WriteLine("x = " + x);
 
@@ -2337,7 +2342,7 @@ namespace Rubik.V1
 
         ////////////////////// Generate Result Finish ////////////////
 
-
+       
         ////////////////////////////////Read / Write File Face and Result  /////////////////////////////////////
         
         public void Read_Result()
@@ -2386,10 +2391,24 @@ namespace Rubik.V1
         ////////Button Control ////////////
         private void button3_Click(object sender, EventArgs e)   ////// HW  Start /////////
         {
-            Stopwatch_timer.Enabled = true;
-            stopwatch.Start();
-            Stopwatch_timer.Start();
-            Robot_Start();
+            try
+            {
+                Stopwatch_timer.Enabled = true;
+                stopwatch.Start();
+                Stopwatch_timer.Start();
+                Robot_Start();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Check Step Result", "Error");
+            }
+        }
+
+        private void DisConnect_Click(object sender, EventArgs e)
+        {
+            serialPort1.Close();
+            connect.Enabled = true;
+
         }
 
         private void button4_Click_1(object sender, EventArgs e) // Start image
@@ -2414,10 +2433,128 @@ namespace Rubik.V1
                                                 new char[] { 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y' } };
 
             listBox1.Items.Clear();
-            numList = 0;
+            numList = 1;
             Rubik = RK;
             show_color(Rubik);
             Text_Time.Text = "00:00:00";
+
+        }
+        private void button4_Click(object sender, EventArgs e)  /////// CONNECT  ////////////////
+        {
+            try
+            {
+                serialPort1.PortName = comboBox2_connect.Text;
+                serialPort1.Open();
+                serialPort1.DataReceived += SerialPort1_DataReceived;
+                connect.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
+        }
+
+        private void SerialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+
+            try
+            {
+
+                string str = serialPort1.ReadLine();
+
+
+                // data_serialport.Enabled = true;
+                //data_serialport.Start();
+                this.BeginInvoke(new LineReceivedEvent(LineReceived), str);
+
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message, "Error");
+            }
+        }
+        private delegate void LineReceivedEvent(string line);
+        private void LineReceived(string str)
+        {
+            try
+            {
+
+
+                if (str.Substring(0, 2).Equals("F'"))
+                    rotate_front(0);
+                else if (str.Substring(0, 2).Equals("F2"))
+                {
+                    rotate_front(1);
+                    rotate_front(1);
+                }
+                else if (str.Substring(0, 1).Equals("F"))
+                    rotate_front(1);
+
+                else if (str.Substring(0, 2).Equals("L'"))
+                    rotate_left(0);
+                else if (str.Substring(0, 2).Equals("L2"))
+                {
+                    rotate_left(1);
+                    rotate_left(1);
+                }
+                else if (str.Substring(0, 1).Equals("L"))
+                    rotate_left(1);
+
+                else if (str.Substring(0, 2).Equals("B'"))
+                    rotate_rear(0);
+                else if (str.Substring(0, 2).Equals("B2"))
+                {
+                    rotate_rear(1);
+                    rotate_rear(1);
+                }
+                else if (str.Substring(0, 1).Equals("B"))
+                    rotate_rear(1);
+
+                else if (str.Substring(0, 2).Equals("R'"))
+                    rotate_right(0);
+                else if (str.Substring(0, 2).Equals("R2"))
+                {
+                    rotate_right(1);
+                    rotate_right(1);
+                }
+                else if (str.Substring(0, 1).Equals("R"))
+                    rotate_right(1);
+
+                else if (str.Substring(0, 2).Equals("U'"))
+                    rotate_top(0);
+                else if (str.Substring(0, 2).Equals("U2"))
+                {
+                    rotate_top(1);
+                    rotate_top(1);
+                }
+                else if (str.Substring(0, 1).Equals("U"))
+                    rotate_top(1);
+
+                else if (str.Substring(0, 2).Equals("D'"))
+                    rotate_down(0);
+                else if (str.Substring(0, 2).Equals("D2"))
+                {
+                    rotate_down(1);
+                    rotate_down(1);
+                }
+                else if (str.Substring(0, 1).Equals("D"))
+                    rotate_down(1);
+
+                show_color(Rubik);
+
+
+
+                listBox1.Items.Add(numList + ":" + str);
+                numList++;
+
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message, "Error");
+            }
+
+            //circularProgressBar1.Update();
+
 
         }
     } // end class 

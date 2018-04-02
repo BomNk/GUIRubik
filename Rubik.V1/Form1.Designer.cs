@@ -151,6 +151,7 @@
             this.Text_Time = new System.Windows.Forms.Label();
             this.Stopwatch_timer = new System.Windows.Forms.Timer(this.components);
             this.button4 = new System.Windows.Forms.Button();
+            this.DisConnect = new System.Windows.Forms.Button();
             this.A4.SuspendLayout();
             this.C4.SuspendLayout();
             this.E4.SuspendLayout();
@@ -764,7 +765,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(820, 343);
+            this.label1.Location = new System.Drawing.Point(705, 220);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 77;
@@ -773,7 +774,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(866, 342);
+            this.label2.Location = new System.Drawing.Point(751, 220);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 78;
@@ -792,7 +793,7 @@
             // 
             // Ck_Color
             // 
-            this.Ck_Color.Location = new System.Drawing.Point(1010, 401);
+            this.Ck_Color.Location = new System.Drawing.Point(1011, 362);
             this.Ck_Color.Name = "Ck_Color";
             this.Ck_Color.Size = new System.Drawing.Size(82, 29);
             this.Ck_Color.TabIndex = 82;
@@ -905,7 +906,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(708, 256);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(78, 173);
+            this.listBox1.Size = new System.Drawing.Size(127, 147);
             this.listBox1.TabIndex = 96;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -1091,9 +1092,9 @@
             // 
             // STOP_AUTO
             // 
-            this.STOP_AUTO.Location = new System.Drawing.Point(564, 185);
+            this.STOP_AUTO.Location = new System.Drawing.Point(514, 187);
             this.STOP_AUTO.Name = "STOP_AUTO";
-            this.STOP_AUTO.Size = new System.Drawing.Size(131, 35);
+            this.STOP_AUTO.Size = new System.Drawing.Size(63, 33);
             this.STOP_AUTO.TabIndex = 121;
             this.STOP_AUTO.Text = "STOP";
             this.STOP_AUTO.UseVisualStyleBackColor = true;
@@ -1129,7 +1130,7 @@
             // 
             this.button3.Location = new System.Drawing.Point(346, 187);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 33);
+            this.button3.Size = new System.Drawing.Size(78, 33);
             this.button3.TabIndex = 124;
             this.button3.Text = "START_HW";
             this.button3.UseVisualStyleBackColor = true;
@@ -1139,9 +1140,10 @@
             // 
             this.connect.BackColor = System.Drawing.Color.Lime;
             this.connect.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.connect.Location = new System.Drawing.Point(923, 408);
+            this.connect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.connect.Location = new System.Drawing.Point(850, 411);
             this.connect.Name = "connect";
-            this.connect.Size = new System.Drawing.Size(75, 23);
+            this.connect.Size = new System.Drawing.Size(95, 23);
             this.connect.TabIndex = 125;
             this.connect.Text = "CONNECT";
             this.connect.UseVisualStyleBackColor = false;
@@ -1150,9 +1152,9 @@
             // comboBox2_connect
             // 
             this.comboBox2_connect.FormattingEnabled = true;
-            this.comboBox2_connect.Location = new System.Drawing.Point(794, 408);
+            this.comboBox2_connect.Location = new System.Drawing.Point(711, 412);
             this.comboBox2_connect.Name = "comboBox2_connect";
-            this.comboBox2_connect.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2_connect.Size = new System.Drawing.Size(133, 21);
             this.comboBox2_connect.TabIndex = 126;
             // 
             // Text_Time
@@ -1172,13 +1174,26 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(465, 190);
+            this.button4.Location = new System.Drawing.Point(430, 187);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(86, 29);
+            this.button4.Size = new System.Drawing.Size(78, 33);
             this.button4.TabIndex = 128;
             this.button4.Text = "START_IMG";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            // 
+            // DisConnect
+            // 
+            this.DisConnect.BackColor = System.Drawing.Color.Red;
+            this.DisConnect.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.DisConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.DisConnect.Location = new System.Drawing.Point(950, 411);
+            this.DisConnect.Name = "DisConnect";
+            this.DisConnect.Size = new System.Drawing.Size(29, 23);
+            this.DisConnect.TabIndex = 129;
+            this.DisConnect.Text = "X";
+            this.DisConnect.UseVisualStyleBackColor = false;
+            this.DisConnect.Click += new System.EventHandler(this.DisConnect_Click);
             // 
             // Form1
             // 
@@ -1186,6 +1201,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1098, 441);
+            this.Controls.Add(this.DisConnect);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.Text_Time);
             this.Controls.Add(this.comboBox2_connect);
@@ -1317,7 +1333,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Box5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box1)).EndInit();
-     //       ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1448,6 +1464,7 @@
         private System.Windows.Forms.Label Text_Time;
         private System.Windows.Forms.Timer Stopwatch_timer;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button DisConnect;
         //>>>>>>> 6660cc3015398fa2a960b8bd0d824c6d907f612f
     }
 }
