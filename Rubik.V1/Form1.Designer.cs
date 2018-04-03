@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.A0 = new System.Windows.Forms.Panel();
             this.A1 = new System.Windows.Forms.Panel();
             this.A2 = new System.Windows.Forms.Panel();
@@ -682,6 +683,8 @@
             // Box2
             // 
             this.Box2.BackColor = System.Drawing.Color.Silver;
+            this.Box2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Box2.BackgroundImage")));
+            this.Box2.Image = global::Rubik.V1.Properties.Resources.load;
             this.Box2.Location = new System.Drawing.Point(371, 2);
             this.Box2.Name = "Box2";
             this.Box2.Size = new System.Drawing.Size(139, 107);
@@ -692,6 +695,8 @@
             // Box3
             // 
             this.Box3.BackColor = System.Drawing.Color.Silver;
+            this.Box3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Box3.BackgroundImage")));
+            this.Box3.Image = global::Rubik.V1.Properties.Resources.load;
             this.Box3.Location = new System.Drawing.Point(516, 2);
             this.Box3.Name = "Box3";
             this.Box3.Size = new System.Drawing.Size(139, 107);
@@ -702,6 +707,8 @@
             // Box4
             // 
             this.Box4.BackColor = System.Drawing.Color.Silver;
+            this.Box4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Box4.BackgroundImage")));
+            this.Box4.Image = global::Rubik.V1.Properties.Resources.load;
             this.Box4.Location = new System.Drawing.Point(661, 2);
             this.Box4.Name = "Box4";
             this.Box4.Size = new System.Drawing.Size(139, 107);
@@ -712,6 +719,8 @@
             // Box5
             // 
             this.Box5.BackColor = System.Drawing.Color.Silver;
+            this.Box5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Box5.BackgroundImage")));
+            this.Box5.Image = global::Rubik.V1.Properties.Resources.load;
             this.Box5.Location = new System.Drawing.Point(806, 2);
             this.Box5.Name = "Box5";
             this.Box5.Size = new System.Drawing.Size(139, 107);
@@ -722,6 +731,8 @@
             // Box6
             // 
             this.Box6.BackColor = System.Drawing.Color.Silver;
+            this.Box6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Box6.BackgroundImage")));
+            this.Box6.Image = global::Rubik.V1.Properties.Resources.load;
             this.Box6.Location = new System.Drawing.Point(954, 2);
             this.Box6.Name = "Box6";
             this.Box6.Size = new System.Drawing.Size(139, 107);
@@ -749,22 +760,26 @@
             // 
             // Start
             // 
+            this.Start.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.Start.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Start.Location = new System.Drawing.Point(1018, 153);
             this.Start.Name = "Start";
             this.Start.Size = new System.Drawing.Size(75, 23);
             this.Start.TabIndex = 75;
             this.Start.Text = "Start";
-            this.Start.UseVisualStyleBackColor = true;
+            this.Start.UseVisualStyleBackColor = false;
             this.Start.Click += new System.EventHandler(this.Start_Click_1);
             // 
             // Stop
             // 
+            this.Stop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.Stop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Stop.Location = new System.Drawing.Point(1018, 182);
             this.Stop.Name = "Stop";
             this.Stop.Size = new System.Drawing.Size(75, 23);
             this.Stop.TabIndex = 76;
             this.Stop.Text = "Stop";
-            this.Stop.UseVisualStyleBackColor = true;
+            this.Stop.UseVisualStyleBackColor = false;
             this.Stop.Click += new System.EventHandler(this.Stop_Click);
             // 
             // timer1
@@ -775,24 +790,28 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(705, 220);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label1.Location = new System.Drawing.Point(928, 130);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.Size = new System.Drawing.Size(51, 15);
             this.label1.TabIndex = 77;
             this.label1.Text = "Status:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(751, 220);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label2.Location = new System.Drawing.Point(985, 130);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(39, 15);
             this.label2.TabIndex = 78;
-            this.label2.Text = "label2";
+            this.label2.Text = "none";
             // 
             // Box1
             // 
             this.Box1.BackColor = System.Drawing.Color.Silver;
+            this.Box1.BackgroundImage = global::Rubik.V1.Properties.Resources.load;
+            this.Box1.Image = global::Rubik.V1.Properties.Resources.load;
             this.Box1.Location = new System.Drawing.Point(223, 2);
             this.Box1.Name = "Box1";
             this.Box1.Size = new System.Drawing.Size(139, 107);
@@ -878,43 +897,47 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(914, 292);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label11.Location = new System.Drawing.Point(902, 292);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(82, 13);
+            this.label11.Size = new System.Drawing.Size(97, 15);
             this.label11.TabIndex = 92;
             this.label11.Text = "**วิธีการใช้กล้อง";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(944, 308);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label12.Location = new System.Drawing.Point(932, 308);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(69, 13);
+            this.label12.Size = new System.Drawing.Size(85, 15);
             this.label12.TabIndex = 93;
             this.label12.Text = "1.กดปุ่ม Start";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(944, 321);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label13.Location = new System.Drawing.Point(932, 321);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(133, 13);
+            this.label13.Size = new System.Drawing.Size(157, 15);
             this.label13.TabIndex = 94;
             this.label13.Text = "2.กดปุ่ม Take เพื่อถ่ายภาพ";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(944, 334);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label14.Location = new System.Drawing.Point(932, 334);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(129, 13);
+            this.label14.Size = new System.Drawing.Size(154, 15);
             this.label14.TabIndex = 95;
             this.label14.Text = "3.กดปุ่ม Stop เพื่อปิดกล้อง";
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(708, 256);
+            this.listBox1.Location = new System.Drawing.Point(673, 264);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(127, 147);
             this.listBox1.TabIndex = 96;
@@ -923,9 +946,10 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(708, 240);
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label15.Location = new System.Drawing.Point(670, 243);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(62, 13);
+            this.label15.Size = new System.Drawing.Size(93, 18);
             this.label15.TabIndex = 97;
             this.label15.Text = "Show_Step";
             // 
@@ -1109,18 +1133,20 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(339, 159);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label10.Location = new System.Drawing.Point(328, 159);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(37, 13);
+            this.label10.Size = new System.Drawing.Size(48, 15);
             this.label10.TabIndex = 117;
             this.label10.Text = "Result";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(706, 197);
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label16.Location = new System.Drawing.Point(600, 200);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(30, 13);
+            this.label16.Size = new System.Drawing.Size(39, 15);
             this.label16.TabIndex = 119;
             this.label16.Text = "Time";
             // 
@@ -1143,15 +1169,16 @@
             // 
             this.Text_face.Location = new System.Drawing.Point(382, 129);
             this.Text_face.Name = "Text_face";
-            this.Text_face.Size = new System.Drawing.Size(533, 20);
+            this.Text_face.Size = new System.Drawing.Size(490, 20);
             this.Text_face.TabIndex = 122;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label17.Location = new System.Drawing.Point(343, 134);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(31, 13);
+            this.label17.Size = new System.Drawing.Size(38, 15);
             this.label17.TabIndex = 123;
             this.label17.Text = "Face";
             // 
@@ -1194,10 +1221,12 @@
             // Text_Time
             // 
             this.Text_Time.AutoSize = true;
-            this.Text_Time.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.Text_Time.Location = new System.Drawing.Point(744, 187);
+            this.Text_Time.BackColor = System.Drawing.Color.Transparent;
+            this.Text_Time.Font = new System.Drawing.Font("Trebuchet MS", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Text_Time.ForeColor = System.Drawing.Color.Blue;
+            this.Text_Time.Location = new System.Drawing.Point(650, 177);
             this.Text_Time.Name = "Text_Time";
-            this.Text_Time.Size = new System.Drawing.Size(128, 31);
+            this.Text_Time.Size = new System.Drawing.Size(231, 61);
             this.Text_Time.TabIndex = 127;
             this.Text_Time.Text = "00:00:00";
             // 
@@ -1347,7 +1376,7 @@
             this.Controls.Add(this.A0);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Name = "Form1";
-            this.Text = "Rubik";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.A4.ResumeLayout(false);
             this.A4.PerformLayout();
