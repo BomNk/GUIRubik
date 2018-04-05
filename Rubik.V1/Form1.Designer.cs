@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.A0 = new System.Windows.Forms.Panel();
             this.A1 = new System.Windows.Forms.Panel();
             this.A2 = new System.Windows.Forms.Panel();
@@ -198,7 +197,6 @@
             // 
             // A4
             // 
-            this.A4.BackColor = System.Drawing.Color.Aqua;
             this.A4.Controls.Add(this.label9);
             this.A4.Location = new System.Drawing.Point(151, 54);
             this.A4.Name = "A4";
@@ -272,7 +270,6 @@
             // 
             // C4
             // 
-            this.C4.BackColor = System.Drawing.Color.White;
             this.C4.Controls.Add(this.label19);
             this.C4.Location = new System.Drawing.Point(151, 159);
             this.C4.Name = "C4";
@@ -346,7 +343,6 @@
             // 
             // E4
             // 
-            this.E4.BackColor = System.Drawing.Color.Lime;
             this.E4.Controls.Add(this.label21);
             this.E4.Location = new System.Drawing.Point(151, 264);
             this.E4.Name = "E4";
@@ -420,7 +416,6 @@
             // 
             // F4
             // 
-            this.F4.BackColor = System.Drawing.Color.Yellow;
             this.F4.Controls.Add(this.label22);
             this.F4.Location = new System.Drawing.Point(151, 369);
             this.F4.Name = "F4";
@@ -494,7 +489,6 @@
             // 
             // D4
             // 
-            this.D4.BackColor = System.Drawing.Color.Red;
             this.D4.Controls.Add(this.label20);
             this.D4.Location = new System.Drawing.Point(262, 159);
             this.D4.Name = "D4";
@@ -568,7 +562,6 @@
             // 
             // B4
             // 
-            this.B4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.B4.Controls.Add(this.label18);
             this.B4.Location = new System.Drawing.Point(43, 159);
             this.B4.Name = "B4";
@@ -614,9 +607,8 @@
             // 
             // Right
             // 
-            this.Right.BackColor = System.Drawing.Color.Red;
+            this.Right.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Right.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Right.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Right.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Right.Location = new System.Drawing.Point(456, 245);
             this.Right.Name = "Right";
@@ -628,9 +620,8 @@
             // 
             // Left
             // 
-            this.Left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Left.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Left.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Left.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Left.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Left.Location = new System.Drawing.Point(315, 245);
             this.Left.Name = "Left";
@@ -642,9 +633,8 @@
             // 
             // Front
             // 
-            this.Front.BackColor = System.Drawing.Color.Lime;
+            this.Front.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Front.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Front.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Front.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Front.Location = new System.Drawing.Point(385, 245);
             this.Front.Name = "Front";
@@ -656,9 +646,8 @@
             // 
             // Rear
             // 
-            this.Rear.BackColor = System.Drawing.Color.Cyan;
+            this.Rear.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Rear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Rear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Rear.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Rear.Location = new System.Drawing.Point(244, 245);
             this.Rear.Name = "Rear";
@@ -672,7 +661,7 @@
             // 
             this.Test.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Test.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.Test.Location = new System.Drawing.Point(5, 12);
+            this.Test.Location = new System.Drawing.Point(7, 19);
             this.Test.Name = "Test";
             this.Test.Size = new System.Drawing.Size(104, 47);
             this.Test.TabIndex = 63;
@@ -683,8 +672,6 @@
             // Box2
             // 
             this.Box2.BackColor = System.Drawing.Color.Silver;
-            this.Box2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Box2.BackgroundImage")));
-         //   this.Box2.Image = global::Rubik.V1.Properties.Resources.load;
             this.Box2.Location = new System.Drawing.Point(371, 2);
             this.Box2.Name = "Box2";
             this.Box2.Size = new System.Drawing.Size(139, 107);
@@ -695,8 +682,6 @@
             // Box3
             // 
             this.Box3.BackColor = System.Drawing.Color.Silver;
-            this.Box3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Box3.BackgroundImage")));
-           // this.Box3.Image = global::Rubik.V1.Properties.Resources.load;
             this.Box3.Location = new System.Drawing.Point(516, 2);
             this.Box3.Name = "Box3";
             this.Box3.Size = new System.Drawing.Size(139, 107);
@@ -707,8 +692,6 @@
             // Box4
             // 
             this.Box4.BackColor = System.Drawing.Color.Silver;
-            this.Box4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Box4.BackgroundImage")));
-          //  this.Box4.Image = global::Rubik.V1.Properties.Resources.load;
             this.Box4.Location = new System.Drawing.Point(661, 2);
             this.Box4.Name = "Box4";
             this.Box4.Size = new System.Drawing.Size(139, 107);
@@ -719,8 +702,6 @@
             // Box5
             // 
             this.Box5.BackColor = System.Drawing.Color.Silver;
-            this.Box5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Box5.BackgroundImage")));
-          //  this.Box5.Image = global::Rubik.V1.Properties.Resources.load;
             this.Box5.Location = new System.Drawing.Point(806, 2);
             this.Box5.Name = "Box5";
             this.Box5.Size = new System.Drawing.Size(139, 107);
@@ -731,8 +712,6 @@
             // Box6
             // 
             this.Box6.BackColor = System.Drawing.Color.Silver;
-            this.Box6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Box6.BackgroundImage")));
-         //   this.Box6.Image = global::Rubik.V1.Properties.Resources.load;
             this.Box6.Location = new System.Drawing.Point(954, 2);
             this.Box6.Name = "Box6";
             this.Box6.Size = new System.Drawing.Size(139, 107);
@@ -760,26 +739,22 @@
             // 
             // Start
             // 
-            this.Start.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.Start.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Start.Location = new System.Drawing.Point(1018, 153);
             this.Start.Name = "Start";
             this.Start.Size = new System.Drawing.Size(75, 23);
             this.Start.TabIndex = 75;
             this.Start.Text = "Start";
-            this.Start.UseVisualStyleBackColor = false;
+            this.Start.UseVisualStyleBackColor = true;
             this.Start.Click += new System.EventHandler(this.Start_Click_1);
             // 
             // Stop
             // 
-            this.Stop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.Stop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Stop.Location = new System.Drawing.Point(1018, 182);
             this.Stop.Name = "Stop";
             this.Stop.Size = new System.Drawing.Size(75, 23);
             this.Stop.TabIndex = 76;
             this.Stop.Text = "Stop";
-            this.Stop.UseVisualStyleBackColor = false;
+            this.Stop.UseVisualStyleBackColor = true;
             this.Stop.Click += new System.EventHandler(this.Stop_Click);
             // 
             // timer1
@@ -790,28 +765,24 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label1.Location = new System.Drawing.Point(928, 130);
+            this.label1.Location = new System.Drawing.Point(705, 220);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 15);
+            this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 77;
             this.label1.Text = "Status:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label2.Location = new System.Drawing.Point(985, 130);
+            this.label2.Location = new System.Drawing.Point(751, 220);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 15);
+            this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 78;
-            this.label2.Text = "none";
+            this.label2.Text = "label2";
             // 
             // Box1
             // 
             this.Box1.BackColor = System.Drawing.Color.Silver;
-        //    this.Box1.BackgroundImage = global::Rubik.V1.Properties.Resources.load;
-         //   this.Box1.Image = global::Rubik.V1.Properties.Resources.load;
             this.Box1.Location = new System.Drawing.Point(223, 2);
             this.Box1.Name = "Box1";
             this.Box1.Size = new System.Drawing.Size(139, 107);
@@ -822,7 +793,7 @@
             // 
             // Ck_Color
             // 
-            this.Ck_Color.Location = new System.Drawing.Point(1008, 377);
+            this.Ck_Color.Location = new System.Drawing.Point(1011, 362);
             this.Ck_Color.Name = "Ck_Color";
             this.Ck_Color.Size = new System.Drawing.Size(82, 29);
             this.Ck_Color.TabIndex = 82;
@@ -897,47 +868,43 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label11.Location = new System.Drawing.Point(902, 292);
+            this.label11.Location = new System.Drawing.Point(914, 292);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(97, 15);
+            this.label11.Size = new System.Drawing.Size(82, 13);
             this.label11.TabIndex = 92;
             this.label11.Text = "**วิธีการใช้กล้อง";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label12.Location = new System.Drawing.Point(932, 308);
+            this.label12.Location = new System.Drawing.Point(944, 308);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(85, 15);
+            this.label12.Size = new System.Drawing.Size(69, 13);
             this.label12.TabIndex = 93;
             this.label12.Text = "1.กดปุ่ม Start";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label13.Location = new System.Drawing.Point(932, 321);
+            this.label13.Location = new System.Drawing.Point(944, 321);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(157, 15);
+            this.label13.Size = new System.Drawing.Size(133, 13);
             this.label13.TabIndex = 94;
             this.label13.Text = "2.กดปุ่ม Take เพื่อถ่ายภาพ";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label14.Location = new System.Drawing.Point(932, 334);
+            this.label14.Location = new System.Drawing.Point(944, 334);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(154, 15);
+            this.label14.Size = new System.Drawing.Size(129, 13);
             this.label14.TabIndex = 95;
             this.label14.Text = "3.กดปุ่ม Stop เพื่อปิดกล้อง";
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(673, 264);
+            this.listBox1.Location = new System.Drawing.Point(708, 256);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(127, 147);
             this.listBox1.TabIndex = 96;
@@ -946,10 +913,9 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label15.Location = new System.Drawing.Point(670, 243);
+            this.label15.Location = new System.Drawing.Point(708, 240);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(93, 18);
+            this.label15.Size = new System.Drawing.Size(62, 13);
             this.label15.TabIndex = 97;
             this.label15.Text = "Show_Step";
             // 
@@ -959,111 +925,95 @@
             // 
             // U
             // 
-            this.U.BackColor = System.Drawing.Color.White;
-            this.U.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.U.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.U.Location = new System.Drawing.Point(530, 245);
             this.U.Name = "U";
             this.U.Size = new System.Drawing.Size(63, 48);
             this.U.TabIndex = 100;
             this.U.Text = "U";
-            this.U.UseVisualStyleBackColor = false;
+            this.U.UseVisualStyleBackColor = true;
             this.U.Click += new System.EventHandler(this.U_Click);
             // 
             // D
             // 
-            this.D.BackColor = System.Drawing.Color.Yellow;
-            this.D.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.D.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.D.Location = new System.Drawing.Point(603, 246);
+            this.D.Location = new System.Drawing.Point(639, 247);
             this.D.Name = "D";
             this.D.Size = new System.Drawing.Size(63, 47);
             this.D.TabIndex = 103;
             this.D.Text = "D";
-            this.D.UseVisualStyleBackColor = false;
+            this.D.UseVisualStyleBackColor = true;
             this.D.Click += new System.EventHandler(this.D_Click);
             // 
             // Ddet
             // 
-            this.Ddet.BackColor = System.Drawing.Color.Yellow;
-            this.Ddet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Ddet.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ddet.Location = new System.Drawing.Point(603, 298);
+            this.Ddet.Location = new System.Drawing.Point(639, 298);
             this.Ddet.Name = "Ddet";
             this.Ddet.Size = new System.Drawing.Size(63, 57);
             this.Ddet.TabIndex = 109;
             this.Ddet.Text = "D\'";
-            this.Ddet.UseVisualStyleBackColor = false;
+            this.Ddet.UseVisualStyleBackColor = true;
             this.Ddet.Click += new System.EventHandler(this.Ddet_Click);
             // 
             // Ldet
             // 
-            this.Ldet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Ldet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Ldet.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ldet.Location = new System.Drawing.Point(313, 298);
             this.Ldet.Name = "Ldet";
             this.Ldet.Size = new System.Drawing.Size(63, 58);
             this.Ldet.TabIndex = 108;
             this.Ldet.Text = "L\'";
-            this.Ldet.UseVisualStyleBackColor = false;
+            this.Ldet.UseVisualStyleBackColor = true;
             this.Ldet.Click += new System.EventHandler(this.Ldet_Click);
             // 
             // Bdet
             // 
-            this.Bdet.BackColor = System.Drawing.Color.Cyan;
-            this.Bdet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Bdet.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Bdet.Location = new System.Drawing.Point(244, 298);
             this.Bdet.Name = "Bdet";
             this.Bdet.Size = new System.Drawing.Size(63, 57);
             this.Bdet.TabIndex = 107;
             this.Bdet.Text = "B\'";
-            this.Bdet.UseVisualStyleBackColor = false;
+            this.Bdet.UseVisualStyleBackColor = true;
             this.Bdet.Click += new System.EventHandler(this.Bdet_Click);
             // 
             // Udet
             // 
-            this.Udet.BackColor = System.Drawing.Color.White;
-            this.Udet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Udet.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Udet.Location = new System.Drawing.Point(530, 298);
             this.Udet.Name = "Udet";
             this.Udet.Size = new System.Drawing.Size(63, 58);
             this.Udet.TabIndex = 106;
             this.Udet.Text = "U\'";
-            this.Udet.UseVisualStyleBackColor = false;
+            this.Udet.UseVisualStyleBackColor = true;
             this.Udet.Click += new System.EventHandler(this.Udet_Click);
             // 
             // Rdet
             // 
-            this.Rdet.BackColor = System.Drawing.Color.Red;
-            this.Rdet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Rdet.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Rdet.Location = new System.Drawing.Point(453, 298);
             this.Rdet.Name = "Rdet";
             this.Rdet.Size = new System.Drawing.Size(63, 58);
             this.Rdet.TabIndex = 105;
             this.Rdet.Text = "R\'";
-            this.Rdet.UseVisualStyleBackColor = false;
+            this.Rdet.UseVisualStyleBackColor = true;
             this.Rdet.Click += new System.EventHandler(this.Rdet_Click);
             // 
             // Fdet
             // 
-            this.Fdet.BackColor = System.Drawing.Color.Lime;
-            this.Fdet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Fdet.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fdet.Location = new System.Drawing.Point(387, 298);
             this.Fdet.Name = "Fdet";
             this.Fdet.Size = new System.Drawing.Size(63, 58);
             this.Fdet.TabIndex = 104;
             this.Fdet.Text = "F\'";
-            this.Fdet.UseVisualStyleBackColor = false;
+            this.Fdet.UseVisualStyleBackColor = true;
             this.Fdet.Click += new System.EventHandler(this.Fdet_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1000, 412);
+            this.button1.Location = new System.Drawing.Point(603, 369);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 22);
             this.button1.TabIndex = 110;
@@ -1073,54 +1023,46 @@
             // 
             // open_left_right
             // 
-            this.open_left_right.BackColor = System.Drawing.Color.Magenta;
-            this.open_left_right.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.open_left_right.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.open_left_right.Location = new System.Drawing.Point(244, 369);
             this.open_left_right.Name = "open_left_right";
             this.open_left_right.Size = new System.Drawing.Size(80, 42);
             this.open_left_right.TabIndex = 111;
             this.open_left_right.Text = "<<LR>>";
-            this.open_left_right.UseVisualStyleBackColor = false;
+            this.open_left_right.UseVisualStyleBackColor = true;
             this.open_left_right.Click += new System.EventHandler(this.open_left_right_Click);
             // 
             // close_left_right
             // 
-            this.close_left_right.BackColor = System.Drawing.Color.Magenta;
-            this.close_left_right.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.close_left_right.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.close_left_right.Location = new System.Drawing.Point(330, 369);
             this.close_left_right.Name = "close_left_right";
             this.close_left_right.Size = new System.Drawing.Size(81, 42);
             this.close_left_right.TabIndex = 112;
             this.close_left_right.Text = ">>LR<<";
-            this.close_left_right.UseVisualStyleBackColor = false;
+            this.close_left_right.UseVisualStyleBackColor = true;
             this.close_left_right.Click += new System.EventHandler(this.close_left_right_Click);
             // 
             // close_front_back
             // 
-            this.close_front_back.BackColor = System.Drawing.Color.Gray;
-            this.close_front_back.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.close_front_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.close_front_back.Location = new System.Drawing.Point(585, 369);
+            this.close_front_back.Location = new System.Drawing.Point(516, 369);
             this.close_front_back.Name = "close_front_back";
             this.close_front_back.Size = new System.Drawing.Size(81, 42);
             this.close_front_back.TabIndex = 115;
             this.close_front_back.Text = ">>FB<<";
-            this.close_front_back.UseVisualStyleBackColor = false;
+            this.close_front_back.UseVisualStyleBackColor = true;
             this.close_front_back.Click += new System.EventHandler(this.close_front_back_Click);
             // 
             // open_front_back
             // 
-            this.open_front_back.BackColor = System.Drawing.Color.Gray;
-            this.open_front_back.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.open_front_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.open_front_back.Location = new System.Drawing.Point(499, 369);
+            this.open_front_back.Location = new System.Drawing.Point(428, 369);
             this.open_front_back.Name = "open_front_back";
             this.open_front_back.Size = new System.Drawing.Size(80, 42);
             this.open_front_back.TabIndex = 114;
             this.open_front_back.Text = "<<FB>>";
-            this.open_front_back.UseVisualStyleBackColor = false;
+            this.open_front_back.UseVisualStyleBackColor = true;
             this.open_front_back.Click += new System.EventHandler(this.open_front_back_Click);
             // 
             // Text_Result
@@ -1133,20 +1075,18 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label10.Location = new System.Drawing.Point(331, 159);
+            this.label10.Location = new System.Drawing.Point(339, 159);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(48, 15);
+            this.label10.Size = new System.Drawing.Size(37, 13);
             this.label10.TabIndex = 117;
             this.label10.Text = "Result";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label16.Location = new System.Drawing.Point(600, 200);
+            this.label16.Location = new System.Drawing.Point(706, 197);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(39, 15);
+            this.label16.Size = new System.Drawing.Size(30, 13);
             this.label16.TabIndex = 119;
             this.label16.Text = "Time";
             // 
@@ -1169,16 +1109,15 @@
             // 
             this.Text_face.Location = new System.Drawing.Point(382, 129);
             this.Text_face.Name = "Text_face";
-            this.Text_face.Size = new System.Drawing.Size(490, 20);
+            this.Text_face.Size = new System.Drawing.Size(533, 20);
             this.Text_face.TabIndex = 122;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label17.Location = new System.Drawing.Point(342, 134);
+            this.label17.Location = new System.Drawing.Point(343, 134);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(38, 15);
+            this.label17.Size = new System.Drawing.Size(31, 13);
             this.label17.TabIndex = 123;
             this.label17.Text = "Face";
             // 
@@ -1221,12 +1160,10 @@
             // Text_Time
             // 
             this.Text_Time.AutoSize = true;
-            this.Text_Time.BackColor = System.Drawing.Color.Transparent;
-            this.Text_Time.Font = new System.Drawing.Font("Trebuchet MS", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Text_Time.ForeColor = System.Drawing.Color.Blue;
-            this.Text_Time.Location = new System.Drawing.Point(650, 177);
+            this.Text_Time.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.Text_Time.Location = new System.Drawing.Point(744, 187);
             this.Text_Time.Name = "Text_Time";
-            this.Text_Time.Size = new System.Drawing.Size(231, 61);
+            this.Text_Time.Size = new System.Drawing.Size(128, 31);
             this.Text_Time.TabIndex = 127;
             this.Text_Time.Text = "00:00:00";
             // 
@@ -1262,7 +1199,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1098, 441);
             this.Controls.Add(this.DisConnect);
             this.Controls.Add(this.button4);
@@ -1376,7 +1313,7 @@
             this.Controls.Add(this.A0);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Name = "Form1";
-            this.Text = " ";
+            this.Text = "Rubik";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.A4.ResumeLayout(false);
             this.A4.PerformLayout();

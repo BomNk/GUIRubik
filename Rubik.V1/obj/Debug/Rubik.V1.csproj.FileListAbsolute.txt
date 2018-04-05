@@ -119,3 +119,6 @@ C:\Users\tanap\Documents\GitHub\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.Form2.resou
 C:\Users\tanap\Documents\GitHub\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.Form3.resources
 C:\Users\tanap\Documents\GitHub\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.Properties.Resources.resources
 C:\Users\tanap\Documents\GitHub\GUIRubik\Rubik.V1\obj\Debug\Rubik.V1.csproj.GenerateResource.Cache
+C:\Users\tanap\Downloads\Compressed\GUIRubik-816cb1bb259189202e705775d759cba68d87da2a\GUIRubik-816cb1bb259189202e705775d759cba68d87da2a\Rubik.V1\bin\Debug\Rubik.V1.exe.config
+C:\Users\tanap\Downloads\Compressed\GUIRubik-816cb1bb259189202e705775d759cba68d87da2a\GUIRubik-816cb1bb259189202e705775d759cba68d87da2a\Rubik.V1\obj\Debug\Rubik.V1.exe
+C:\Users\tanap\Downloads\Compressed\GUIRubik-816cb1bb259189202e705775d759cba68d87da2a\GUIRubik-816cb1bb259189202e705775d759cba68d87da2a\Rubik.V1\obj\Debug\Rubik.V1.pdb
