@@ -1134,7 +1134,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label10.Location = new System.Drawing.Point(328, 159);
+            this.label10.Location = new System.Drawing.Point(331, 159);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(48, 15);
             this.label10.TabIndex = 117;
@@ -1176,7 +1176,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label17.Location = new System.Drawing.Point(343, 134);
+            this.label17.Location = new System.Drawing.Point(342, 134);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(38, 15);
             this.label17.TabIndex = 123;
