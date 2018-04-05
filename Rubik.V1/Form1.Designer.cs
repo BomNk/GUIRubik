@@ -684,7 +684,7 @@
             // 
             this.Box2.BackColor = System.Drawing.Color.Silver;
             this.Box2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Box2.BackgroundImage")));
-            this.Box2.Image = global::Rubik.V1.Properties.Resources.load;
+         //   this.Box2.Image = global::Rubik.V1.Properties.Resources.load;
             this.Box2.Location = new System.Drawing.Point(371, 2);
             this.Box2.Name = "Box2";
             this.Box2.Size = new System.Drawing.Size(139, 107);
@@ -696,7 +696,7 @@
             // 
             this.Box3.BackColor = System.Drawing.Color.Silver;
             this.Box3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Box3.BackgroundImage")));
-            this.Box3.Image = global::Rubik.V1.Properties.Resources.load;
+           // this.Box3.Image = global::Rubik.V1.Properties.Resources.load;
             this.Box3.Location = new System.Drawing.Point(516, 2);
             this.Box3.Name = "Box3";
             this.Box3.Size = new System.Drawing.Size(139, 107);
@@ -708,7 +708,7 @@
             // 
             this.Box4.BackColor = System.Drawing.Color.Silver;
             this.Box4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Box4.BackgroundImage")));
-            this.Box4.Image = global::Rubik.V1.Properties.Resources.load;
+          //  this.Box4.Image = global::Rubik.V1.Properties.Resources.load;
             this.Box4.Location = new System.Drawing.Point(661, 2);
             this.Box4.Name = "Box4";
             this.Box4.Size = new System.Drawing.Size(139, 107);
@@ -720,7 +720,7 @@
             // 
             this.Box5.BackColor = System.Drawing.Color.Silver;
             this.Box5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Box5.BackgroundImage")));
-            this.Box5.Image = global::Rubik.V1.Properties.Resources.load;
+          //  this.Box5.Image = global::Rubik.V1.Properties.Resources.load;
             this.Box5.Location = new System.Drawing.Point(806, 2);
             this.Box5.Name = "Box5";
             this.Box5.Size = new System.Drawing.Size(139, 107);
@@ -732,7 +732,7 @@
             // 
             this.Box6.BackColor = System.Drawing.Color.Silver;
             this.Box6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Box6.BackgroundImage")));
-            this.Box6.Image = global::Rubik.V1.Properties.Resources.load;
+         //   this.Box6.Image = global::Rubik.V1.Properties.Resources.load;
             this.Box6.Location = new System.Drawing.Point(954, 2);
             this.Box6.Name = "Box6";
             this.Box6.Size = new System.Drawing.Size(139, 107);
@@ -810,8 +810,8 @@
             // Box1
             // 
             this.Box1.BackColor = System.Drawing.Color.Silver;
-            this.Box1.BackgroundImage = global::Rubik.V1.Properties.Resources.load;
-            this.Box1.Image = global::Rubik.V1.Properties.Resources.load;
+        //    this.Box1.BackgroundImage = global::Rubik.V1.Properties.Resources.load;
+         //   this.Box1.Image = global::Rubik.V1.Properties.Resources.load;
             this.Box1.Location = new System.Drawing.Point(223, 2);
             this.Box1.Name = "Box1";
             this.Box1.Size = new System.Drawing.Size(139, 107);
