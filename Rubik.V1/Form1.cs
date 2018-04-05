@@ -2541,7 +2541,7 @@ namespace Rubik.V1
                     rotate_down(1);
 
                 show_color(Rubik);
-
+                //tanapon  ninket
 
 
                 listBox1.Items.Add(numList + ":" + str);

@@ -197,6 +197,7 @@
             // 
             // A4
             // 
+            this.A4.BackColor = System.Drawing.Color.Cyan;
             this.A4.Controls.Add(this.label9);
             this.A4.Location = new System.Drawing.Point(151, 54);
             this.A4.Name = "A4";
@@ -270,6 +271,7 @@
             // 
             // C4
             // 
+            this.C4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.C4.Controls.Add(this.label19);
             this.C4.Location = new System.Drawing.Point(151, 159);
             this.C4.Name = "C4";
@@ -343,6 +345,7 @@
             // 
             // E4
             // 
+            this.E4.BackColor = System.Drawing.Color.Lime;
             this.E4.Controls.Add(this.label21);
             this.E4.Location = new System.Drawing.Point(151, 264);
             this.E4.Name = "E4";
@@ -416,6 +419,7 @@
             // 
             // F4
             // 
+            this.F4.BackColor = System.Drawing.Color.Yellow;
             this.F4.Controls.Add(this.label22);
             this.F4.Location = new System.Drawing.Point(151, 369);
             this.F4.Name = "F4";
@@ -489,6 +493,7 @@
             // 
             // D4
             // 
+            this.D4.BackColor = System.Drawing.Color.Red;
             this.D4.Controls.Add(this.label20);
             this.D4.Location = new System.Drawing.Point(262, 159);
             this.D4.Name = "D4";
@@ -562,6 +567,7 @@
             // 
             // B4
             // 
+            this.B4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.B4.Controls.Add(this.label18);
             this.B4.Location = new System.Drawing.Point(43, 159);
             this.B4.Name = "B4";
@@ -607,7 +613,7 @@
             // 
             // Right
             // 
-            this.Right.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Right.BackColor = System.Drawing.Color.Red;
             this.Right.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Right.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Right.Location = new System.Drawing.Point(456, 245);
@@ -620,7 +626,7 @@
             // 
             // Left
             // 
-            this.Left.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.Left.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Left.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Left.Location = new System.Drawing.Point(315, 245);
@@ -633,7 +639,7 @@
             // 
             // Front
             // 
-            this.Front.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Front.BackColor = System.Drawing.Color.Lime;
             this.Front.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Front.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Front.Location = new System.Drawing.Point(385, 245);
@@ -646,7 +652,7 @@
             // 
             // Rear
             // 
-            this.Rear.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Rear.BackColor = System.Drawing.Color.Aqua;
             this.Rear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Rear.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Rear.Location = new System.Drawing.Point(244, 245);
@@ -765,7 +771,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(705, 220);
+            this.label1.Location = new System.Drawing.Point(939, 132);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 77;
@@ -774,7 +780,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(751, 220);
+            this.label2.Location = new System.Drawing.Point(985, 134);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 78;
@@ -925,95 +931,103 @@
             // 
             // U
             // 
+            this.U.BackColor = System.Drawing.Color.WhiteSmoke;
             this.U.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.U.Location = new System.Drawing.Point(530, 245);
             this.U.Name = "U";
             this.U.Size = new System.Drawing.Size(63, 48);
             this.U.TabIndex = 100;
             this.U.Text = "U";
-            this.U.UseVisualStyleBackColor = true;
+            this.U.UseVisualStyleBackColor = false;
             this.U.Click += new System.EventHandler(this.U_Click);
             // 
             // D
             // 
+            this.D.BackColor = System.Drawing.Color.Yellow;
             this.D.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.D.Location = new System.Drawing.Point(639, 247);
+            this.D.Location = new System.Drawing.Point(612, 246);
             this.D.Name = "D";
             this.D.Size = new System.Drawing.Size(63, 47);
             this.D.TabIndex = 103;
             this.D.Text = "D";
-            this.D.UseVisualStyleBackColor = true;
+            this.D.UseVisualStyleBackColor = false;
             this.D.Click += new System.EventHandler(this.D_Click);
             // 
             // Ddet
             // 
+            this.Ddet.BackColor = System.Drawing.Color.Yellow;
             this.Ddet.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ddet.Location = new System.Drawing.Point(639, 298);
+            this.Ddet.Location = new System.Drawing.Point(612, 298);
             this.Ddet.Name = "Ddet";
             this.Ddet.Size = new System.Drawing.Size(63, 57);
             this.Ddet.TabIndex = 109;
             this.Ddet.Text = "D\'";
-            this.Ddet.UseVisualStyleBackColor = true;
+            this.Ddet.UseVisualStyleBackColor = false;
             this.Ddet.Click += new System.EventHandler(this.Ddet_Click);
             // 
             // Ldet
             // 
+            this.Ldet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.Ldet.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ldet.Location = new System.Drawing.Point(313, 298);
             this.Ldet.Name = "Ldet";
             this.Ldet.Size = new System.Drawing.Size(63, 58);
             this.Ldet.TabIndex = 108;
             this.Ldet.Text = "L\'";
-            this.Ldet.UseVisualStyleBackColor = true;
+            this.Ldet.UseVisualStyleBackColor = false;
             this.Ldet.Click += new System.EventHandler(this.Ldet_Click);
             // 
             // Bdet
             // 
+            this.Bdet.BackColor = System.Drawing.Color.Aqua;
             this.Bdet.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Bdet.Location = new System.Drawing.Point(244, 298);
             this.Bdet.Name = "Bdet";
             this.Bdet.Size = new System.Drawing.Size(63, 57);
             this.Bdet.TabIndex = 107;
             this.Bdet.Text = "B\'";
-            this.Bdet.UseVisualStyleBackColor = true;
+            this.Bdet.UseVisualStyleBackColor = false;
             this.Bdet.Click += new System.EventHandler(this.Bdet_Click);
             // 
             // Udet
             // 
+            this.Udet.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Udet.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Udet.Location = new System.Drawing.Point(530, 298);
             this.Udet.Name = "Udet";
             this.Udet.Size = new System.Drawing.Size(63, 58);
             this.Udet.TabIndex = 106;
             this.Udet.Text = "U\'";
-            this.Udet.UseVisualStyleBackColor = true;
+            this.Udet.UseVisualStyleBackColor = false;
             this.Udet.Click += new System.EventHandler(this.Udet_Click);
             // 
             // Rdet
             // 
+            this.Rdet.BackColor = System.Drawing.Color.Red;
             this.Rdet.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Rdet.Location = new System.Drawing.Point(453, 298);
             this.Rdet.Name = "Rdet";
             this.Rdet.Size = new System.Drawing.Size(63, 58);
             this.Rdet.TabIndex = 105;
             this.Rdet.Text = "R\'";
-            this.Rdet.UseVisualStyleBackColor = true;
+            this.Rdet.UseVisualStyleBackColor = false;
             this.Rdet.Click += new System.EventHandler(this.Rdet_Click);
             // 
             // Fdet
             // 
+            this.Fdet.BackColor = System.Drawing.Color.Lime;
             this.Fdet.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fdet.Location = new System.Drawing.Point(387, 298);
             this.Fdet.Name = "Fdet";
             this.Fdet.Size = new System.Drawing.Size(63, 58);
             this.Fdet.TabIndex = 104;
             this.Fdet.Text = "F\'";
-            this.Fdet.UseVisualStyleBackColor = true;
+            this.Fdet.UseVisualStyleBackColor = false;
             this.Fdet.Click += new System.EventHandler(this.Fdet_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(603, 369);
+            this.button1.Location = new System.Drawing.Point(985, 407);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 22);
             this.button1.TabIndex = 110;
@@ -1023,46 +1037,50 @@
             // 
             // open_left_right
             // 
+            this.open_left_right.BackColor = System.Drawing.Color.Fuchsia;
             this.open_left_right.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.open_left_right.Location = new System.Drawing.Point(244, 369);
             this.open_left_right.Name = "open_left_right";
             this.open_left_right.Size = new System.Drawing.Size(80, 42);
             this.open_left_right.TabIndex = 111;
             this.open_left_right.Text = "<<LR>>";
-            this.open_left_right.UseVisualStyleBackColor = true;
+            this.open_left_right.UseVisualStyleBackColor = false;
             this.open_left_right.Click += new System.EventHandler(this.open_left_right_Click);
             // 
             // close_left_right
             // 
+            this.close_left_right.BackColor = System.Drawing.Color.Fuchsia;
             this.close_left_right.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.close_left_right.Location = new System.Drawing.Point(330, 369);
             this.close_left_right.Name = "close_left_right";
             this.close_left_right.Size = new System.Drawing.Size(81, 42);
             this.close_left_right.TabIndex = 112;
             this.close_left_right.Text = ">>LR<<";
-            this.close_left_right.UseVisualStyleBackColor = true;
+            this.close_left_right.UseVisualStyleBackColor = false;
             this.close_left_right.Click += new System.EventHandler(this.close_left_right_Click);
             // 
             // close_front_back
             // 
+            this.close_front_back.BackColor = System.Drawing.Color.Green;
             this.close_front_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.close_front_back.Location = new System.Drawing.Point(516, 369);
+            this.close_front_back.Location = new System.Drawing.Point(594, 369);
             this.close_front_back.Name = "close_front_back";
             this.close_front_back.Size = new System.Drawing.Size(81, 42);
             this.close_front_back.TabIndex = 115;
             this.close_front_back.Text = ">>FB<<";
-            this.close_front_back.UseVisualStyleBackColor = true;
+            this.close_front_back.UseVisualStyleBackColor = false;
             this.close_front_back.Click += new System.EventHandler(this.close_front_back_Click);
             // 
             // open_front_back
             // 
+            this.open_front_back.BackColor = System.Drawing.Color.Green;
             this.open_front_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.open_front_back.Location = new System.Drawing.Point(428, 369);
+            this.open_front_back.Location = new System.Drawing.Point(508, 369);
             this.open_front_back.Name = "open_front_back";
             this.open_front_back.Size = new System.Drawing.Size(80, 42);
             this.open_front_back.TabIndex = 114;
             this.open_front_back.Text = "<<FB>>";
-            this.open_front_back.UseVisualStyleBackColor = true;
+            this.open_front_back.UseVisualStyleBackColor = false;
             this.open_front_back.Click += new System.EventHandler(this.open_front_back_Click);
             // 
             // Text_Result
@@ -1199,7 +1217,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1098, 441);
             this.Controls.Add(this.DisConnect);
             this.Controls.Add(this.button4);
@@ -1333,7 +1351,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Box5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
+         //   ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
