@@ -110,6 +110,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -131,6 +132,7 @@
   <ItemGroup>
     <Content Include="concrt140.dll" />
     <Content Include="cvextern.dll" />
+    <None Include="load.png" />
     <Content Include="msvcp140.dll" />
     <Content Include="opencv_ffmpeg320_64.dll" />
     <Content Include="vcruntime140.dll" />
