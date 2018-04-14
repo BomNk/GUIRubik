@@ -35,18 +35,21 @@ namespace Rubik.V1
        
         private FilterInfoCollection webcam;
         private VideoCaptureDevice cam;
-        int numTake = 1;
+       
         Image<Hsv, Byte> R_Image;
         Image<Hsv, Byte> My_Image;
         String str = "";
-        int numPicture = 1;
-        int numList = 1;
+       
         int Time,Delay=0;
         Stopwatch stopwatch = new Stopwatch();
         //time counter = new time();
         int NumTimer = 0;   // Dela
+        int numStep = 0;
+        int numTake = 1;
+        int numPicture = 1;
+        int numList = 1;
 
-      
+
         int UD = 0;
         
 
@@ -66,6 +69,7 @@ namespace Rubik.V1
             InitializeComponent();
             getAvailableComponent();
             //Text_Time.Text = min + " : " + sec + " : " + ssec;
+            numStep = 0;
            
 
         }
@@ -2331,9 +2335,12 @@ namespace Rubik.V1
                     F_2();
                     x++;
                 }
-
+                numStep++;
                 serialPort1.Write("0");
             }
+            listBox1.Items.Add("Result is " + numStep + " Step");
+
+
            // System.Diagnostics.Debug.WriteLine("x = " + x);
 
 
@@ -2438,7 +2445,14 @@ namespace Rubik.V1
                                                 new char[] { 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y' } };
 
             listBox1.Items.Clear();
+            //numList = 1;
+
+            NumTimer = 0;   // Dela
+            numStep = 0;
+            numTake = 1;
+            numPicture = 1;
             numList = 1;
+
             Rubik = RK;
             show_color(Rubik);
             Text_Time.Text = "00:00:00";
@@ -2550,6 +2564,14 @@ namespace Rubik.V1
 
 
                 listBox1.Items.Add(numList + ":" + str);
+
+                if(numList == numStep)
+                {
+                    timer2.Enabled = false;
+                    timer2.Stop();
+                    Stopwatch_timer.Enabled = false;
+                    Stopwatch_timer.Stop();
+                }
                 numList++;
 
             }
