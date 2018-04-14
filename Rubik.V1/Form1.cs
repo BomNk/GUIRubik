@@ -2338,6 +2338,7 @@ namespace Rubik.V1
                 numStep++;
                 serialPort1.Write("0");
             }
+
             listBox1.Items.Add("Result is " + numStep + " Step");
 
 
@@ -2567,11 +2568,13 @@ namespace Rubik.V1
 
                 if(numList == numStep)
                 {
+                    listBox1.Items.Add("Time STOP ");
                     timer2.Enabled = false;
                     timer2.Stop();
                     Stopwatch_timer.Enabled = false;
                     Stopwatch_timer.Stop();
                 }
+
                 numList++;
 
             }
