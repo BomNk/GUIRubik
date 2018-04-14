@@ -45,7 +45,6 @@ namespace Rubik.V1
         Stopwatch stopwatch = new Stopwatch();
         //time counter = new time();
         int NumTimer = 0;   // Dela
-        int numStep = 0;
 
       
         int UD = 0;
@@ -2173,8 +2172,8 @@ namespace Rubik.V1
             {
                 serialPort1.Write("1");
 
+               
 
-                numStep++;
                 if (Result.Substring(i, 2).Equals("L "))
                 {
                     //listBox1.Items.Add(x + ":L");
@@ -2335,8 +2334,7 @@ namespace Rubik.V1
 
                 serialPort1.Write("0");
             }
-            listBox1.Items.Add("Result " + numStep + " STEP");
-            // System.Diagnostics.Debug.WriteLine("x = " + x);
+           // System.Diagnostics.Debug.WriteLine("x = " + x);
 
 
 
@@ -2356,6 +2354,10 @@ namespace Rubik.V1
                 //Console.WriteLine(Result);
             }
         }
+
+
+
+
         public void Write_Face()
         {
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"D:\\Face.txt"))
@@ -2370,11 +2372,12 @@ namespace Rubik.V1
                 //Text_face.Text = Face;
 
 
-                
                 file.Write(FF);
                 //ReadFile Naja//
             }
         }
+
+
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -2422,7 +2425,6 @@ namespace Rubik.V1
         {
             timer2.Enabled = false;
             timer2.Stop();
-            stopwatch.Reset();
             Stopwatch_timer.Enabled = false;
             Stopwatch_timer.Stop();
         }
@@ -2437,15 +2439,9 @@ namespace Rubik.V1
 
             listBox1.Items.Clear();
             numList = 1;
-            numStep = 0;
             Rubik = RK;
             show_color(Rubik);
             Text_Time.Text = "00:00:00";
-            timer2.Enabled = false;
-            timer2.Stop();
-            stopwatch.Reset();
-            Stopwatch_timer.Enabled = false;
-            Stopwatch_timer.Stop();
 
         }
         private void button4_Click(object sender, EventArgs e)  /////// CONNECT  ////////////////
@@ -2462,11 +2458,6 @@ namespace Rubik.V1
                 MessageBox.Show(ex.Message, "Error");
             }
         }
-
-        private void Text_Result_TextChanged(object sender, EventArgs e)
-        {
-
-        }  // no Remove
 
         private void SerialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
@@ -2559,14 +2550,6 @@ namespace Rubik.V1
 
 
                 listBox1.Items.Add(numList + ":" + str);
-                if(numStep == numList)
-                {
-                    timer2.Enabled = false;
-                    timer2.Stop();
-                    stopwatch.Reset();
-                    Stopwatch_timer.Enabled = false;
-                    Stopwatch_timer.Stop();
-                }
                 numList++;
 
             }
