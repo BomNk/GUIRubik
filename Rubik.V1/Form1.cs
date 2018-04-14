@@ -2354,6 +2354,10 @@ namespace Rubik.V1
                 //Console.WriteLine(Result);
             }
         }
+
+
+
+
         public void Write_Face()
         {
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"D:\\Face.txt"))
@@ -2368,11 +2372,12 @@ namespace Rubik.V1
                 //Text_face.Text = Face;
 
 
-                
                 file.Write(FF);
                 //ReadFile Naja//
             }
         }
+
+
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
