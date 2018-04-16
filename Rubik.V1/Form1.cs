@@ -70,6 +70,7 @@ namespace Rubik.V1
             getAvailableComponent();
             //Text_Time.Text = min + " : " + sec + " : " + ssec;
             numStep = 0;
+
            
 
         }
@@ -1475,13 +1476,8 @@ namespace Rubik.V1
         
 
       
-        private void Ck_Color_Click(object sender, EventArgs e)
-        {
-            Form2 fm2 = new Form2();
-            fm2.Show();
-        }
 
-
+/*
         private void button2_Click(object sender, EventArgs e) // Test  TakePicture
         {
             
@@ -1551,6 +1547,7 @@ namespace Rubik.V1
 
 
         }
+        */
         public string showRubik(char[][] Rubik)    // Show data in Rubik
         {
             String str = "";
@@ -2422,6 +2419,29 @@ namespace Rubik.V1
             serialPort1.Close();
             connect.Enabled = true;
 
+            Rear.Enabled = false;
+            Left.Enabled = false;
+            Front.Enabled = false;
+            Right.Enabled = false;
+            U.Enabled = false;
+            D.Enabled = false;
+
+            Bdet.Enabled = false;
+            Ldet.Enabled = false;
+            Fdet.Enabled = false;
+            Rdet.Enabled = false;
+            Udet.Enabled = false;
+            Ddet.Enabled = false;
+
+            open_front_back.Enabled = false;
+            open_left_right.Enabled = false;
+            close_front_back.Enabled = false;
+            close_left_right.Enabled = false;
+
+            button3.Enabled = false;
+            button4.Enabled = false;
+            STOP_AUTO.Enabled = false;
+
         }
 
         private void button4_Click_1(object sender, EventArgs e) // Start image
@@ -2467,6 +2487,30 @@ namespace Rubik.V1
                 serialPort1.Open();
                 serialPort1.DataReceived += SerialPort1_DataReceived;
                 connect.Enabled = false;
+
+                Rear.Enabled = true;
+                Left.Enabled = true;
+                Front.Enabled = true;
+                Right.Enabled = true;
+                U.Enabled = true;
+                D.Enabled = true;
+
+                Bdet.Enabled = true;
+                Ldet.Enabled = true;
+                Fdet.Enabled = true;
+                Rdet.Enabled = true;
+                Udet.Enabled = true;
+                Ddet.Enabled = true;
+
+                open_front_back.Enabled = true;
+                open_left_right.Enabled = true;
+                close_front_back.Enabled = true;
+                close_left_right.Enabled = true;
+
+                button3.Enabled = true;
+                button4.Enabled = true;
+                STOP_AUTO.Enabled = true;
+
             }
             catch (Exception ex)
             {
