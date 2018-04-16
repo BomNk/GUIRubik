@@ -2467,7 +2467,7 @@ namespace Rubik.V1
 
             listBox1.Items.Clear();
             //numList = 1;
-
+          
             NumTimer = 0;   // Dela
             numStep = 0;
             numTake = 1;
@@ -2477,6 +2477,8 @@ namespace Rubik.V1
             Rubik = RK;
             show_color(Rubik);
             Text_Time.Text = "00:00:00";
+
+          
 
         }
         private void button4_Click(object sender, EventArgs e)  /////// CONNECT  ////////////////
