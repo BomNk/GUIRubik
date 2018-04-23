@@ -2467,7 +2467,7 @@ namespace Rubik.V1
 
             listBox1.Items.Clear();
             //numList = 1;
-          
+            //Box1.Image = Image.FromFile("../load.jpg");
             NumTimer = 0;   // Dela
             numStep = 0;
             numTake = 1;
