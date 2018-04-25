@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.A8 = new System.Windows.Forms.Panel();
-            this.A7 = new System.Windows.Forms.Panel();
-            this.A6 = new System.Windows.Forms.Panel();
-            this.A3 = new System.Windows.Forms.Panel();
-            this.A4 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.A5 = new System.Windows.Forms.Panel();
             this.A0 = new System.Windows.Forms.Panel();
             this.A1 = new System.Windows.Forms.Panel();
             this.A2 = new System.Windows.Forms.Panel();
+            this.A5 = new System.Windows.Forms.Panel();
+            this.A4 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.A3 = new System.Windows.Forms.Panel();
+            this.A8 = new System.Windows.Forms.Panel();
+            this.A7 = new System.Windows.Forms.Panel();
+            this.A6 = new System.Windows.Forms.Panel();
             this.C8 = new System.Windows.Forms.Panel();
             this.C7 = new System.Windows.Forms.Panel();
             this.C6 = new System.Windows.Forms.Panel();
@@ -69,26 +69,26 @@
             this.F2 = new System.Windows.Forms.Panel();
             this.F1 = new System.Windows.Forms.Panel();
             this.F0 = new System.Windows.Forms.Panel();
-            this.D2 = new System.Windows.Forms.Panel();
-            this.D5 = new System.Windows.Forms.Panel();
             this.D8 = new System.Windows.Forms.Panel();
-            this.D1 = new System.Windows.Forms.Panel();
+            this.D7 = new System.Windows.Forms.Panel();
+            this.D6 = new System.Windows.Forms.Panel();
+            this.D5 = new System.Windows.Forms.Panel();
             this.D4 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
-            this.D7 = new System.Windows.Forms.Panel();
-            this.D0 = new System.Windows.Forms.Panel();
             this.D3 = new System.Windows.Forms.Panel();
-            this.D6 = new System.Windows.Forms.Panel();
-            this.B6 = new System.Windows.Forms.Panel();
-            this.B3 = new System.Windows.Forms.Panel();
-            this.B0 = new System.Windows.Forms.Panel();
+            this.D2 = new System.Windows.Forms.Panel();
+            this.D1 = new System.Windows.Forms.Panel();
+            this.D0 = new System.Windows.Forms.Panel();
+            this.B8 = new System.Windows.Forms.Panel();
             this.B7 = new System.Windows.Forms.Panel();
+            this.B6 = new System.Windows.Forms.Panel();
+            this.B5 = new System.Windows.Forms.Panel();
             this.B4 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
-            this.B1 = new System.Windows.Forms.Panel();
-            this.B8 = new System.Windows.Forms.Panel();
-            this.B5 = new System.Windows.Forms.Panel();
+            this.B3 = new System.Windows.Forms.Panel();
             this.B2 = new System.Windows.Forms.Panel();
+            this.B1 = new System.Windows.Forms.Panel();
+            this.B0 = new System.Windows.Forms.Panel();
             this.Right = new System.Windows.Forms.Button();
             this.Left = new System.Windows.Forms.Button();
             this.Front = new System.Windows.Forms.Button();
@@ -165,37 +165,37 @@
             ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).BeginInit();
             this.SuspendLayout();
             // 
-            // A8
+            // A0
             // 
-            this.A8.BackColor = System.Drawing.Color.DarkGray;
-            this.A8.Location = new System.Drawing.Point(115, 19);
-            this.A8.Name = "A8";
-            this.A8.Size = new System.Drawing.Size(30, 29);
-            this.A8.TabIndex = 1;
+            this.A0.BackColor = System.Drawing.Color.DarkGray;
+            this.A0.Location = new System.Drawing.Point(115, 19);
+            this.A0.Name = "A0";
+            this.A0.Size = new System.Drawing.Size(30, 29);
+            this.A0.TabIndex = 1;
             // 
-            // A7
+            // A1
             // 
-            this.A7.BackColor = System.Drawing.Color.DarkGray;
-            this.A7.Location = new System.Drawing.Point(151, 19);
-            this.A7.Name = "A7";
-            this.A7.Size = new System.Drawing.Size(30, 29);
-            this.A7.TabIndex = 2;
+            this.A1.BackColor = System.Drawing.Color.DarkGray;
+            this.A1.Location = new System.Drawing.Point(151, 19);
+            this.A1.Name = "A1";
+            this.A1.Size = new System.Drawing.Size(30, 29);
+            this.A1.TabIndex = 2;
             // 
-            // A6
+            // A2
             // 
-            this.A6.BackColor = System.Drawing.Color.DarkGray;
-            this.A6.Location = new System.Drawing.Point(187, 19);
-            this.A6.Name = "A6";
-            this.A6.Size = new System.Drawing.Size(30, 29);
-            this.A6.TabIndex = 3;
+            this.A2.BackColor = System.Drawing.Color.DarkGray;
+            this.A2.Location = new System.Drawing.Point(187, 19);
+            this.A2.Name = "A2";
+            this.A2.Size = new System.Drawing.Size(30, 29);
+            this.A2.TabIndex = 3;
             // 
-            // A3
+            // A5
             // 
-            this.A3.BackColor = System.Drawing.Color.DarkGray;
-            this.A3.Location = new System.Drawing.Point(187, 54);
-            this.A3.Name = "A3";
-            this.A3.Size = new System.Drawing.Size(30, 29);
-            this.A3.TabIndex = 6;
+            this.A5.BackColor = System.Drawing.Color.DarkGray;
+            this.A5.Location = new System.Drawing.Point(187, 54);
+            this.A5.Name = "A5";
+            this.A5.Size = new System.Drawing.Size(30, 29);
+            this.A5.TabIndex = 6;
             // 
             // A4
             // 
@@ -215,37 +215,37 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "B";
             // 
-            // A5
+            // A3
             // 
-            this.A5.BackColor = System.Drawing.Color.DarkGray;
-            this.A5.Location = new System.Drawing.Point(115, 54);
-            this.A5.Name = "A5";
-            this.A5.Size = new System.Drawing.Size(30, 29);
-            this.A5.TabIndex = 4;
+            this.A3.BackColor = System.Drawing.Color.DarkGray;
+            this.A3.Location = new System.Drawing.Point(115, 54);
+            this.A3.Name = "A3";
+            this.A3.Size = new System.Drawing.Size(30, 29);
+            this.A3.TabIndex = 4;
             // 
-            // A0
+            // A8
             // 
-            this.A0.BackColor = System.Drawing.Color.DarkGray;
-            this.A0.Location = new System.Drawing.Point(187, 89);
-            this.A0.Name = "A0";
-            this.A0.Size = new System.Drawing.Size(30, 29);
-            this.A0.TabIndex = 9;
+            this.A8.BackColor = System.Drawing.Color.DarkGray;
+            this.A8.Location = new System.Drawing.Point(187, 89);
+            this.A8.Name = "A8";
+            this.A8.Size = new System.Drawing.Size(30, 29);
+            this.A8.TabIndex = 9;
             // 
-            // A1
+            // A7
             // 
-            this.A1.BackColor = System.Drawing.Color.DarkGray;
-            this.A1.Location = new System.Drawing.Point(151, 89);
-            this.A1.Name = "A1";
-            this.A1.Size = new System.Drawing.Size(30, 29);
-            this.A1.TabIndex = 8;
+            this.A7.BackColor = System.Drawing.Color.DarkGray;
+            this.A7.Location = new System.Drawing.Point(151, 89);
+            this.A7.Name = "A7";
+            this.A7.Size = new System.Drawing.Size(30, 29);
+            this.A7.TabIndex = 8;
             // 
-            // A2
+            // A6
             // 
-            this.A2.BackColor = System.Drawing.Color.DarkGray;
-            this.A2.Location = new System.Drawing.Point(115, 89);
-            this.A2.Name = "A2";
-            this.A2.Size = new System.Drawing.Size(30, 29);
-            this.A2.TabIndex = 7;
+            this.A6.BackColor = System.Drawing.Color.DarkGray;
+            this.A6.Location = new System.Drawing.Point(115, 89);
+            this.A6.Name = "A6";
+            this.A6.Size = new System.Drawing.Size(30, 29);
+            this.A6.TabIndex = 7;
             // 
             // C8
             // 
@@ -493,37 +493,37 @@
             this.F0.Size = new System.Drawing.Size(30, 29);
             this.F0.TabIndex = 28;
             // 
-            // D2
+            // D8
             // 
-            this.D2.BackColor = System.Drawing.Color.DarkGray;
-            this.D2.Location = new System.Drawing.Point(298, 194);
-            this.D2.Name = "D2";
-            this.D2.Size = new System.Drawing.Size(30, 29);
-            this.D2.TabIndex = 45;
+            this.D8.BackColor = System.Drawing.Color.DarkGray;
+            this.D8.Location = new System.Drawing.Point(298, 194);
+            this.D8.Name = "D8";
+            this.D8.Size = new System.Drawing.Size(30, 29);
+            this.D8.TabIndex = 45;
+            // 
+            // D7
+            // 
+            this.D7.BackColor = System.Drawing.Color.DarkGray;
+            this.D7.Location = new System.Drawing.Point(262, 194);
+            this.D7.Name = "D7";
+            this.D7.Size = new System.Drawing.Size(30, 29);
+            this.D7.TabIndex = 44;
+            // 
+            // D6
+            // 
+            this.D6.BackColor = System.Drawing.Color.DarkGray;
+            this.D6.Location = new System.Drawing.Point(226, 194);
+            this.D6.Name = "D6";
+            this.D6.Size = new System.Drawing.Size(30, 29);
+            this.D6.TabIndex = 43;
             // 
             // D5
             // 
             this.D5.BackColor = System.Drawing.Color.DarkGray;
-            this.D5.Location = new System.Drawing.Point(262, 194);
+            this.D5.Location = new System.Drawing.Point(298, 159);
             this.D5.Name = "D5";
             this.D5.Size = new System.Drawing.Size(30, 29);
-            this.D5.TabIndex = 44;
-            // 
-            // D8
-            // 
-            this.D8.BackColor = System.Drawing.Color.DarkGray;
-            this.D8.Location = new System.Drawing.Point(226, 194);
-            this.D8.Name = "D8";
-            this.D8.Size = new System.Drawing.Size(30, 29);
-            this.D8.TabIndex = 43;
-            // 
-            // D1
-            // 
-            this.D1.BackColor = System.Drawing.Color.DarkGray;
-            this.D1.Location = new System.Drawing.Point(298, 159);
-            this.D1.Name = "D1";
-            this.D1.Size = new System.Drawing.Size(30, 29);
-            this.D1.TabIndex = 42;
+            this.D5.TabIndex = 42;
             // 
             // D4
             // 
@@ -543,69 +543,69 @@
             this.label20.TabIndex = 126;
             this.label20.Text = "R";
             // 
-            // D7
+            // D3
             // 
-            this.D7.BackColor = System.Drawing.Color.DarkGray;
-            this.D7.Location = new System.Drawing.Point(226, 159);
-            this.D7.Name = "D7";
-            this.D7.Size = new System.Drawing.Size(30, 29);
-            this.D7.TabIndex = 40;
+            this.D3.BackColor = System.Drawing.Color.DarkGray;
+            this.D3.Location = new System.Drawing.Point(226, 159);
+            this.D3.Name = "D3";
+            this.D3.Size = new System.Drawing.Size(30, 29);
+            this.D3.TabIndex = 40;
+            // 
+            // D2
+            // 
+            this.D2.BackColor = System.Drawing.Color.DarkGray;
+            this.D2.Location = new System.Drawing.Point(298, 124);
+            this.D2.Name = "D2";
+            this.D2.Size = new System.Drawing.Size(30, 29);
+            this.D2.TabIndex = 39;
+            // 
+            // D1
+            // 
+            this.D1.BackColor = System.Drawing.Color.DarkGray;
+            this.D1.Location = new System.Drawing.Point(262, 124);
+            this.D1.Name = "D1";
+            this.D1.Size = new System.Drawing.Size(30, 29);
+            this.D1.TabIndex = 38;
             // 
             // D0
             // 
             this.D0.BackColor = System.Drawing.Color.DarkGray;
-            this.D0.Location = new System.Drawing.Point(298, 124);
+            this.D0.Location = new System.Drawing.Point(226, 124);
             this.D0.Name = "D0";
             this.D0.Size = new System.Drawing.Size(30, 29);
-            this.D0.TabIndex = 39;
+            this.D0.TabIndex = 37;
             // 
-            // D3
+            // B8
             // 
-            this.D3.BackColor = System.Drawing.Color.DarkGray;
-            this.D3.Location = new System.Drawing.Point(262, 124);
-            this.D3.Name = "D3";
-            this.D3.Size = new System.Drawing.Size(30, 29);
-            this.D3.TabIndex = 38;
-            // 
-            // D6
-            // 
-            this.D6.BackColor = System.Drawing.Color.DarkGray;
-            this.D6.Location = new System.Drawing.Point(226, 124);
-            this.D6.Name = "D6";
-            this.D6.Size = new System.Drawing.Size(30, 29);
-            this.D6.TabIndex = 37;
-            // 
-            // B6
-            // 
-            this.B6.BackColor = System.Drawing.Color.DarkGray;
-            this.B6.Location = new System.Drawing.Point(79, 194);
-            this.B6.Name = "B6";
-            this.B6.Size = new System.Drawing.Size(30, 29);
-            this.B6.TabIndex = 54;
-            // 
-            // B3
-            // 
-            this.B3.BackColor = System.Drawing.Color.DarkGray;
-            this.B3.Location = new System.Drawing.Point(43, 194);
-            this.B3.Name = "B3";
-            this.B3.Size = new System.Drawing.Size(30, 29);
-            this.B3.TabIndex = 53;
-            // 
-            // B0
-            // 
-            this.B0.BackColor = System.Drawing.Color.DarkGray;
-            this.B0.Location = new System.Drawing.Point(7, 194);
-            this.B0.Name = "B0";
-            this.B0.Size = new System.Drawing.Size(30, 29);
-            this.B0.TabIndex = 52;
+            this.B8.BackColor = System.Drawing.Color.DarkGray;
+            this.B8.Location = new System.Drawing.Point(79, 191);
+            this.B8.Name = "B8";
+            this.B8.Size = new System.Drawing.Size(30, 29);
+            this.B8.TabIndex = 54;
             // 
             // B7
             // 
             this.B7.BackColor = System.Drawing.Color.DarkGray;
-            this.B7.Location = new System.Drawing.Point(79, 159);
+            this.B7.Location = new System.Drawing.Point(43, 191);
             this.B7.Name = "B7";
             this.B7.Size = new System.Drawing.Size(30, 29);
-            this.B7.TabIndex = 51;
+            this.B7.TabIndex = 53;
+            // 
+            // B6
+            // 
+            this.B6.BackColor = System.Drawing.Color.DarkGray;
+            this.B6.Location = new System.Drawing.Point(7, 191);
+            this.B6.Name = "B6";
+            this.B6.Size = new System.Drawing.Size(30, 29);
+            this.B6.TabIndex = 52;
+            // 
+            // B5
+            // 
+            this.B5.BackColor = System.Drawing.Color.DarkGray;
+            this.B5.Location = new System.Drawing.Point(79, 159);
+            this.B5.Name = "B5";
+            this.B5.Size = new System.Drawing.Size(30, 29);
+            this.B5.TabIndex = 51;
             // 
             // B4
             // 
@@ -625,37 +625,37 @@
             this.label18.TabIndex = 124;
             this.label18.Text = "L";
             // 
-            // B1
+            // B3
             // 
-            this.B1.BackColor = System.Drawing.Color.DarkGray;
-            this.B1.Location = new System.Drawing.Point(7, 159);
-            this.B1.Name = "B1";
-            this.B1.Size = new System.Drawing.Size(30, 29);
-            this.B1.TabIndex = 49;
-            // 
-            // B8
-            // 
-            this.B8.BackColor = System.Drawing.Color.DarkGray;
-            this.B8.Location = new System.Drawing.Point(79, 124);
-            this.B8.Name = "B8";
-            this.B8.Size = new System.Drawing.Size(30, 29);
-            this.B8.TabIndex = 48;
-            // 
-            // B5
-            // 
-            this.B5.BackColor = System.Drawing.Color.DarkGray;
-            this.B5.Location = new System.Drawing.Point(43, 124);
-            this.B5.Name = "B5";
-            this.B5.Size = new System.Drawing.Size(30, 29);
-            this.B5.TabIndex = 47;
+            this.B3.BackColor = System.Drawing.Color.DarkGray;
+            this.B3.Location = new System.Drawing.Point(7, 159);
+            this.B3.Name = "B3";
+            this.B3.Size = new System.Drawing.Size(30, 29);
+            this.B3.TabIndex = 49;
             // 
             // B2
             // 
             this.B2.BackColor = System.Drawing.Color.DarkGray;
-            this.B2.Location = new System.Drawing.Point(7, 124);
+            this.B2.Location = new System.Drawing.Point(79, 127);
             this.B2.Name = "B2";
             this.B2.Size = new System.Drawing.Size(30, 29);
-            this.B2.TabIndex = 46;
+            this.B2.TabIndex = 48;
+            // 
+            // B1
+            // 
+            this.B1.BackColor = System.Drawing.Color.DarkGray;
+            this.B1.Location = new System.Drawing.Point(43, 127);
+            this.B1.Name = "B1";
+            this.B1.Size = new System.Drawing.Size(30, 29);
+            this.B1.TabIndex = 47;
+            // 
+            // B0
+            // 
+            this.B0.BackColor = System.Drawing.Color.DarkGray;
+            this.B0.Location = new System.Drawing.Point(7, 127);
+            this.B0.Name = "B0";
+            this.B0.Size = new System.Drawing.Size(30, 29);
+            this.B0.TabIndex = 46;
             // 
             // Right
             // 
@@ -1367,24 +1367,24 @@
             this.Controls.Add(this.Front);
             this.Controls.Add(this.Left);
             this.Controls.Add(this.Right);
-            this.Controls.Add(this.B6);
-            this.Controls.Add(this.B3);
-            this.Controls.Add(this.B0);
-            this.Controls.Add(this.B7);
-            this.Controls.Add(this.B4);
-            this.Controls.Add(this.B1);
             this.Controls.Add(this.B8);
+            this.Controls.Add(this.B7);
+            this.Controls.Add(this.B6);
             this.Controls.Add(this.B5);
+            this.Controls.Add(this.B4);
+            this.Controls.Add(this.B3);
             this.Controls.Add(this.B2);
-            this.Controls.Add(this.D2);
-            this.Controls.Add(this.D5);
+            this.Controls.Add(this.B1);
+            this.Controls.Add(this.B0);
             this.Controls.Add(this.D8);
-            this.Controls.Add(this.D1);
-            this.Controls.Add(this.D4);
             this.Controls.Add(this.D7);
-            this.Controls.Add(this.D0);
-            this.Controls.Add(this.D3);
             this.Controls.Add(this.D6);
+            this.Controls.Add(this.D5);
+            this.Controls.Add(this.D4);
+            this.Controls.Add(this.D3);
+            this.Controls.Add(this.D2);
+            this.Controls.Add(this.D1);
+            this.Controls.Add(this.D0);
             this.Controls.Add(this.F8);
             this.Controls.Add(this.F7);
             this.Controls.Add(this.F6);
@@ -1412,15 +1412,15 @@
             this.Controls.Add(this.C2);
             this.Controls.Add(this.C1);
             this.Controls.Add(this.C0);
-            this.Controls.Add(this.A0);
-            this.Controls.Add(this.A1);
-            this.Controls.Add(this.A2);
-            this.Controls.Add(this.A3);
-            this.Controls.Add(this.A4);
-            this.Controls.Add(this.A5);
-            this.Controls.Add(this.A6);
-            this.Controls.Add(this.A7);
             this.Controls.Add(this.A8);
+            this.Controls.Add(this.A7);
+            this.Controls.Add(this.A6);
+            this.Controls.Add(this.A5);
+            this.Controls.Add(this.A4);
+            this.Controls.Add(this.A3);
+            this.Controls.Add(this.A2);
+            this.Controls.Add(this.A1);
+            this.Controls.Add(this.A0);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Name = "Form1";
             this.Text = "Rubik";
@@ -1443,22 +1443,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.Box5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box1)).EndInit();
-         //   //((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel A8;
-        private System.Windows.Forms.Panel A7;
-        private System.Windows.Forms.Panel A6;
-        private System.Windows.Forms.Panel A3;
-        private System.Windows.Forms.Panel A4;
-        private System.Windows.Forms.Panel A5;
         private System.Windows.Forms.Panel A0;
         private System.Windows.Forms.Panel A1;
         private System.Windows.Forms.Panel A2;
+        private System.Windows.Forms.Panel A5;
+        private System.Windows.Forms.Panel A4;
+        private System.Windows.Forms.Panel A3;
+        private System.Windows.Forms.Panel A8;
+        private System.Windows.Forms.Panel A7;
+        private System.Windows.Forms.Panel A6;
         private System.Windows.Forms.Panel C8;
         private System.Windows.Forms.Panel C7;
         private System.Windows.Forms.Panel C6;
@@ -1486,24 +1486,24 @@
         private System.Windows.Forms.Panel F2;
         private System.Windows.Forms.Panel F1;
         private System.Windows.Forms.Panel F0;
-        private System.Windows.Forms.Panel D2;
-        private System.Windows.Forms.Panel D5;
         private System.Windows.Forms.Panel D8;
-        private System.Windows.Forms.Panel D1;
-        private System.Windows.Forms.Panel D4;
         private System.Windows.Forms.Panel D7;
-        private System.Windows.Forms.Panel D0;
-        private System.Windows.Forms.Panel D3;
         private System.Windows.Forms.Panel D6;
-        private System.Windows.Forms.Panel B6;
-        private System.Windows.Forms.Panel B3;
-        private System.Windows.Forms.Panel B0;
-        private System.Windows.Forms.Panel B7;
-        private System.Windows.Forms.Panel B4;
-        private System.Windows.Forms.Panel B1;
+        private System.Windows.Forms.Panel D5;
+        private System.Windows.Forms.Panel D4;
+        private System.Windows.Forms.Panel D3;
+        private System.Windows.Forms.Panel D2;
+        private System.Windows.Forms.Panel D1;
+        private System.Windows.Forms.Panel D0;
         private System.Windows.Forms.Panel B8;
+        private System.Windows.Forms.Panel B7;
+        private System.Windows.Forms.Panel B6;
         private System.Windows.Forms.Panel B5;
+        private System.Windows.Forms.Panel B4;
+        private System.Windows.Forms.Panel B3;
         private System.Windows.Forms.Panel B2;
+        private System.Windows.Forms.Panel B1;
+        private System.Windows.Forms.Panel B0;
         private System.Windows.Forms.Button Right;
         private System.Windows.Forms.Button Left;
         private System.Windows.Forms.Button Front;
