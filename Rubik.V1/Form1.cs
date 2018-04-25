@@ -329,28 +329,28 @@ namespace Rubik.V1
                 H = col[i, 0];
                 g = col[i, 1];
                 r = col[i, 2];
-                if (g < 20)    // white
+                if (g < 30)    // white
                 {
                     Rubik[Face][i] = 'W';
                 }
-                else if ((H >= 0 && H < 10) || (H > 160 && H<=180 )) // RED
+                else if ((H >= 0 && H < 11) || (H > 160 && H<=180 )) // RED
                 {
                     Rubik[Face][i] = 'R';
                 }
-                else if (H > 13 && H < 27)   // ม่วง
+                else if (H > 10 && H < 27)   // ม่วง
                 {
                     Rubik[Face][i] = 'P';
                 }
-                else if (H > 27 && H < 52) //yellow
+                else if (H > 26 && H < 50) //yellow
                 {
                     Rubik[Face][i] = 'Y';
                 }
-               else if (H >= 52 && H < 97)   //Green
+               else if (H >= 50 && H < 99)   //Green
                 {
                     Rubik[Face][i] = 'G';
                 }
 
-                else if (H >= 97 && H < 130)   //blue
+                else if (H >= 89 && H < 120)   //blue
                 {
                     Rubik[Face][i] = 'B';
                 }
@@ -2617,25 +2617,26 @@ namespace Rubik.V1
         private void open_left_right_Click(object sender, EventArgs e) // เลื่อนออก ซ้าย---ขวา  <<LR>>
         {
             listBox1.Items.Add(numList + ": " +"Left-Right  Open");
-            serialPort1.Write("j");
+
+            serialPort1.Write("0j");
         }
 
         private void close_left_right_Click(object sender, EventArgs e) // เลื่อนเข้า ซ้าย---ขวา  >>LR<<
         {
             listBox1.Items.Add(numList + ": " + "Left-Right  Close");
-            serialPort1.Write("J");
+            serialPort1.Write("0J");
         }
 
         private void open_front_back_Click(object sender, EventArgs e)  // เลื่อนเข้า หน้า---หลัง   <<FB>>
         {
             listBox1.Items.Add(numList + ": " + "Front-Back  Open");
-            serialPort1.Write("K");
+            serialPort1.Write("0K");
         }
 
         private void close_front_back_Click(object sender, EventArgs e) // เลื่อนออก หน้า---หลัง   >>FB<<
         {
             listBox1.Items.Add(numList + ": " + "Front-Back  Close");
-            serialPort1.Write("k");
+            serialPort1.Write("0k");
         }
 
         private void Start_Auto_Click(object sender, EventArgs e)
