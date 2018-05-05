@@ -220,7 +220,7 @@ namespace Rubik.V1
 
             label2.Text = "Cam_" + numTake + " Running";
 
-            show_color(Rubik);
+            show_color1(Rubik);
 
             
                  Text_face.Text = showRubik(Rubik);
@@ -280,10 +280,10 @@ namespace Rubik.V1
             float sumHue = 0, sumSatuation = 0, sumValue = 0;
             //ดึงค่าใส่ในตัวแปร
 
-            for (int y = 126; y < 385; y += 120)    // แกน YYYYYYYYYYY
+            for (int y = 136; y < 450; y += 135)    // แกน YYYYYYYYYYY
             {
 
-                for (int x = 214; x < 500; x += 120)   // แกน XXXXXXXXXXXXX
+                for (int x = 175; x < 450; x += 135)   // แกน XXXXXXXXXXXXX
                 {
                     collum = y - 5;
                     roll = x - 5;
@@ -625,7 +625,7 @@ namespace Rubik.V1
 
 
 
-        /*
+        
         //  Original  Show Rubik
 
         public void show_color(char[][] rk) // แสดงค่าสีบน panel // Finish
@@ -1459,12 +1459,14 @@ namespace Rubik.V1
             } // end for i
         } // end Function show Panel
 
+
+
         // END Original
-        */      // Show_Rubik() Original
+              // Show_Rubik() Original
 
         //  End Edit
 
-        public void show_color(char[][] rk) // แสดงค่าสีบน panel // Finish
+        public void show_color1(char[][] rk) // แสดงค่าสีบน panel // Finish
         {
             for (int i = 0; i < 6; i++)
             {
@@ -1635,110 +1637,110 @@ namespace Rubik.V1
 
                         else if (rk[i][j] == 'B')   //สีน้ำเงิน
                         {
-                            if (j == 2)
+                            if (j == 6)
                                 B0.BackColor = Color.Blue;
-                            else if (j == 5)
+                            else if (j == 3)
                                 B1.BackColor = Color.Blue;
-                            else if (j == 8)
+                            else if (j == 0)
                                 B2.BackColor = Color.Blue;
-                            else if (j == 1)
+                            else if (j == 7)
                                 B3.BackColor = Color.Blue;
                             else if (j == 4)
                                 B4.BackColor = Color.Blue;
-                            else if (j == 7)
+                            else if (j == 1)
                                 B5.BackColor = Color.Blue;
-                            else if (j == 0)
+                            else if (j == 8)
                                 B6.BackColor = Color.Blue;
-                            else if (j == 3)
+                            else if (j == 5)
                                 B7.BackColor = Color.Blue;
-                            else if (j == 6)
+                            else if (j == 2)
                                 B8.BackColor = Color.Blue;
                         }
 
                         else if (rk[i][j] == 'Y')   // สีเหลือง
                         {
-                            if (j == 2)
+                            if (j == 6)
                                 B0.BackColor = Color.Yellow;
-                            else if (j == 5)
+                            else if (j == 3)
                                 B1.BackColor = Color.Yellow;
-                            else if (j == 8)
+                            else if (j == 0)
                                 B2.BackColor = Color.Yellow;
-                            else if (j == 1)
+                            else if (j == 7)
                                 B3.BackColor = Color.Yellow;
                             else if (j == 4)
                                 B4.BackColor = Color.Yellow;
-                            else if (j == 7)
+                            else if (j == 1)
                                 B5.BackColor = Color.Yellow;
-                            else if (j == 0)
+                            else if (j == 8)
                                 B6.BackColor = Color.Yellow;
-                            else if (j == 3)
+                            else if (j == 5)
                                 B7.BackColor = Color.Yellow;
-                            else if (j == 6)
+                            else if (j == 2)
                                 B8.BackColor = Color.Yellow;
                         }
 
                         else if (rk[i][j] == 'G')   //สีเขียว
                         {
-                            if (j == 2)
+                            if (j == 6)
                                 B0.BackColor = Color.Green;
-                            else if (j == 5)
+                            else if (j == 3)
                                 B1.BackColor = Color.Green;
-                            else if (j == 8)
+                            else if (j == 0)
                                 B2.BackColor = Color.Green;
-                            else if (j == 1)
+                            else if (j == 7)
                                 B3.BackColor = Color.Green;
                             else if (j == 4)
                                 B4.BackColor = Color.Green;
-                            else if (j == 7)
+                            else if (j == 1)
                                 B5.BackColor = Color.Green;
-                            else if (j == 0)
+                            else if (j == 8)
                                 B6.BackColor = Color.Green;
-                            else if (j == 3)
+                            else if (j == 5)
                                 B7.BackColor = Color.Green;
-                            else if (j == 6)
+                            else if (j == 2)
                                 B8.BackColor = Color.Green;
                         }
 
                         else if (rk[i][j] == 'R') //สีแดง
                         {
-                            if (j == 2)
+                            if (j == 6)
                                 B0.BackColor = Color.Red;
-                            else if (j == 5)
+                            else if (j == 3)
                                 B1.BackColor = Color.Red;
-                            else if (j == 8)
+                            else if (j == 0)
                                 B2.BackColor = Color.Red;
-                            else if (j == 1)
+                            else if (j == 7)
                                 B3.BackColor = Color.Red;
                             else if (j == 4)
                                 B4.BackColor = Color.Red;
-                            else if (j == 7)
+                            else if (j == 1)
                                 B5.BackColor = Color.Red;
-                            else if (j == 0)
+                            else if (j == 8)
                                 B6.BackColor = Color.Red;
-                            else if (j == 3)
+                            else if (j == 5)
                                 B7.BackColor = Color.Red;
-                            else if (j == 6)
+                            else if (j == 2)
                                 B8.BackColor = Color.Red;
                         }
                         else if (rk[i][j] == 'W') //สีขาว
                         {
-                            if (j == 2)
+                            if (j == 6)
                                 B0.BackColor = Color.White;
-                            else if (j == 5)
+                            else if (j == 3)
                                 B1.BackColor = Color.White;
-                            else if (j == 8)
+                            else if (j == 0)
                                 B2.BackColor = Color.White;
-                            else if (j == 1)
+                            else if (j == 7)
                                 B3.BackColor = Color.White;
                             else if (j == 4)
                                 B4.BackColor = Color.White;
-                            else if (j == 7)
+                            else if (j == 1)
                                 B5.BackColor = Color.White;
-                            else if (j == 0)
+                            else if (j == 8)
                                 B6.BackColor = Color.White;
-                            else if (j == 3)
+                            else if (j == 5)
                                 B7.BackColor = Color.White;
-                            else if (j == 6)
+                            else if (j == 2)
                                 B8.BackColor = Color.White;
 
                         }
@@ -1886,133 +1888,133 @@ namespace Rubik.V1
                     {
                         if (rk[i][j] == 'P')
                         {//สีม่วง
-                            if (j == 6)
+                            if (j == 2)
                                 D0.BackColor = Color.Orange;
-                            else if (j == 3)
+                            else if (j == 5)
                                 D1.BackColor = Color.Orange;
-                            else if (j == 0)
+                            else if (j == 8)
                                 D2.BackColor = Color.Orange;
-                            else if (j == 7)
+                            else if (j == 1)
                                 D3.BackColor = Color.Orange;
                             else if (j == 4)
                                 D4.BackColor = Color.Orange;
-                            else if (j == 1)
+                            else if (j == 7)
                                 D5.BackColor = Color.Orange;
-                            else if (j == 8)
+                            else if (j == 0)
                                 D6.BackColor = Color.Orange;
-                            else if (j == 5)
+                            else if (j == 3)
                                 D7.BackColor = Color.Orange;
-                            else if (j == 2)
+                            else if (j == 6)
                                 D8.BackColor = Color.Orange;
                         }
 
 
                         else if (rk[i][j] == 'B')   //สีน้ำเงิน
                         {
-                            if (j == 6)
+                            if (j == 2)
                                 D0.BackColor = Color.Blue;
-                            else if (j == 3)
+                            else if (j == 5)
                                 D1.BackColor = Color.Blue;
-                            else if (j == 0)
+                            else if (j == 8)
                                 D2.BackColor = Color.Blue;
-                            else if (j == 7)
+                            else if (j == 1)
                                 D3.BackColor = Color.Blue;
                             else if (j == 4)
                                 D4.BackColor = Color.Blue;
-                            else if (j == 1)
+                            else if (j == 7)
                                 D5.BackColor = Color.Blue;
-                            else if (j == 8)
+                            else if (j == 0)
                                 D6.BackColor = Color.Blue;
-                            else if (j == 5)
+                            else if (j == 3)
                                 D7.BackColor = Color.Blue;
-                            else if (j == 2)
+                            else if (j == 6)
                                 D8.BackColor = Color.Blue;
                         }
 
                         else if (rk[i][j] == 'Y')   // สีเหลือง
                         {
-                            if (j == 6)
+                            if (j == 2)
                                 D0.BackColor = Color.Yellow;
-                            else if (j == 3)
+                            else if (j == 5)
                                 D1.BackColor = Color.Yellow;
-                            else if (j == 0)
+                            else if (j == 8)
                                 D2.BackColor = Color.Yellow;
-                            else if (j == 7)
+                            else if (j == 1)
                                 D3.BackColor = Color.Yellow;
                             else if (j == 4)
                                 D4.BackColor = Color.Yellow;
-                            else if (j == 1)
+                            else if (j == 7)
                                 D5.BackColor = Color.Yellow;
-                            else if (j == 8)
+                            else if (j == 0)
                                 D6.BackColor = Color.Yellow;
-                            else if (j == 5)
+                            else if (j == 3)
                                 D7.BackColor = Color.Yellow;
-                            else if (j == 2)
+                            else if (j == 6)
                                 D8.BackColor = Color.Yellow;
                         }
 
                         else if (rk[i][j] == 'G')   //สีเขียว
                         {
-                            if (j == 6)
+                            if (j == 2)
                                 D0.BackColor = Color.Green;
-                            else if (j == 3)
+                            else if (j == 5)
                                 D1.BackColor = Color.Green;
-                            else if (j == 0)
+                            else if (j == 8)
                                 D2.BackColor = Color.Green;
-                            else if (j == 7)
+                            else if (j == 1)
                                 D3.BackColor = Color.Green;
                             else if (j == 4)
                                 D4.BackColor = Color.Green;
-                            else if (j == 1)
+                            else if (j == 7)
                                 D5.BackColor = Color.Green;
-                            else if (j == 8)
+                            else if (j == 0)
                                 D6.BackColor = Color.Green;
-                            else if (j == 5)
+                            else if (j == 3)
                                 D7.BackColor = Color.Green;
-                            else if (j == 2)
+                            else if (j == 6)
                                 D8.BackColor = Color.Green;
                         }
 
                         else if (rk[i][j] == 'R') //สีแดง
                         {
-                            if (j == 6)
+                            if (j == 2)
                                 D0.BackColor = Color.Red;
-                            else if (j == 3)
+                            else if (j == 5)
                                 D1.BackColor = Color.Red;
-                            else if (j == 0)
+                            else if (j == 8)
                                 D2.BackColor = Color.Red;
-                            else if (j == 7)
+                            else if (j == 1)
                                 D3.BackColor = Color.Red;
                             else if (j == 4)
                                 D4.BackColor = Color.Red;
-                            else if (j == 1)
+                            else if (j == 7)
                                 D5.BackColor = Color.Red;
-                            else if (j == 8)
+                            else if (j == 0)
                                 D6.BackColor = Color.Red;
-                            else if (j == 5)
+                            else if (j == 3)
                                 D7.BackColor = Color.Red;
-                            else if (j == 2)
+                            else if (j == 6)
                                 D8.BackColor = Color.Red;
                         }
                         else if (rk[i][j] == 'W') //สีขาว
                         {
-                            if (j == 6)
+                            if (j == 2)
                                 D0.BackColor = Color.White;
-                            else if (j == 3)
+                            else if (j == 5)
                                 D1.BackColor = Color.White;
-                            else if (j == 0)
+                            else if (j == 8)
                                 D2.BackColor = Color.White;
-                            else if (j == 7)
+                            else if (j == 1)
                                 D3.BackColor = Color.White;
                             else if (j == 4)
                                 D4.BackColor = Color.White;
-                            else if (j == 1)
+                            else if (j == 7)
                                 D5.BackColor = Color.White;
-                            else if (j == 8)
+                            else if (j == 0)
                                 D6.BackColor = Color.White;
-                            else if (j == 5)
+                            else if (j == 3)
                                 D7.BackColor = Color.White;
-                            else if (j == 2)
+                            else if (j == 6)
                                 D8.BackColor = Color.White;
 
                         }
