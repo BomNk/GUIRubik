@@ -2753,11 +2753,43 @@ namespace Rubik.V1
                
                 Text_face.Text = Face;
                 Write_Face();
+                //
+                
                 //Timer Rubik Start
                 Thread.Sleep(1000);
                 serialPort1.Write("1");
+                Rubik_real = Rubik;
+                // Zone Blue
+                Rubik[0][0] = Rubik_real[0][8];
+                Rubik[0][1] = Rubik_real[0][7];
+                Rubik[0][2] = Rubik_real[0][6];
+                Rubik[0][3] = Rubik_real[0][5];
+                Rubik[0][5] = Rubik_real[0][3];
+                Rubik[0][6] = Rubik_real[0][2];
+                Rubik[0][7] = Rubik_real[0][1];
+                Rubik[0][8] = Rubik_real[0][0];
+                // Zone Orange
+                Rubik[1][0] = Rubik_real[1][6];
+                Rubik[1][1] = Rubik_real[1][3];
+                Rubik[1][2] = Rubik_real[1][0];
+                Rubik[1][3] = Rubik_real[1][7];
+                Rubik[1][5] = Rubik_real[1][1];
+                Rubik[1][6] = Rubik_real[1][8];
+                Rubik[1][7] = Rubik_real[1][5];
+                Rubik[1][8] = Rubik_real[1][2];
+                // Zone Red
+                Rubik[3][0] = Rubik_real[3][2];
+                Rubik[3][1] = Rubik_real[3][5];
+                Rubik[3][2] = Rubik_real[3][8];
+                Rubik[3][3] = Rubik_real[3][1];
+                Rubik[3][5] = Rubik_real[3][7];
+                Rubik[3][6] = Rubik_real[3][0];
+                Rubik[3][7] = Rubik_real[3][3];
+                Rubik[3][8] = Rubik_real[3][6];
+                // ene change zone
                 timer_read_result.Enabled = true;
                 timer_read_result.Start();
+
 
                
                 
@@ -3230,34 +3262,7 @@ namespace Rubik.V1
                 
             }
 
-            Rubik_real = Rubik;
-            // Zone Blue
-            Rubik[0][0] = Rubik_real[0][8];
-            Rubik[0][1] = Rubik_real[0][7];
-            Rubik[0][2] = Rubik_real[0][6];
-            Rubik[0][3] = Rubik_real[0][5];
-            Rubik[0][5] = Rubik_real[0][3];
-            Rubik[0][6] = Rubik_real[0][2];
-            Rubik[0][7] = Rubik_real[0][1];
-            Rubik[0][8] = Rubik_real[0][0];
-            // Zone Orange
-            Rubik[1][0] = Rubik_real[1][6];
-            Rubik[1][1] = Rubik_real[1][3];
-            Rubik[1][2] = Rubik_real[1][0];
-            Rubik[1][3] = Rubik_real[1][7];
-            Rubik[1][5] = Rubik_real[1][1];
-            Rubik[1][6] = Rubik_real[1][8];
-            Rubik[1][7] = Rubik_real[1][5];
-            Rubik[1][8] = Rubik_real[1][2];
-            // Zone Red
-            Rubik[3][0] = Rubik_real[3][2];
-            Rubik[3][1] = Rubik_real[3][5];
-            Rubik[3][2] = Rubik_real[3][8];
-            Rubik[3][3] = Rubik_real[3][1];
-            Rubik[3][5] = Rubik_real[3][7];
-            Rubik[3][6] = Rubik_real[3][0];
-            Rubik[3][7] = Rubik_real[3][3];
-            Rubik[3][8] = Rubik_real[3][6];
+            
         }
 
 
