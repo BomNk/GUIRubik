@@ -32,7 +32,7 @@ namespace Rubik.V1
                                                 new char[] {'G', 'G' , 'G' , 'G', 'G' , 'G' , 'G' , 'G','G' },
                                                 new char[] { 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y' } };
         public char[][] Rubik_tmp = new char[6][];
-        public char[][] Rubik_real = new char[6][];
+        //public char[][] Rubik_real = new char[6][];
        
         private FilterInfoCollection webcam;
         private VideoCaptureDevice cam;
@@ -2758,7 +2758,8 @@ namespace Rubik.V1
                 //Timer Rubik Start
                 Thread.Sleep(1000);
                 serialPort1.Write("1");
-                Rubik_real = Rubik;
+
+                char[][] Rubik_real = Rubik;
                 // Zone Blue
                 Rubik[0][0] = Rubik_real[0][8];
                 Rubik[0][1] = Rubik_real[0][7];
@@ -2786,6 +2787,9 @@ namespace Rubik.V1
                 Rubik[3][6] = Rubik_real[3][0];
                 Rubik[3][7] = Rubik_real[3][3];
                 Rubik[3][8] = Rubik_real[3][6];
+                Thread.Sleep(3000);
+                
+                show_color(Rubik);
                 // ene change zone
                 timer_read_result.Enabled = true;
                 timer_read_result.Start();
