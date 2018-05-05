@@ -32,6 +32,7 @@ namespace Rubik.V1
                                                 new char[] {'G', 'G' , 'G' , 'G', 'G' , 'G' , 'G' , 'G','G' },
                                                 new char[] { 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y' } };
         public char[][] Rubik_tmp = new char[6][];
+        public char[][] Rubik_real = new char[6][];
        
         private FilterInfoCollection webcam;
         private VideoCaptureDevice cam;
@@ -220,10 +221,12 @@ namespace Rubik.V1
 
             label2.Text = "Cam_" + numTake + " Running";
 
-            show_color(Rubik);
+            show_color1(Rubik);
+            
+
 
             
-                 Text_face.Text = showRubik(Rubik);
+            Text_face.Text = showRubik(Rubik);
             Face = showRubik(Rubik);
             //  saveFileDialog1.InitialDirectory = @"d:\picture";
             //saveFileDialog1.FileName = str+i;
@@ -239,7 +242,31 @@ namespace Rubik.V1
             if (numTake == 7)
             {
                 label2.Text = " Complete";
-               // timer2.Stop();
+                Rubik_real = Rubik;
+                // Zone Blue
+                for (int i= 0; i < 9; i++)
+                {
+                    Rubik[0][i] = Rubik_real[0][8 - i];
+                }
+                // Zone Orange
+                Rubik[1][0] = Rubik_real[1][6];
+                Rubik[1][1] = Rubik_real[1][3];
+                Rubik[1][2] = Rubik_real[1][0];
+                Rubik[1][3] = Rubik_real[1][7];
+                Rubik[1][5] = Rubik_real[1][1];
+                Rubik[1][6] = Rubik_real[1][8];
+                Rubik[1][7] = Rubik_real[1][5];
+                Rubik[1][8] = Rubik_real[1][2];
+                // Zone Red
+                Rubik[3][0] = Rubik_real[3][2];
+                Rubik[3][1] = Rubik_real[3][5];
+                Rubik[3][2] = Rubik_real[3][8];
+                Rubik[3][3] = Rubik_real[3][1];
+                Rubik[3][5] = Rubik_real[3][7];
+                Rubik[3][6] = Rubik_real[3][0];
+                Rubik[3][7] = Rubik_real[3][3];
+                Rubik[3][8] = Rubik_real[3][6];
+                // timer2.Stop();
 
             }
 
@@ -625,7 +652,7 @@ namespace Rubik.V1
 
 
 
-        /*
+        
         //  Original  Show Rubik
 
         public void show_color(char[][] rk) // แสดงค่าสีบน panel // Finish
@@ -1460,11 +1487,11 @@ namespace Rubik.V1
         } // end Function show Panel
 
         // END Original
-        */      // Show_Rubik() Original
+             // Show_Rubik() Original
 
         //  End Edit
 
-        public void show_color(char[][] rk) // แสดงค่าสีบน panel // Finish
+        public void show_color1(char[][] rk) // แสดงค่าสีบน panel // Finish
         {
             for (int i = 0; i < 6; i++)
             {
@@ -3295,12 +3322,12 @@ namespace Rubik.V1
         }
         private void Test_Click(object sender, EventArgs e) // Reset Click125 //Finish
         {
-            char[][] RK = new char[6][] {  new char[] {'B','B','B','B','B','B','B','B','B' },
-                                                new char[] {'P','P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},
-                                                new char[] { 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W'  },
-                                                new char[] { 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R' },
-                                                new char[] {'G', 'G' , 'G' , 'G', 'G' , 'G' , 'G' , 'G','G' },
-                                                new char[] { 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y' } };
+            char[][] RK = new char[6][] {  new char[] {'B','B','B','B','B','B','B','B','B' },  // น้ำเงิน
+                                                new char[] {'P','P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},  // ส้ม
+                                                new char[] { 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W'  }, //ขาว
+                                                new char[] { 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R' },  // แดง
+                                                new char[] {'G', 'G' , 'G' , 'G', 'G' , 'G' , 'G' , 'G','G' },  // เขียว
+                                                new char[] { 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y' } };  // เหลือง
 
             listBox1.Items.Clear();
             //numList = 1;
