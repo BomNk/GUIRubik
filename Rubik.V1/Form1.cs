@@ -2763,8 +2763,8 @@ namespace Rubik.V1
                 rotate_Face(Rubik, 0, 1);
                 rotate_Face(Rubik, 0, 1);
 
-                rotate_Face(Rubik, 1, 0);
-                rotate_Face(Rubik, 3, 1);
+                rotate_Face(Rubik, 1, 1);
+                rotate_Face(Rubik, 3, 0);
 
                 show_color(Rubik);
                 // ene change zone
