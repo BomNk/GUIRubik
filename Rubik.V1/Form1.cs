@@ -222,11 +222,7 @@ namespace Rubik.V1
             label2.Text = "Cam_" + numTake + " Running";
 
             show_color1(Rubik);
-<<<<<<< HEAD
-=======
-            
 
->>>>>>> b69426bc422602b26e9eea6705bef2d4243929a7
 
             
             Text_face.Text = showRubik(Rubik);
@@ -245,30 +241,7 @@ namespace Rubik.V1
             if (numTake == 7)
             {
                 label2.Text = " Complete";
-                Rubik_real = Rubik;
-                // Zone Blue
-                for (int i= 0; i < 9; i++)
-                {
-                    Rubik[0][i] = Rubik_real[0][8 - i];
-                }
-                // Zone Orange
-                Rubik[1][0] = Rubik_real[1][6];
-                Rubik[1][1] = Rubik_real[1][3];
-                Rubik[1][2] = Rubik_real[1][0];
-                Rubik[1][3] = Rubik_real[1][7];
-                Rubik[1][5] = Rubik_real[1][1];
-                Rubik[1][6] = Rubik_real[1][8];
-                Rubik[1][7] = Rubik_real[1][5];
-                Rubik[1][8] = Rubik_real[1][2];
-                // Zone Red
-                Rubik[3][0] = Rubik_real[3][2];
-                Rubik[3][1] = Rubik_real[3][5];
-                Rubik[3][2] = Rubik_real[3][8];
-                Rubik[3][3] = Rubik_real[3][1];
-                Rubik[3][5] = Rubik_real[3][7];
-                Rubik[3][6] = Rubik_real[3][0];
-                Rubik[3][7] = Rubik_real[3][3];
-                Rubik[3][8] = Rubik_real[3][6];
+               
                 // timer2.Stop();
 
             }
@@ -310,10 +283,10 @@ namespace Rubik.V1
             float sumHue = 0, sumSatuation = 0, sumValue = 0;
             //ดึงค่าใส่ในตัวแปร
 
-            for (int y = 136; y < 450; y += 135)    // แกน YYYYYYYYYYY
+            for (int y = 125; y < 450; y += 135)    // แกน YYYYYYYYYYY
             {
 
-                for (int x = 175; x < 450; x += 135)   // แกน XXXXXXXXXXXXX
+                for (int x = 156; x < 450; x += 135)   // แกน XXXXXXXXXXXXX
                 {
                     collum = y - 5;
                     roll = x - 5;
@@ -359,31 +332,34 @@ namespace Rubik.V1
                 H = col[i, 0];
                 g = col[i, 1];
                 r = col[i, 2];
-                if (g < 30)    // white
+                if (g < 20)    // white
                 {
                     Rubik[Face][i] = 'W';
                 }
-                else if ((H >= 0 && H < 11) || (H > 160 && H<=180 )) // RED
+                else if ((H >= 0 && H < 11) || (H > 160 && H <= 180)) // RED
                 {
                     Rubik[Face][i] = 'R';
                 }
-                else if (H > 10 && H < 27)   // ม่วง
-                {
-                    Rubik[Face][i] = 'P';
-                }
-                else if (H > 26 && H < 50) //yellow
+
+                else if (H > 25 && H < 50) //yellow
                 {
                     Rubik[Face][i] = 'Y';
                 }
-               else if (H >= 50 && H < 99)   //Green
+                else if (H > 10 && H < 26)   // ม่วง
+                {
+                    Rubik[Face][i] = 'P';
+                }
+                else if (H >= 50 && H < 99)   //Green
                 {
                     Rubik[Face][i] = 'G';
                 }
 
-                else if (H >= 89 && H < 120)   //blue
+                else if (H >= 99 && H <= 160)   //blue
                 {
                     Rubik[Face][i] = 'B';
                 }
+                else
+                    Rubik[Face][i] = 'W';
 
             }
 
@@ -1492,11 +1468,9 @@ namespace Rubik.V1
 
 
         // END Original
-<<<<<<< HEAD
-              // Show_Rubik() Original
-=======
+
              // Show_Rubik() Original
->>>>>>> b69426bc422602b26e9eea6705bef2d4243929a7
+
 
         //  End Edit
 
@@ -1648,23 +1622,23 @@ namespace Rubik.V1
                     {
                         if (rk[i][j] == 'P')
                         {//สีม่วง
-                            if (j == 2)
+                            if (j == 6)
                                 B0.BackColor = Color.Orange;
-                            else if (j == 5)
+                            else if (j == 3)
                                 B1.BackColor = Color.Orange;
-                            else if (j == 8)
+                            else if (j == 0)
                                 B2.BackColor = Color.Orange;
-                            else if (j == 1)
+                            else if (j == 7)
                                 B3.BackColor = Color.Orange;
                             else if (j == 4)
                                 B4.BackColor = Color.Orange;
-                            else if (j == 7)
+                            else if (j == 1)
                                 B5.BackColor = Color.Orange;
-                            else if (j == 0)
+                            else if (j == 8)
                                 B6.BackColor = Color.Orange;
-                            else if (j == 3)
+                            else if (j == 5)
                                 B7.BackColor = Color.Orange;
-                            else if (j == 6)
+                            else if (j == 2)
                                 B8.BackColor = Color.Orange;
                         }
 
@@ -2766,6 +2740,7 @@ namespace Rubik.V1
                 serialPort1.Write("JKdkjD");
                 Thread.Sleep(5000);
                 Take_Click_1(sender, e);
+                Thread.Sleep(1000);
                 serialPort1.Write("DDJKdAkjAJ");
                 Thread.Sleep(4000);
 
@@ -3252,6 +3227,30 @@ namespace Rubik.V1
 
                 file.Write(FF);
                 //ReadFile Naja//
+                Rubik_real = Rubik;
+                // Zone Blue
+                for (int i = 0; i < 9; i++)
+                {
+                    Rubik[0][i] = Rubik_real[0][8 - i];
+                }
+                // Zone Orange
+                Rubik[1][0] = Rubik_real[1][6];
+                Rubik[1][1] = Rubik_real[1][3];
+                Rubik[1][2] = Rubik_real[1][0];
+                Rubik[1][3] = Rubik_real[1][7];
+                Rubik[1][5] = Rubik_real[1][1];
+                Rubik[1][6] = Rubik_real[1][8];
+                Rubik[1][7] = Rubik_real[1][5];
+                Rubik[1][8] = Rubik_real[1][2];
+                // Zone Red
+                Rubik[3][0] = Rubik_real[3][2];
+                Rubik[3][1] = Rubik_real[3][5];
+                Rubik[3][2] = Rubik_real[3][8];
+                Rubik[3][3] = Rubik_real[3][1];
+                Rubik[3][5] = Rubik_real[3][7];
+                Rubik[3][6] = Rubik_real[3][0];
+                Rubik[3][7] = Rubik_real[3][3];
+                Rubik[3][8] = Rubik_real[3][6];
             }
         }
 
